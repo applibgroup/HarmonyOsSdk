@@ -1,0 +1,4456 @@
+{
+  "properties": [
+    {
+      "name": "column-span",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Number of columns occupied by the current list-item in the list. By default, the list-item occupies one column. This attribute is valid only when the list contains multiple columns"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "width",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Component width. If this attribute is not set, the width required for the element content is used",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "Component width. If this attribute is not set, default value 0 is used",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "height",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Component height. If this attribute is not set, the height required for the element content is used",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "Component height. If this attribute is not set, default value 0 is used",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "padding",
+      "syntax": [
+        {
+          "name": "<length>{1,4} || <percentage>{1,4}",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<length>",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "The attribute can have one to four values: 1. If you set a value, it specifies the padding for four sides; 2. If you set two values, the first value specifies the top and bottom padding, and the second value specifies the left and right padding; 3. If you set three values, the first value specifies the top padding, the second value specifies the left and right padding, and the third value specifies the bottom padding; 4. If you set four values, they respectively specify the padding for top, right, bottom, and left sides (in clockwise order)",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "Shorthand attribute to set all padding attributes",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["length"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "padding-left",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<length>",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Left padding (in px)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["length"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "padding-top",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<length>",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Top padding (in px)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["length"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "padding-right",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<length>",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Right padding (in px)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["length"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "padding-bottom",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<length>",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Bottom padding (in px)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["length"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "padding-start",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<length>",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Start padding"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["length"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "padding-end",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<length>",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "End padding"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["length"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "margin",
+      "syntax": [
+        {
+          "name": "<length>{1,4} || <percentage>{1,4}"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set margins for all sides in a declaration. You can set one to four values: 1. One value: specifies the margin for all the four sides; 2. Two values: The first value is for the top and bottom sides, and the second value is for the left and right sides; 3. Three values: The first value is for the top, the second value for the left and right, and the third value for the bottom; 4. They are margins for top, right, bottom, and left sides, respectively"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "margin-left",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Left margin"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "margin-top",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Top margin"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "margin-right",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Right margin"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "margin-bottom",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Bottom margin"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "margin-start",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Start margin"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "margin-end",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "End margin"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "border",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<line-width> || <line-style> || <color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set all boarders. You can set border-width, border-style, and border-color in sequence. Default values are used for attributes that are not set"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "line-style", "color"]
+        }
+      ]
+    },
+    {
+      "name": "border-style",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set the style of all borders. The available values are as follows: 1. dotted: Dotted border. The radius of a dot is half of border-width;2. dashed: Dashed border;3. solid: Solid border;"
+        }
+      ],
+      "values": [
+        {
+          "name": "dotted"
+        },
+        {
+          "name": "dashed"
+        },
+        {
+          "name": "solid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "border-left-style",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Styles of the left borders. The available values are dotted, dashed, and solid"
+        }
+      ],
+      "values": [
+        {
+          "name": "dotted"
+        },
+        {
+          "name": "dashed"
+        },
+        {
+          "name": "solid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "border-top-style",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Styles of the top borders. The available values are dotted, dashed, and solid"
+        }
+      ],
+      "values": [
+        {
+          "name": "dotted"
+        },
+        {
+          "name": "dashed"
+        },
+        {
+          "name": "solid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "border-right-style",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Styles of the right borders. The available values are dotted, dashed, and solid"
+        }
+      ],
+      "values": [
+        {
+          "name": "dotted"
+        },
+        {
+          "name": "dashed"
+        },
+        {
+          "name": "solid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "border-bottom-style",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Styles of the bottom borders. The available values are dotted, dashed, and solid"
+        }
+      ],
+      "values": [
+        {
+          "name": "dotted"
+        },
+        {
+          "name": "dashed"
+        },
+        {
+          "name": "solid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "border-left",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set the boarders for every sides respectively. You can set border-width, border-style and border-color in sequence. Default values are used for attributes that are not set"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<line-width> || <line-style> || <color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "line-style", "color"]
+        }
+      ]
+    },
+    {
+      "name": "border-top",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set the boarders for every sides respectively. You can set border-width, border-style and border-color in sequence. Default values are used for attributes that are not set"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<line-width> || <line-style> || <color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "line-style", "color"]
+        }
+      ]
+    },
+    {
+      "name": "border-right",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set the boarders for every sides respectively. You can set border-width, border-style and border-color in sequence. Default values are used for attributes that are not set"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<line-width> || <line-style> || <color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "line-style", "color"]
+        }
+      ]
+    },
+    {
+      "name": "border-bottom",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set the boarders for every sides respectively. You can set border-width, border-style and border-color in sequence. Default values are used for attributes that are not set"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<line-width> || <line-style> || <color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "line-style", "color"]
+        }
+      ]
+    },
+    {
+      "name": "border-width",
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set the width of all borders, or separately set the width of each border"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "<line-width>{1,4}",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-left-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set widths of left borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-top-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set widths of top borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-right-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set widths of right borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-bottom-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set widths of right borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-color",
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Shorthand attribute to set the color of all borders, or separately set the color of each border"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<color>{1,4}"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "border-left-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set colors of left borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "border-top-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set colors of top borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "border-right-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set colors of right borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "border-bottom-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set colors of bottom borders"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "border-radius",
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to set the radius of round borders of an element. This attribute cannot be used to set the width, color, or style of a specific border. To set the width or color, you need to set border-width, border-color, or border-style for all the borders at the same time.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "Attribute to set the radius of round borders of an element",
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-top-left-radius",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to receptively set the radius of the upper-left rounded corner"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-top-right-radius",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to receptively set the radius of the upper-right rounded corner"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-bottom-left-radius",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to receptively set the radius of the lower-left rounded corner"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "border-bottom-right-radius",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Attribute to receptively set the radius of the lower-right rounded corner"
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "mask-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Color configuration of the mask layer. By default, the mask layer is completely transparent."
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "background",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "This attribute supports Gradient Styles but is not compatible with background-color or background-image"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["image"]
+        }
+      ]
+    },
+    {
+      "name": "background-color",
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Background color"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "background-image",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Background image. Currently, this attribute is not compatible with background-color or border-color. Both Internet and local image resources are supported"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "background-size",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "[ contain | cover | auto | <length> | <percentage> ]"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Background image size. The string values are as follows: − contain: Expands the image to the maximum size so that the height and width of the image are applicable to the content area. − cover: Extends the background image to a large enough size so that the background image completely covers the background area. Some parts of the image may not be displayed in the background localization area. − auto: The original image width-height ratio is retained. The two <length> values are as follows: Height and width of the background image. The first value indicates the width, and the second value indicates the height. If you only set one value, the second value is set to auto by default. 2. The two <percentage> values are as follows: Width and height of the background image in percentage of the parent element. The first value indicates the width, and the second value indicates the height. If you only set one value, the other value is set to auto by default"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum", "length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "background-repeat",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<repeat-style>#"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Repeating attribute of a background image. By default, a background image is repeated both horizontally and vertically. 1. repeat: Draws images along the x axis and y axis at the same time. 2. repeat-x: Draws images along the x axis. 3. repeat-y: Draws images along the y axis. 4. no-repeat: The image is not drawn repeatedly."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["repeat"]
+        }
+      ]
+    },
+    {
+      "name": "background-position",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<bg-position>#"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Using keywords: If only one keyword is specified, the second value is center. The two values define the horizontal position and vertical position respectively. −left: leftmost in the horizontal direction −right: rightmost in the horizontal direction −top: top in the vertical direction −bottom: bottom in the vertical direction −center: center position 1. Using <length>: The first value indicates the horizontal position, and the second value indicates the vertical position. The values are in the Xpx Ypx format. 0 0 indicates the upper left corner. If only one value is specified, the other one is 50%. 2.Using <percentage>: The first value indicates the horizontal position, and the second value indicates the vertical position. 0% 0% indicates the upper left corner. 100% 100% indicates the lower right corner. If only one value is specified, the other one is 50%. 3.Using both <percentage> and <length>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["position", "length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "opacity",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Transparency of an element. The value ranges from 0 to 1. 1 indicates opaque, and 0 indicates completely transparent"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "display",
+      "values": [
+        {
+          "name": "flex",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        },
+        {
+          "name": "grid",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "none",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Type of the view box of the element. Currently, dynamic modification is not supported. Available values are as follows:  flex: flexible layout;  none: This item is hidden"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "visibility",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "visible",
+          "description": "The element is visible"
+        },
+        {
+          "name": "hidden",
+          "description": "The element is hidden but still takes up space"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Whether to display an element. Invisible borders occupy layout space (set the display attribute to none to hide the borders). The values are as follows: 1. visible: The element is visible. 2. hidden: The element is hidden but still takes up space. NOTE If both visibility and display are set, only display takes effect."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "flex",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "How to divide available space of the parent component for a child component. It is used as a shorthand attribute to set the flex-grow attribute of the parent component. NOTE This attribute takes effect only when the parent component is <div>, <list-item>, or <tabs>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "flex-grow",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "How much a child component will grow. The value specifies allocation of the remaining space on the main axis of the parent component. Size of available space = Container size - Total size of all child components. Value 0 indicates that the child component does not grow. NOTE: This attribute takes effect only when the parent component is <div>, <list-item>, or <tabs>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "flex-shrink",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "How much child component will shrink. The shrink occurs only when the sum of default item widths is greater than that of the parent component. Value 0 indicates that the child component does not shrink. NOTE: This attribute takes effect only when the parent component is <div>, <list-item>, or <tabs>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "flex-basis",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Initial length of the flex item on the main axis. NOTE: This attribute takes effect only when the parent component is <div>, <list-item>, or <tabs>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "position",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "fixed"
+        },
+        {
+          "name": "absolute"
+        },
+        {
+          "name": "relative"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Positioning type of an element. Dynamic changes are not supported. 1. fixed: The element is positioned related to the browser window. 2. absolute: The element is positioned absolutely to its parent element. 3. relative: The element is positioned relative to its normal position. NOTE: The absolute attribute takes effect only when the parent component is <div> or <stack>"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "left",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "left must be used together with position to determine the offset position of an element. The left attribute specifies the left edge position of the element. This attribute defines the offset between the left edge of a positioned element and that of a block included in the element"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "top",
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "top must be used together with position to determine the offset position of an element. The top attribute specifies the top edge position of the element. This attribute defines the offset between the top edge of a positioned element and that of a block included in the element"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "right",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "right must be used together with position to determine the offset position of an element. The right attribute specifies the right edge position of the element. This attribute defines the offset between the right edge of a positioned element and that of a block included in the element"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "bottom",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "bottom must be used together with position to determine the offset position of an element. The bottom attribute specifies the bottom edge position of the element. This attribute defines the offset between the bottom edge of a positioned element and that of a block included in the element"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "transform-origin",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "0px 0px"
+        },
+        {
+          "name": "0% 0%"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Origin position of the transformed element. The unit can be px or a percentage (relative to the animation target component), for example, 50px 100px or 50% 50%."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "transform",
+      "values": [
+        {
+          "name": "translate()",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "translateX()"
+        },
+        {
+          "name": "translateY()"
+        },
+        {
+          "name": "scale()",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "scaleX()",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "scaleY()",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "rotate()"
+        },
+        {
+          "name": "rotateX('angle')",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "rotateY('angle')",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ],
+      "syntax": [
+        {
+          "name": "<transform-list>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Translation, rotation, and scaling attributes"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "animation-name",
+      "syntax": [
+        {
+          "name": "[ none | <keyframes-name> ]#"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "@keyframes rule"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["identifier"]
+        }
+      ]
+    },
+    {
+      "name": "animation-delay",
+      "syntax": [
+        {
+          "name": "<time>#"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Delay for playing the animation, in ms or s, for example, 1000 ms or 1s. The default unit is ms."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["time"]
+        }
+      ]
+    },
+    {
+      "name": "animation-duration",
+      "syntax": [
+        {
+          "name": "<time>#"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Animation duration, in ms or s, for example, 1000 ms or 1s. The default unit is ms. NOTE: For basic watches, the maximum animation duration is 60s. animation-duration must be specified. Otherwise, the duration is 0, which means the animation will not be played"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["time"]
+        }
+      ]
+    },
+    {
+      "name": "animation-iteration-count",
+      "syntax": [
+        {
+          "name": "<single-animation-iteration-count>#"
+        }
+      ],
+      "values": [
+        {
+          "name": "infinite"
+        },
+        {
+          "name": "1"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Number of times that an animation is played. The animation is played once by default. You can set the value to infinite to play the animation infinitely"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number", "enum"],
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": ["enum"],
+          "supportedDevices": ["liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "animation-timing-function",
+      "syntax": [
+        {
+          "name": "linear | ease-in | ease-out | ease-in-out"
+        }
+      ],
+      "values": [
+        {
+          "name": "linear"
+        },
+        {
+          "name": "ease",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "ease-in"
+        },
+        {
+          "name": "ease-out"
+        },
+        {
+          "name": "ease-in-out"
+        },
+        {
+          "name": "fast-out-slow-in",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "linear-out-slow-in",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "fast-out-linear-in",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "friction",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "extreme-deceleration",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "sharp",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "rhythm",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "smooth",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "cubic-bezier",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Speed curve of an animation, which makes the animation more fluent. Available values include: linear: The animation speed keeps unchanged; ease: The animation starts at a low speed and then accelerates. It slows down before the animation ends. cubic-bezier(0.25, 0.1, 0.25, 1.0); ease-in: The animation starts at a low speed. cubic-bezier(0.42, 0.0, 1.0, 1.0); ease-out: The animation ends at a low speed. cubic-bezier(0.0, 0.0, 0.58, 1.0); ease-in-out: The animation starts and ends at a low speed. cubic-bezier(0.42, 0.0, 0.58, 1.0); fast-out-slow-in: Standard curve, cubic-bezier(0.4, 0.0, 0.2, 1.0); linear-out-slow-in: Deceleration curve, cubic-bezier(0.0, 0.0, 0.2, 1.0); fast-out-linear-in: Acceleration curve, cubic-bezier(0.4, 0.0, 1.0, 1.0); friction: Damping curve, cubic-bezier(0.2, 0.0, 0.2, 1.0);extreme-deceleration: Extreme deceleration curve, cubic-bezier(0.0, 0.0, 0.0, 1.0) curve; sharp: Sharp curve, cubic-bezier(0.33, 0.0, 0.67, 1.0); rhythm: Rhythm curve, cubic-bezier(0.7, 0.0, 0.2, 1.0); smooth: Smooth curve, cubic-bezier(0.4, 0.0, 0.4, 1.0); cubic-bezier: You can customize an animation speed curve in the cubic-bezier() function. The x and y values of each input parameter must be between 0 and 1"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "animation-fill-mode",
+      "syntax": [
+        {
+          "name": "forwards | none"
+        }
+      ],
+      "values": [
+        {
+          "name": "forwards"
+        },
+        {
+          "name": "none"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Whether to restore the initial state after the animation is executed. Available values include: none: The initial state is restored after the animation is executed; forwards: The state at the end of the animation (defined in the last key frame) is retained after the animation is executed"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "shared-transition-effect",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "exchange"
+        },
+        {
+          "name": "static"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Entry style of shared elements during the transition, which can be exchange or static.During the transition, the style configured on the target page takes effect preferentially. exchange: The source page element is moved to the position of the target page element and is zoomed in or out properly. static: The position of the target page element remains unchanged. You can configure the transparency animation. Currently, only the static effect configured on the target page takes effect"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "shared-transition-name",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "During the transition, the style configured on the target page takes effect preferentially. This style is used to configure the animation effect of shared elements. The animation effect is an animation sequence defined by @keyframes supporting transform and transparency animations. If the effect of the shared element conflicts with the custom animation, the latter is used"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "shared-transition-timing-function",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "friction"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "During the transition, the style configured on the target page takes effect preferentially. This attribute defines the difference curve during the transition of shared elements. The friction curve is used by default if this parameter is not configured"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "transition-enter",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Related to @keyframes, which supports transform and transparent animations"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "transition-exit",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Related to @keyframes, which supports transform and transparent animations"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "transition-duration",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "The unit can be s or ms. The default unit is ms"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["time"]
+        }
+      ]
+    },
+    {
+      "name": "transition-timing-function",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "friction"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Speed curve of executing transition animation for smoother transition. For details about the parameters, see the description of the valid values of animation-timing-function"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "flex-direction",
+      "syntax": [
+        {
+          "name": "column | row"
+        }
+      ],
+      "values": [
+        {
+          "name": "column"
+        },
+        {
+          "name": "row"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Main axis direction of the flex container. Available values are as follows: column: Items are placed vertically from top to bottom; row: Items are placed horizontally from left to right"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "flex-wrap",
+      "syntax": [
+        {
+          "name": "nowrap | wrap"
+        }
+      ],
+      "values": [
+        {
+          "name": "nowrap"
+        },
+        {
+          "name": "wrap"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Whether flex items in the container are displayed in a single line or multiple lines. Currently, dynamic modification is not supported. Available values are as follows: nowrap: Items are displayed on a single axis; wrap: Items are displayed on multiple axes."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "justify-content",
+      "syntax": [
+        {
+          "name": "flex-start | flex-end | center | space-between | space-around"
+        }
+      ],
+      "values": [
+        {
+          "name": "flex-start"
+        },
+        {
+          "name": "flex-end"
+        },
+        {
+          "name": "center"
+        },
+        {
+          "name": "space-between"
+        },
+        {
+          "name": "space-around"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "How items are aligned along the main axis of the current line in a flex container. Available values are as follows: flex-start: Items are packed towards the start line. flex-end: Items are packed towards the end line. center: Items are centered along the line. space-between: Items are positioned with space between the lines. space-around: Items are positioned with space before, between, and after the lines."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "align-items",
+      "values": [
+        {
+          "name": "stretch",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "flex-start"
+        },
+        {
+          "name": "flex-end"
+        },
+        {
+          "name": "center"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "How items are aligned along the cross axis of the current line in a flex container. Available values are as follows: stretch: Items are stretched to the same height or width as the container in the cross axis direction; flex-start: Items are aligned to the start of the cross axis; flex-end: Items are aligned to the end of the cross axis; center: Items are aligned in the middle of the cross axis"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "align-content",
+      "syntax": [
+        {
+          "name": "normal | <baseline-position> | <content-distribution> | <overflow-position>? <content-position>"
+        }
+      ],
+      "values": [
+        {
+          "name": "center",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "flex-start"
+        },
+        {
+          "name": "flex-end"
+        },
+        {
+          "name": "space-between",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "space-around",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Multi-line alignment mode when there is extra space in the cross axis. Available values are as follows: flex-start: All lines are packed towards the start of the cross axis. The start edge of the cross axis of the first line is aligned with the start edge of the cross axis of the container. All subsequent lines are aligned with the previous line; flex-end: All lines are packed towards the end of the cross axis. The end of the cross axis of the last line is aligned with the end of the cross axis of the container. All subsequent lines are aligned with the previous line; center: All lines are packed towards the center of the container. Lines are close to each other and aligned with the center of the container. The spacing between the start of the container's cross axis and the first line is equal to the spacing between the end of the container's cross axis and the last line; space-between: All lines are evenly distributed in the container. The spacing between two adjacent lines is the same. The start and end edges of the container's cross axis are aligned with the edges of the first and last lines, respectively; space-around: All lines are evenly distributed in the container, and the spacing between two adjacent lines is the same. The spacing between the start edge of the container's cross axis and the first line and that between the end edge and the last line are half of the spacing between two adjacent lines."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "grid-template-columns",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Number of columns in the current grid layout. If this attribute is not set, one row and one column are displayed by default. This attribute is valid only when display is set to grid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "grid-template-rows",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Number of rows in the current grid layout. If this attribute is not set, one row and one column are displayed by default. This attribute is valid only when display is set to grid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "grid-columns-gap",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Size of the gap between two consecutive columns in a grid layout. You can also use grid-gap to set the same size of the gap between rows and columns. This attribute is valid only when display is set to grid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "grid-rows-gap",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Size of the gap between two consecutive rows in a grid layout. You can also use grid-gap to set the same size of the gap between rows and columns. This attribute is valid only when display is set to grid"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "grid-row-start",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Start row numbers of the current item in the grid layout. This attribute is valid only when display of the parent component is grid. (The display attribute of the parent component can be set to grid only for the <div> container.)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "grid-row-end",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "End row numbers of the current item in the grid layout. This attribute is valid only when display of the parent component is grid. (The display attribute of the parent component can be set to grid only for the <div> container.)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "grid-column-start",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Start column numbers of the current item in the grid layout. This attribute is valid only when display of the parent component is grid. (The display attribute of the parent component can be set to grid only for the <div> container.)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "grid-column-end",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "End column numbers of the current item in the grid layout. This attribute is valid only when display of the parent component is grid. (The display attribute of the parent component can be set to grid only for the <div> container.)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "grid-auto-flow",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<string>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "columns",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Number of columns displayed in the main axis direction of the element. The default value is 1"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "item-extent",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Size of an internal item. When a percentage is set, the value indicates the percentage of the length in the main axis direction relative to the list viewpoint"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "fade-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Color of the physical dynamic effect. This attribute is valid only when scrolleffect is set to fade"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "indicator-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Fill color of the navigation point indicator"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "indicator-selected-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Color of the currently selected navigation point indicator"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "indicator-size",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Diameter of the navigation point indicator"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "indicator-top",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Position of the indicator relative to the swiper"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "indicator-left",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Diameter of the navigation point indicator"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "indicator-right",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Diameter of the navigation point indicator"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "indicator-bottom",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length> || <percentage>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Diameter of the navigation point indicator"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length", "percentage"]
+        }
+      ]
+    },
+    {
+      "name": "progress-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Loading color of the <refresh> component"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "object-fit",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "fill | contain | cover | none | scale-down"
+        }
+      ],
+      "values": [
+        {
+          "name": "cover",
+          "description": "The image is scaled with the aspect ratio retained for both sides to be greater than or equal to the display boundaries and displayed in the middle"
+        },
+        {
+          "name": "contain",
+          "description": "The image is scaled with the aspect ratio retained for the image to be completely displayed within the display boundaries and displayed in the middle"
+        },
+        {
+          "name": "fill",
+          "description": "The image is resized to fill the display area and its aspect ratio is not retained"
+        },
+        {
+          "name": "none",
+          "description": "The image is displayed in the middle with its aspect ratio and size retained"
+        },
+        {
+          "name": "scale-down",
+          "description": "The image is displayed in the middle with its aspect ratio retained. The size is equal to or smaller than the original size"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Image scale type. The SVG format is not supported. cover: The image is scaled with the aspect ratio retained for both sides to be greater than or equal to the display boundaries and displayed in the middle. contain: The image is scaled with the aspect ratio retained for the image to be completely displayed within the display boundaries and displayed in the middle. fill: The image is resized to fill the display area and its aspect ratio is not retained. none: The image is displayed in the middle with its aspect ratio and size retained. scale-down: The image is displayed in the middle with its aspect ratio retained. The size is equal to or smaller than the original size."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "match-text-direction",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "true | false"
+        }
+      ],
+      "values": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Whether image orientation changes with the text direction. The SVG format is not supported"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "fit-original-size",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "true | false"
+        }
+      ],
+      "values": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Whether the <image> component adapts to the image source size when the width and height are not set. If this attribute is set to true, the object-fit attribute does not take effect. SVG images do not support this attribute"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "color",
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Color of the component"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "opacity",
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Transparency of an element. The value ranges from 0 to 1. 1 indicates opaque, and 0 indicates completely transparent"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "stroke-width",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Width of the component"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "secondary-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Secondary color of the component"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "scale-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Scale thickness of the ring progress bar with a scale. This style takes effect only when the type is scale-ring"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "scale-number",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Number of scales of the ring progress bar with a scale. This style takes effect only when the type is scale-ring"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "start-angle",
+      "syntax": [
+        {
+          "name": "<angle>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Start angle of the component, which starts from the direction of zero o'clock. The value ranges from 0 to 360 degrees (clockwise)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "total-angle",
+      "syntax": [
+        {
+          "name": "<angle>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Total length of the component. The value ranges from –360 to 360. A negative number indicates counterclockwise direction"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "center-x",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Center of the component (with the upper left corner of this widget as the coordinate origin). This style must be used together with center-y and radius"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "center-y",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Center of the component (with the upper left corner of this widget as the coordinate origin). This style must be used together with center-x and radius"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "radius",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Radius of the component. This style must be used together with center-x and center-y"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "font-size",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font size (px).Currently, only 30px and 38px font sizes are supported"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "allow-scale",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "[ true | false ]"
+        }
+      ],
+      "values": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Whether the font size changes following the system's font size settings. NOTE: For details about how to make the configuration take effect dynamically, see the config-changes attribute in the config.json file"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "letter-spacing",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Character spacing (px)"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "font-style",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "normal"
+        },
+        {
+          "name": "italic"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font style. Available values are as follows: normal: standard font style. italic: italic font style"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "font-weight",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<font-weight-absolute>{1,2}"
+        }
+      ],
+      "values": [
+        {
+          "name": "lighter"
+        },
+        {
+          "name": "normal"
+        },
+        {
+          "name": "bold"
+        },
+        {
+          "name": "bolder"
+        },
+        {
+          "name": "100"
+        },
+        {
+          "name": "200"
+        },
+        {
+          "name": "300"
+        },
+        {
+          "name": "400"
+        },
+        {
+          "name": "500"
+        },
+        {
+          "name": "600"
+        },
+        {
+          "name": "700"
+        },
+        {
+          "name": "800"
+        },
+        {
+          "name": "900"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font width. For the number type, the value ranges from 100 to 900. The default value is 400. A larger value indicates a larger font width. NOTE: The value must be an integer multiple of 100. The value of the string type can be lighter, normal, hold, or bolder"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "text-decoration",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "values": [
+        {
+          "name": "underline",
+          "description": "An underline is used"
+        },
+        {
+          "name": "line-through",
+          "description": "A strikethrough is used"
+        },
+        {
+          "name": "none",
+          "description": "The standard text is used"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text modifier. Available values are as follows: underline: An underline is used; line-through: A strikethrough is used; none: The standard text is used"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "text-align",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"],
+      "values": [
+        {
+          "name": "left",
+          "description": "The text is left-aligned",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        },
+        {
+          "name": "center",
+          "description": "The text is center-aligned",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        },
+        {
+          "name": "right",
+          "description": "The text is right-aligned",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        },
+        {
+          "name": "start",
+          "description": "The text is aligned with the direction in which the text is written",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        },
+        {
+          "name": "end",
+          "description": "The text in aligned with the opposite direction in which the text is written",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text alignment mode. Available values are as follows: left: The text is left-aligned; center: The text is center-aligned; right: The text is right-aligned; start: The text is aligned with the direction in which the text is written; end: The text in aligned with the opposite direction in which the text is written; NOTE If the text width is not specified, the alignment effect may not be obvious when the text width is the same as the width of the parent container"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "line-height",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text line height. When this parameter is set to 0px, the text line height is not limited and the font size is adaptive"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "text-overflow",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "[ clip | ellipsis | <string> ]{1,2}"
+        }
+      ],
+      "values": [
+        {
+          "name": "clip",
+          "description": "The text is clipped and displayed based on the size of the parent container"
+        },
+        {
+          "name": "ellipsis",
+          "description": "The text is displayed based on the size of the parent container. The text that cannot be displayed is replaced with ellipsis. This style must be used together with max-lines"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text line height. When this parameter is set to 0px, the text line height is not limited and the font size is adaptive"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "text-overflow",
+      "syntax": [
+        {
+          "name": "[ clip | ellipsis | <string> ]{1,2}"
+        }
+      ],
+      "values": [
+        {
+          "name": "clip",
+          "description": "The text is clipped and displayed based on the size of the parent container"
+        },
+        {
+          "name": "ellipsis",
+          "description": "The text is displayed based on the size of the parent container. The text that cannot be displayed is replaced with ellipsis. This style must be used together with max-lines"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text line height. When this parameter is set to 0px, the text line height is not limited and the font size is adaptive"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum", "string"]
+        }
+      ]
+    },
+    {
+      "name": "font-family",
+      "syntax": [
+        {
+          "name": "[ clip | ellipsis | <string> ]{1,2}"
+        }
+      ],
+      "values": [
+        {
+          "name": "sans-serif"
+        },
+        {
+          "name": "HYQiHei-65S"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font family, in which fonts are separated by commas (,). Each font is set using a font name or font family name. The first font that exists in the system or the font specified by Customizing Font Styles in the family is selected as the font for the text"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "max-lines",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Maximum number of lines in the text"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "min-font-size",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Minimum font size in the text. This style must be used together with max-font-size. The font size can be changed dynamically. After the maximum and minimum font sizes are set, font-size does not take effect"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "max-font-size",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Maximum font size in the text. This style must be used together with min-font-size. The font size can be changed dynamically. After the maximum and minimum font sizes are set, font-size does not take effect"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "font-size-step",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Step for dynamically adjusting the font size in the text. The minimum and maximum font sizes must be set"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "prefer-font-sizes",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Preset preferred font sizes. For dynamic font size adjusting, the preset sizes are used to match the maximum number of lines in the text. If the preferred font sizes were not set, the font size will be adjusted based on the maximum and minimum font sizes and the step you have set. If the font size cannot match the maximum number of lines in the text, use text-overflow to truncate the text. If this parameter is set, font-size, max-font-size, min-font-size, and font-size-step do not take effect. Example values: 12 px,14 px,16 px"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "star-background",
+      "supportedDevices": ["tv", "phone", "tablet"],
+      "syntax": [
+        {
+          "name": "<string>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Background image when a rating star is unselected. Only PNG and JPG images in a local path are supported"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "star-foreground",
+      "supportedDevices": ["tv", "phone", "tablet"],
+      "syntax": [
+        {
+          "name": "<string>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Secondary background image when a rating star is partially selected. This image will cover the background image and can only be of the PNG or JPG format and from a local path"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "star-secondary",
+      "supportedDevices": ["tv", "phone", "tablet"],
+      "syntax": [
+        {
+          "name": "<url>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "values": [
+        {
+          "name": "url()"
+        }
+      ],
+      "description": [
+        {
+          "name": "Foreground image when a rating star is selected. Only PNG and JPG images in a local path are supported"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "rtl-flip",
+      "supportedDevices": ["tv", "phone", "tablet"],
+      "syntax": [
+        {
+          "name": "[ true | false ]"
+        }
+      ],
+      "values": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Whether the image source is automatically flipped in the RTL text direction"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "line-cap",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "[ butt | square | round ]"
+        }
+      ],
+      "values": [
+        {
+          "name": "butt",
+          "description": "The ends of the split line are squared off at the endpoints"
+        },
+        {
+          "name": "square",
+          "description": "The ends of the split line are squared off by adding a box with an equal width and half the height of the line's thickness"
+        },
+        {
+          "name": "round",
+          "description": "The ends of the split line are round"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Cap style of a divider. The default value is butt. Available values are as follows: butt: The ends of the divider are squared off. round: A rounded cap is added to each end of the divider. square: A square cap is added to each end of the divider. NOTE If the value is round or square, the line length increases by the line width"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "placeholder-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Color of the hint text"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "text-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text color"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "icon-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Width of the internal icon of a circle button. The entire circle button is filled by default."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "icon-height",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Height of the internal icon of a circle button. The entire circle button is filled by default."
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "block-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Slider color"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "texton-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text color displayed when the component is checked"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "textoff-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Text color displayed when the component is not checked"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "text-padding",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Distance between the two sides of the longest text in texton and textoff and the border of the slider"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "selected-color",
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font color of the selected item"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "selected-font-size",
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font size of the selected item. The value is of the length type, in pixels"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "focus-color",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font color of the focus. This attribute is available only for smart TV"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "focus-font-size",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Font size of the focus. The value is of the length type, in pixels. This attribute is available only for smart TV'"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "colors",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<color>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Color of each section for the scale bar of the gauge component. For example, colors: #FF0000, #00FF00. This style is supported by the gauge chart only"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["color"]
+        }
+      ]
+    },
+    {
+      "name": "weights",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Weight of each section for the scale bar of the gauge component. For example, weights: 2, 2. This style is supported by the gauge chart only"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "src",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<url>#"
+        }
+      ],
+      "values": [
+        {
+          "name": "url()"
+        }
+      ],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Supported sources of customized fonts"
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["enum"]
+        }
+      ]
+    },
+    {
+      "name": "min-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "min-height",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "max-width",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "max-height",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<length>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["length"]
+        }
+      ]
+    },
+    {
+      "name": "box-shadow",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "filter",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<string>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "backdrop-filter",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<string>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "window-filter",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<string>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["string"]
+        }
+      ]
+    },
+    {
+      "name": "display-index",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "flex-weight",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "syntax": [
+        {
+          "name": "<number>"
+        }
+      ],
+      "version": [
+        {
+          "name": "v4.0"
+        }
+      ],
+      "description": [
+        {
+          "name": " "
+        }
+      ],
+      "restrictions": [
+        {
+          "name": ["number"]
+        }
+      ]
+    }
+  ],
+  "atDirectives": [
+    {
+      "name": "@import",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Includes content of another file.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "@keyframes",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Defines set of animation key frames.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": "@font-face",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Allows for linking to fonts that are automatically activated when needed. This permits authors to work around the limitation of 'web-safe' fonts, allowing for consistent rendering independent of the fonts available in a given user's environment.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ]
+    },
+    {
+      "name": "@media",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Defines a stylesheet for a particular media type.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ]
+    }
+  ],
+  "pseudoClasses": [
+    {
+      "name": ":active",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Represents an element that is being activated by the user.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": ":checked",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Represents an element that is checked or toggled to an on state..",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": ":waiting",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Represents an element that is waiting for operation finished.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+        }
+      ]
+    },
+    {
+      "name": ":disabled",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Represents any disabled element.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ]
+    },
+    {
+      "name": ":focus",
+      "supportedDevices": ["tv", "phone", "tablet", "wearable"],
+      "version": [
+        {
+          "name": "v3.0"
+        }
+      ],
+      "description": [
+        {
+          "name": "Represents an element that has received focus.",
+          "supportedDevices": ["tv", "phone", "tablet", "wearable"]
+        }
+      ]
+    }
+  ]
+}

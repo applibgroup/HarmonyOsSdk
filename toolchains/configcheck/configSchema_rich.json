@@ -1,0 +1,2943 @@
+{
+  "title": "JSON schema for HarmonyProfile.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "app",
+    "deviceConfig",
+    "module"
+  ],
+  "propertyNames": {
+    "enum": [
+      "app",
+      "deviceConfig",
+      "module"
+    ]
+  },
+  "properties": {
+    "app": {
+      "description": "Indicates the global configuration of an application. Different .hap files of the same application must use the same app configuration.",
+      "type": "object",
+      "required": [
+        "bundleName",
+        "version"
+      ],
+      "propertyNames": {
+        "enum": [
+          "bundleName",
+          "vendor",
+          "version",
+          "apiVersion",
+          "type",
+          "relatedBundleName",
+          "smartWindowSize",
+          "smartWindowDeviceType",
+          "targetBundleList"
+        ]
+      },
+      "properties": {
+        "bundleName": {
+          "description": "Indicates the bundle name of the application. It uniquely identifies the application. The value is a string with 7 to 127 bytes of a reverse domain name, for example, com.huawei.himusic. It is recommended that the first label of this attribute is the top-level domain com, the second label is the vendor or individual name, and the third label is the application name. This label is a string type and cannot be defaulted.",
+          "type": "string",
+          "maxLength": 127,
+          "minLength": 7,
+          "pattern": "^(([a-zA-Z]|[a-zA-Z][0-9a-zA-Z_]+)[.]([0-9a-zA-Z_.]+))|([{]([a-zA-Z]|[a-zA-Z][0-9a-zA-Z_]+)[}](.huawei.com))$"
+        },
+        "vendor": {
+          "description": "Describes the application vendor. The value is a string with a maximum of 255 bytes. This label is a string type and can be defaulted.",
+          "type": "string",
+          "maxLength": 255
+        },
+        "version": {
+          "description": "Indicates the version information of the application.Includes two sub-labels:”code” and ”name”.This label cannot be left blank.",
+          "type": "object",
+          "required": [
+            "code",
+            "name"
+          ],
+          "propertyNames": {
+            "enum": [
+              "code",
+              "name",
+              "minCompatibleVersionCode"
+            ]
+          },
+          "properties": {
+            "code": {
+              "description": "Indicates the version number of the application. The value is an integer greater than 0. A larger value generally represents a later version.The system determines the application version based on the tag value.This label cannot be left blank.",
+              "type": "integer",
+              "minimum": 0,
+              "maxLength": 32
+            },
+            "name": {
+              "description": "Indicates the text description of the application version.Used for displaying to users.A string can contain a maximum of 127 bytes.This label cannot be left blank.",
+              "type": "string",
+              "maxLength": 127,
+              "pattern": "^([1-9][0-9]{0,2})(.(0|[1-9][0-9]{0,2})){1,2}$"
+            },
+            "minCompatibleVersionCode": {
+              "description": "This label identifies the earliest historical version compatible with the app pack, which is used for cross-device compatibility determination.This label is an integer and can be defaulted.",
+              "type": "integer",
+              "minimum": 0,
+              "maxLength": 32
+            }
+          }
+        },
+        "apiVersion": {
+          "description": "This tag identifies the Harmony API version on which the application depends.",
+          "type": "object",
+          "required": [
+            "compatible"
+          ],
+          "propertyNames": {
+            "enum": [
+              "compatible",
+              "target",
+              "releaseType"
+            ]
+          },
+          "properties": {
+            "compatible": {
+              "description": "Indicates the minimum API version required for running an application. This label is an integer and can be defaulted.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "target": {
+              "description": "This tag identifies the target API version required for application running. The value is an integer.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "releaseType": {
+              "description": "This tag identifies the type of the target API version required for application running. The tag is a string.",
+              "type": "string",
+              "pattern": "^(Canary[1-9][0-9]+|Canary[1-9]|Beta[1-9][0-9]+|Beta[1-9]|Release)$"
+            }
+          }
+        },
+        "type": {
+          "description": "Describes the application type. The value is a string with 'normal' or 'shareLib'. If the value of label is 'normal', This label can be left blank by default.",
+          "type": "string",
+          "enum": [
+            "normal",
+            "shareLib"
+          ]
+        },
+        "relatedBundleName": {
+          "description": "Indicates the name of the Android package associated with the Harmony application in the independent packaging scenario. The value is a character string. This tag is valid only for system applications.",
+          "type": "string"
+        },
+        "smartWindowSize": {
+          "description": "Indicates the size of the simulation window. The value is a character string.",
+          "type": "string",
+          "pattern": "^([2-9][0-9]{2}|[1][0-9]{3}|2000)\\*([2-9][0-9]{2}|[1][0-9]{3}|2000)$"
+        },
+        "smartWindowDeviceType": {
+          "description": "This label indicates the device on which the application is opened using the simulation window, a string array.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "phone",
+              "tablet",
+              "tv"
+            ]
+          }
+        },
+        "targetBundleList": {
+          "description": "This tag specifies the list of Harmony services that can be installed without the application. The list contains the bundle name of each Harmony service. A maximum of five bundle names can be configured. This label is a string array type and can be defaulted.",
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "deviceConfig": {
+      "description": "Indicates the application configuration applied to a specific type of devices. When compiling and generating the HAP package, copy the device type configuration supported by the HAP package to the generated config file. The compilation is not required for the devices that are not supported by the HAP package.",
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "car",
+          "default",
+          "liteWearable",
+          "phone",
+          "tablet",
+          "tv",
+          "wearable"
+        ]
+      },
+      "properties": {
+        "default": {
+          "description": "The configuration in the default tag is applicable to all devices. If the configuration is different for other device types, you need to configure the configuration under the configuration tag of the device type.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive",
+              "jointUserId",
+              "process",
+              "ark",
+              "directLaunch",
+              "network",
+              "supportBackup",
+              "compressNativeLibs",
+              "allowComponentsProxy"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            },
+            "jointUserId": {
+              "description": "Indicates the user ID shared by applications.Generally, applications run in different processes, and resources used by the applications are isolated. However, in some cases, you may develop multiple applications that need to share resources with each other. This resource sharing is implemented based on the same jointUserId value on the premise that the applications have the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string"
+            },
+            "process": {
+              "description": "Indicates the name of the process running the application or ability.If a process is configured in the deviceConfig tag, all abilities of the application run in this process. You can also set the process attribute for a specific ability, so that the ability can run in this process. If this attribute is set to the same process name as other applications, all these applications can run in the same process on the premise that they have the same jointUserId and the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "ark": {
+              "description": "This tag identifies maple configuration information.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "reqVersion",
+                  "flag"
+                ]
+              },
+              "properties": {
+                "reqVersion": {
+                  "description": "Maple version number that supports the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "compatible",
+                      "target"
+                    ]
+                  },
+                  "properties": {
+                    "compatible": {
+                      "description": "Indicates the minimum maple version that supports the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "target": {
+                      "description": "Specifies the target maple version of the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "flag": {
+                  "description": "Specifies the type of the maple application.",
+                  "type": "string",
+                  "enum": [
+                    "m",
+                    "mo",
+                    "z"
+                  ]
+                }
+              }
+            },
+            "directLaunch": {
+              "description": "Specifies whether the application can be started when the device is locked. Set this attribute to true if you want to start the application without unlocking the device.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "network": {
+              "description": "Indicates the network security configuration. You can customize the network security settings of the application in a security statement configuration file without modifying the application code.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "cleartextTraffic",
+                  "securityConfig"
+                ]
+              },
+              "properties": {
+                "cleartextTraffic": {
+                  "description": "Specifies whether an application can use plaintext network transmission. The value is of the Boolean type. The value true indicates that plaintext network transmission is enabled.",
+                  "type": "boolean"
+                },
+                "securityConfig": {
+                  "description": "Indicates the network security configuration of the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "domainSettings"
+                    ]
+                  },
+                  "properties": {
+                    "domainSettings": {
+                      "description": "Indicates the security settings of the custom network domain. This attribute allows nested domains. To be more specific, the domainSettings object of a large domain can be nested with the domainSettings objects of small network domains.",
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "cleartextPermitted",
+                          "domains"
+                        ]
+                      },
+                      "properties": {
+                        "cleartextPermitted": {
+                          "description": "Specifies whether plaintext traffic can be transmitted in the custom network domain. If both cleartextTraffic and securityConfig are declared, whether plaintext traffic can be transmitted in the custom network domain is determined by the cleartextPermitted attribute.",
+                          "type": "boolean"
+                        },
+                        "domains": {
+                          "description": "Indicates the domain name configuration. This attribute consists of the subDomains and name sub-attributes.",
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "propertyNames": {
+                              "enum": [
+                                "subdomains",
+                                "name"
+                              ]
+                            },
+                            "properties": {
+                              "subdomains": {
+                                "description": "Subdomain name",
+                                "type": "boolean"
+                              },
+                              "name": {
+                                "description": "Domain name",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "supportBackup": {
+              "description": "Specifies whether the application supports backup and restoration. If this attribute is set to false, backup or restoration will never be performed for the application.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "compressNativeLibs": {
+              "description": "Specifies whether the libs libraries of the .hap file are compressed for storage. If this attribute is set to false, the libs libraries are stored without being compressed and will be directly loaded during the installation of the .hap file.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "allowComponentsProxy": {
+              "description": "Indicates whether the application supports the ability proxy.If this property is set to true, the ability component can be hooked.",
+              "type": "boolean"
+            }
+          }
+        },
+        "tv": {
+          "description": "The configuration in the default tag is applicable to all devices. If the configuration is different for other device types, you need to configure the configuration under the configuration tag of the device type.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive",
+              "jointUserId",
+              "process",
+              "ark",
+              "directLaunch",
+              "network",
+              "supportBackup",
+              "compressNativeLibs",
+              "allowComponentsProxy"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            },
+            "jointUserId": {
+              "description": "Indicates the user ID shared by applications.Generally, applications run in different processes, and resources used by the applications are isolated. However, in some cases, you may develop multiple applications that need to share resources with each other. This resource sharing is implemented based on the same jointUserId value on the premise that the applications have the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string"
+            },
+            "process": {
+              "description": "Indicates the name of the process running the application or ability.If a process is configured in the deviceConfig tag, all abilities of the application run in this process. You can also set the process attribute for a specific ability, so that the ability can run in this process. If this attribute is set to the same process name as other applications, all these applications can run in the same process on the premise that they have the same jointUserId and the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "ark": {
+              "description": "This tag identifies maple configuration information.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "reqVersion",
+                  "flag"
+                ]
+              },
+              "properties": {
+                "reqVersion": {
+                  "description": "Maple version number that supports the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "compatible",
+                      "target"
+                    ]
+                  },
+                  "properties": {
+                    "compatible": {
+                      "description": "Indicates the minimum maple version that supports the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "target": {
+                      "description": "Specifies the target maple version of the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "flag": {
+                  "description": "Specifies the type of the maple application.",
+                  "type": "string",
+                  "enum": [
+                    "m",
+                    "mo",
+                    "z"
+                  ]
+                }
+              }
+            },
+            "directLaunch": {
+              "description": "Specifies whether the application can be started when the device is locked. Set this attribute to true if you want to start the application without unlocking the device.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "network": {
+              "description": "Indicates the network security configuration. You can customize the network security settings of the application in a security statement configuration file without modifying the application code.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "cleartextTraffic",
+                  "securityConfig"
+                ]
+              },
+              "properties": {
+                "cleartextTraffic": {
+                  "description": "Specifies whether an application can use plaintext network transmission. The value is of the Boolean type. The value true indicates that plaintext network transmission is enabled.",
+                  "type": "boolean"
+                },
+                "securityConfig": {
+                  "description": "Indicates the network security configuration of the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "domainSettings"
+                    ]
+                  },
+                  "properties": {
+                    "domainSettings": {
+                      "description": "Indicates the security settings of the custom network domain. This attribute allows nested domains. To be more specific, the domainSettings object of a large domain can be nested with the domainSettings objects of small network domains.",
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "cleartextPermitted",
+                          "domains"
+                        ]
+                      },
+                      "properties": {
+                        "cleartextPermitted": {
+                          "description": "Specifies whether plaintext traffic can be transmitted in the custom network domain. If both cleartextTraffic and securityConfig are declared, whether plaintext traffic can be transmitted in the custom network domain is determined by the cleartextPermitted attribute.",
+                          "type": "boolean"
+                        },
+                        "domains": {
+                          "description": "Indicates the domain name configuration. This attribute consists of the subDomains and name sub-attributes.",
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "propertyNames": {
+                              "enum": [
+                                "subdomains",
+                                "name"
+                              ]
+                            },
+                            "properties": {
+                              "subdomains": {
+                                "description": "Subdomain name",
+                                "type": "boolean"
+                              },
+                              "name": {
+                                "description": "Domain name",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "supportBackup": {
+              "description": "Specifies whether the application supports backup and restoration. If this attribute is set to false, backup or restoration will never be performed for the application.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "compressNativeLibs": {
+              "description": "Specifies whether the libs libraries of the .hap file are compressed for storage. If this attribute is set to false, the libs libraries are stored without being compressed and will be directly loaded during the installation of the .hap file.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "allowComponentsProxy": {
+              "description": "Indicates whether the application supports the ability proxy.If this property is set to true, the ability component can be hooked.",
+              "type": "boolean"
+            }
+          }
+        },
+        "wearable": {
+          "description": "The configuration in the default tag is applicable to all devices. If the configuration is different for other device types, you need to configure the configuration under the configuration tag of the device type.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive",
+              "jointUserId",
+              "process",
+              "ark",
+              "directLaunch",
+              "network",
+              "supportBackup",
+              "compressNativeLibs",
+              "allowComponentsProxy"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            },
+            "jointUserId": {
+              "description": "Indicates the user ID shared by applications.Generally, applications run in different processes, and resources used by the applications are isolated. However, in some cases, you may develop multiple applications that need to share resources with each other. This resource sharing is implemented based on the same jointUserId value on the premise that the applications have the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string"
+            },
+            "process": {
+              "description": "Indicates the name of the process running the application or ability.If a process is configured in the deviceConfig tag, all abilities of the application run in this process. You can also set the process attribute for a specific ability, so that the ability can run in this process. If this attribute is set to the same process name as other applications, all these applications can run in the same process on the premise that they have the same jointUserId and the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "ark": {
+              "description": "This tag identifies maple configuration information.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "reqVersion",
+                  "flag"
+                ]
+              },
+              "properties": {
+                "reqVersion": {
+                  "description": "Maple version number that supports the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "compatible",
+                      "target"
+                    ]
+                  },
+                  "properties": {
+                    "compatible": {
+                      "description": "Indicates the minimum maple version that supports the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "target": {
+                      "description": "Specifies the target maple version of the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "flag": {
+                  "description": "Specifies the type of the maple application.",
+                  "type": "string",
+                  "enum": [
+                    "m",
+                    "mo",
+                    "z"
+                  ]
+                }
+              }
+            },
+            "directLaunch": {
+              "description": "Specifies whether the application can be started when the device is locked. Set this attribute to true if you want to start the application without unlocking the device.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "network": {
+              "description": "Indicates the network security configuration. You can customize the network security settings of the application in a security statement configuration file without modifying the application code.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "cleartextTraffic",
+                  "securityConfig"
+                ]
+              },
+              "properties": {
+                "cleartextTraffic": {
+                  "description": "Specifies whether an application can use plaintext network transmission. The value is of the Boolean type. The value true indicates that plaintext network transmission is enabled.",
+                  "type": "boolean"
+                },
+                "securityConfig": {
+                  "description": "Indicates the network security configuration of the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "domainSettings"
+                    ]
+                  },
+                  "properties": {
+                    "domainSettings": {
+                      "description": "Indicates the security settings of the custom network domain. This attribute allows nested domains. To be more specific, the domainSettings object of a large domain can be nested with the domainSettings objects of small network domains.",
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "cleartextPermitted",
+                          "domains"
+                        ]
+                      },
+                      "properties": {
+                        "cleartextPermitted": {
+                          "description": "Specifies whether plaintext traffic can be transmitted in the custom network domain. If both cleartextTraffic and securityConfig are declared, whether plaintext traffic can be transmitted in the custom network domain is determined by the cleartextPermitted attribute.",
+                          "type": "boolean"
+                        },
+                        "domains": {
+                          "description": "Indicates the domain name configuration. This attribute consists of the subDomains and name sub-attributes.",
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "propertyNames": {
+                              "enum": [
+                                "subdomains",
+                                "name"
+                              ]
+                            },
+                            "properties": {
+                              "subdomains": {
+                                "description": "Subdomain name",
+                                "type": "boolean"
+                              },
+                              "name": {
+                                "description": "Domain name",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "supportBackup": {
+              "description": "Specifies whether the application supports backup and restoration. If this attribute is set to false, backup or restoration will never be performed for the application.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "compressNativeLibs": {
+              "description": "Specifies whether the libs libraries of the .hap file are compressed for storage. If this attribute is set to false, the libs libraries are stored without being compressed and will be directly loaded during the installation of the .hap file.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "allowComponentsProxy": {
+              "description": "Indicates whether the application supports the ability proxy.If this property is set to true, the ability component can be hooked.",
+              "type": "boolean"
+            }
+          }
+        },
+        "phone": {
+          "description": "The configuration in the default tag is applicable to all devices. If the configuration is different for other device types, you need to configure the configuration under the configuration tag of the device type.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive",
+              "jointUserId",
+              "process",
+              "ark",
+              "directLaunch",
+              "network",
+              "supportBackup",
+              "compressNativeLibs",
+              "allowComponentsProxy"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            },
+            "jointUserId": {
+              "description": "Indicates the user ID shared by applications.Generally, applications run in different processes, and resources used by the applications are isolated. However, in some cases, you may develop multiple applications that need to share resources with each other. This resource sharing is implemented based on the same jointUserId value on the premise that the applications have the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string"
+            },
+            "process": {
+              "description": "Indicates the name of the process running the application or ability.If a process is configured in the deviceConfig tag, all abilities of the application run in this process. You can also set the process attribute for a specific ability, so that the ability can run in this process. If this attribute is set to the same process name as other applications, all these applications can run in the same process on the premise that they have the same jointUserId and the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "ark": {
+              "description": "This tag identifies maple configuration information.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "reqVersion",
+                  "flag"
+                ]
+              },
+              "properties": {
+                "reqVersion": {
+                  "description": "Maple version number that supports the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "compatible",
+                      "target"
+                    ]
+                  },
+                  "properties": {
+                    "compatible": {
+                      "description": "Indicates the minimum maple version that supports the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "target": {
+                      "description": "Specifies the target maple version of the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "flag": {
+                  "description": "Specifies the type of the maple application.",
+                  "type": "string",
+                  "enum": [
+                    "m",
+                    "mo",
+                    "z"
+                  ]
+                }
+              }
+            },
+            "directLaunch": {
+              "description": "Specifies whether the application can be started when the device is locked. Set this attribute to true if you want to start the application without unlocking the device.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "network": {
+              "description": "Indicates the network security configuration. You can customize the network security settings of the application in a security statement configuration file without modifying the application code.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "cleartextTraffic",
+                  "securityConfig"
+                ]
+              },
+              "properties": {
+                "cleartextTraffic": {
+                  "description": "Specifies whether an application can use plaintext network transmission. The value is of the Boolean type. The value true indicates that plaintext network transmission is enabled.",
+                  "type": "boolean"
+                },
+                "securityConfig": {
+                  "description": "Indicates the network security configuration of the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "domainSettings"
+                    ]
+                  },
+                  "properties": {
+                    "domainSettings": {
+                      "description": "Indicates the security settings of the custom network domain. This attribute allows nested domains. To be more specific, the domainSettings object of a large domain can be nested with the domainSettings objects of small network domains.",
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "cleartextPermitted",
+                          "domains"
+                        ]
+                      },
+                      "properties": {
+                        "cleartextPermitted": {
+                          "description": "Specifies whether plaintext traffic can be transmitted in the custom network domain. If both cleartextTraffic and securityConfig are declared, whether plaintext traffic can be transmitted in the custom network domain is determined by the cleartextPermitted attribute.",
+                          "type": "boolean"
+                        },
+                        "domains": {
+                          "description": "Indicates the domain name configuration. This attribute consists of the subDomains and name sub-attributes.",
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "propertyNames": {
+                              "enum": [
+                                "subdomains",
+                                "name"
+                              ]
+                            },
+                            "properties": {
+                              "subdomains": {
+                                "description": "Subdomain name",
+                                "type": "boolean"
+                              },
+                              "name": {
+                                "description": "Domain name",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "supportBackup": {
+              "description": "Specifies whether the application supports backup and restoration. If this attribute is set to false, backup or restoration will never be performed for the application.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "compressNativeLibs": {
+              "description": "Specifies whether the libs libraries of the .hap file are compressed for storage. If this attribute is set to false, the libs libraries are stored without being compressed and will be directly loaded during the installation of the .hap file.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "allowComponentsProxy": {
+              "description": "Indicates whether the application supports the ability proxy.If this property is set to true, the ability component can be hooked.",
+              "type": "boolean"
+            }
+          }
+        },
+        "tablet": {
+          "description": "The configuration in the default tag is applicable to all devices. If the configuration is different for other device types, you need to configure the configuration under the configuration tag of the device type.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive",
+              "jointUserId",
+              "process",
+              "ark",
+              "directLaunch",
+              "network",
+              "supportBackup",
+              "compressNativeLibs",
+              "allowComponentsProxy"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            },
+            "jointUserId": {
+              "description": "Indicates the user ID shared by applications.Generally, applications run in different processes, and resources used by the applications are isolated. However, in some cases, you may develop multiple applications that need to share resources with each other. This resource sharing is implemented based on the same jointUserId value on the premise that the applications have the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string"
+            },
+            "process": {
+              "description": "Indicates the name of the process running the application or ability.If a process is configured in the deviceConfig tag, all abilities of the application run in this process. You can also set the process attribute for a specific ability, so that the ability can run in this process. If this attribute is set to the same process name as other applications, all these applications can run in the same process on the premise that they have the same jointUserId and the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "ark": {
+              "description": "This tag identifies maple configuration information.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "reqVersion",
+                  "flag"
+                ]
+              },
+              "properties": {
+                "reqVersion": {
+                  "description": "Maple version number that supports the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "compatible",
+                      "target"
+                    ]
+                  },
+                  "properties": {
+                    "compatible": {
+                      "description": "Indicates the minimum maple version that supports the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "target": {
+                      "description": "Specifies the target maple version of the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "flag": {
+                  "description": "Specifies the type of the maple application.",
+                  "type": "string",
+                  "enum": [
+                    "m",
+                    "mo",
+                    "z"
+                  ]
+                }
+              }
+            },
+            "directLaunch": {
+              "description": "Specifies whether the application can be started when the device is locked. Set this attribute to true if you want to start the application without unlocking the device.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "network": {
+              "description": "Indicates the network security configuration. You can customize the network security settings of the application in a security statement configuration file without modifying the application code.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "cleartextTraffic",
+                  "securityConfig"
+                ]
+              },
+              "properties": {
+                "cleartextTraffic": {
+                  "description": "Specifies whether an application can use plaintext network transmission. The value is of the Boolean type. The value true indicates that plaintext network transmission is enabled.",
+                  "type": "boolean"
+                },
+                "securityConfig": {
+                  "description": "Indicates the network security configuration of the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "domainSettings"
+                    ]
+                  },
+                  "properties": {
+                    "domainSettings": {
+                      "description": "Indicates the security settings of the custom network domain. This attribute allows nested domains. To be more specific, the domainSettings object of a large domain can be nested with the domainSettings objects of small network domains.",
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "cleartextPermitted",
+                          "domains"
+                        ]
+                      },
+                      "properties": {
+                        "cleartextPermitted": {
+                          "description": "Specifies whether plaintext traffic can be transmitted in the custom network domain. If both cleartextTraffic and securityConfig are declared, whether plaintext traffic can be transmitted in the custom network domain is determined by the cleartextPermitted attribute.",
+                          "type": "boolean"
+                        },
+                        "domains": {
+                          "description": "Indicates the domain name configuration. This attribute consists of the subDomains and name sub-attributes.",
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "propertyNames": {
+                              "enum": [
+                                "subdomains",
+                                "name"
+                              ]
+                            },
+                            "properties": {
+                              "subdomains": {
+                                "description": "Indicates whether a subdomain name is available.This label is a boolean type.",
+                                "type": "boolean"
+                              },
+                              "name": {
+                                "description": "Indicates the domain name.This label is a string type",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "supportBackup": {
+              "description": "Specifies whether the application supports backup and restoration. If this attribute is set to false, backup or restoration will never be performed for the application.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "compressNativeLibs": {
+              "description": "Specifies whether the libs libraries of the .hap file are compressed for storage. If this attribute is set to false, the libs libraries are stored without being compressed and will be directly loaded during the installation of the .hap file.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "allowComponentsProxy": {
+              "description": "Indicates whether the application supports the ability proxy.If this property is set to true, the ability component can be hooked.",
+              "type": "boolean"
+            }
+          }
+        },
+        "car": {
+          "description": "The configuration in the default tag is applicable to all devices. If the configuration is different for other device types, you need to configure the configuration under the configuration tag of the device type.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive",
+              "jointUserId",
+              "process",
+              "ark",
+              "directLaunch",
+              "network",
+              "supportBackup",
+              "compressNativeLibs",
+              "allowComponentsProxy"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            },
+            "jointUserId": {
+              "description": "Indicates the user ID shared by applications.Generally, applications run in different processes, and resources used by the applications are isolated. However, in some cases, you may develop multiple applications that need to share resources with each other. This resource sharing is implemented based on the same jointUserId value on the premise that the applications have the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string"
+            },
+            "process": {
+              "description": "Indicates the name of the process running the application or ability.If a process is configured in the deviceConfig tag, all abilities of the application run in this process. You can also set the process attribute for a specific ability, so that the ability can run in this process. If this attribute is set to the same process name as other applications, all these applications can run in the same process on the premise that they have the same jointUserId and the same signature.This attribute is not supported by devices running the OHOS.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "ark": {
+              "description": "This tag identifies maple configuration information.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "reqVersion",
+                  "flag"
+                ]
+              },
+              "properties": {
+                "reqVersion": {
+                  "description": "Maple version number that supports the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "compatible",
+                      "target"
+                    ]
+                  },
+                  "properties": {
+                    "compatible": {
+                      "description": "Indicates the minimum maple version that supports the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "target": {
+                      "description": "Specifies the target maple version of the application. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "flag": {
+                  "description": "Specifies the type of the maple application.",
+                  "type": "string",
+                  "enum": [
+                    "m",
+                    "mo",
+                    "z"
+                  ]
+                }
+              }
+            },
+            "directLaunch": {
+              "description": "Specifies whether the application can be started when the device is locked. Set this attribute to true if you want to start the application without unlocking the device.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "network": {
+              "description": "Indicates the network security configuration. You can customize the network security settings of the application in a security statement configuration file without modifying the application code.",
+              "type": "object",
+              "propertyNames": {
+                "enum": [
+                  "cleartextTraffic",
+                  "securityConfig"
+                ]
+              },
+              "properties": {
+                "cleartextTraffic": {
+                  "description": "Specifies whether an application can use plaintext network transmission. The value is of the Boolean type. The value true indicates that plaintext network transmission is enabled.",
+                  "type": "boolean"
+                },
+                "securityConfig": {
+                  "description": "Indicates the network security configuration of the application.",
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "domainSettings"
+                    ]
+                  },
+                  "properties": {
+                    "domainSettings": {
+                      "description": "Indicates the security settings of the custom network domain. This attribute allows nested domains. To be more specific, the domainSettings object of a large domain can be nested with the domainSettings objects of small network domains.",
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "cleartextPermitted",
+                          "domains"
+                        ]
+                      },
+                      "properties": {
+                        "cleartextPermitted": {
+                          "description": "Specifies whether plaintext traffic can be transmitted in the custom network domain. If both cleartextTraffic and securityConfig are declared, whether plaintext traffic can be transmitted in the custom network domain is determined by the cleartextPermitted attribute.",
+                          "type": "boolean"
+                        },
+                        "domains": {
+                          "description": "Indicates the domain name configuration. This attribute consists of the subDomains and name sub-attributes.",
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "propertyNames": {
+                              "enum": [
+                                "subdomains",
+                                "name"
+                              ]
+                            },
+                            "properties": {
+                              "subdomains": {
+                                "description": "Subdomain name",
+                                "type": "boolean"
+                              },
+                              "name": {
+                                "description": "Domain name",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "supportBackup": {
+              "description": "Specifies whether the application supports backup and restoration. If this attribute is set to false, backup or restoration will never be performed for the application.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "compressNativeLibs": {
+              "description": "Specifies whether the libs libraries of the .hap file are compressed for storage. If this attribute is set to false, the libs libraries are stored without being compressed and will be directly loaded during the installation of the .hap file.This attribute is not supported by devices running the OHOS.",
+              "type": "boolean"
+            },
+            "allowComponentsProxy": {
+              "description": "Indicates whether the application supports the ability proxy.If this property is set to true, the ability component can be hooked.",
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "module": {
+      "description": "Indicates the configuration of a .hap file. The module configuration is valid only for the current .hap file.",
+      "type": "object",
+      "required": [
+        "package",
+        "deviceType",
+        "distro"
+      ],
+      "propertyNames": {
+        "enum": [
+          "commonEvents",
+          "description",
+          "abilities",
+          "js",
+          "reqPermissions",
+          "deviceType",
+          "distro",
+          "reqCapabilities",
+          "metaData",
+          "package",
+          "name",
+          "supportedModes",
+          "shortcuts",
+          "defPermissions",
+          "defPermissionGroups",
+          "allowClassMap",
+          "colorMode",
+          "theme",
+          "mainAbility",
+          "resizeable",
+          "entryTheme"
+        ]
+      },
+      "properties": {
+        "package": {
+          "description": "Indicates the name of the .hap file. It cannot be used as the bundle name of the application. The value is a string with a maximum of 127 bytes, in the reverse domain name notation. It is recommended that the value be the same as the project directory of the .hap file.This attribute is not supported by basic watches.",
+          "type": "string",
+          "maxLength": 127,
+          "minLength": 1
+        },
+        "name": {
+          "description": "Indicates the class name of the .hap file. The value is a string with a maximum of 255 bytes, in the reverse domain name notation. The prefix must be the same as the package value specified for this module. Alternatively, the value can start with a period (.) followed by the class name.This attribute is not supported by basic watches.",
+          "type": "string",
+          "maxLength": 255
+        },
+        "description": {
+          "description": "Describes the .hap file. The value can be a string or a resource index to descriptions in multiple languages. A string can contain a maximum of 255 bytes. If the value exceeds 255 bytes, use the resource index.The tag can be left blank by default.",
+          "type": "string",
+          "maxLength": 255
+        },
+        "deviceType": {
+          "description": "Indicates the type of devices on which the abilities can run. The value can be default, tv (smart TVs), wearable (smart watches), liteWearable (basic watches), smartVision, phone, car, tablet, router or any combination of these values.This label cannot be left blank.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "car",
+              "default",
+              "liteWearable",
+              "phone",
+              "smartVision",
+              "tablet",
+              "tv",
+              "wearable",
+              "router"
+            ]
+          }
+        },
+        "distro": {
+          "description": "Indicates the description of the current .hap file.This label cannot be left blank.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "deliveryWithInstall",
+              "moduleName",
+              "moduleType",
+              "installationFree"
+            ]
+          },
+          "required": [
+            "deliveryWithInstall",
+            "moduleName",
+            "moduleType"
+          ],
+          "properties": {
+            "deliveryWithInstall": {
+              "description": "Specifies whether the .hap file is installed when the user installs the application.true: The .hap file is installed during the application installation.false: The .hap file is not installed during the application installation.This label cannot be left blank.",
+              "type": "boolean"
+            },
+            "moduleName": {
+              "description": "Indicates the name of the current .hap file.This label cannot be left blank.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "moduleType": {
+              "description": "Indicates the type of the current .hap file. The value can be entry or feature.This label cannot be left blank.",
+              "type": "string",
+              "enum": [
+                "entry",
+                "feature",
+                "har"
+              ]
+            },
+            "installationFree": {
+              "description": "Indicates whether free installation of the current hap is supported. If moduleType is feature, this item label is mandatory, else this item label is optional.",
+              "type": "boolean"
+            }
+          },
+          "if": {
+            "properties": {
+              "moduleType": {
+                "const": "har"
+              }
+            }
+          },
+          "then": {
+            "propertyNames": {
+              "enum": [
+                "deliveryWithInstall",
+                "moduleName",
+                "moduleType",
+                "installationFree"
+              ]
+            }
+          },
+          "else": {
+            "required": [
+              "installationFree"
+            ]
+          }
+        },
+        "abilities": {
+          "description": "Indicates all abilities in the current module. The value is an array of objects, each of which represents an ability.This label can be left blank by default,and indicates no capability exists in the current module.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "page"
+                    }
+                  }
+                },
+                "then": {
+                  "propertyNames": {
+                    "enum": [
+                      "process",
+                      "mergeRule",
+                      "name",
+                      "description",
+                      "icon",
+                      "type",
+                      "label",
+                      "visible",
+                      "launchType",
+                      "metaData",
+                      "orientation",
+                      "permissions",
+                      "skills",
+                      "configChanges",
+                      "mission",
+                      "targetAbility",
+                      "supportPipMode",
+                      "formsEnabled",
+                      "forms",
+                      "deviceCapability",
+                      "resizeable"
+                    ]
+                  },
+                  "required": [
+                    "name",
+                    "type"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "data"
+                    }
+                  }
+                },
+                "then": {
+                  "propertyNames": {
+                    "enum": [
+                      "process",
+                      "mergeRule",
+                      "name",
+                      "description",
+                      "icon",
+                      "type",
+                      "label",
+                      "visible",
+                      "uri",
+                      "launchType",
+                      "metaData",
+                      "permissions",
+                      "skills",
+                      "grantPermission",
+                      "readPermission",
+                      "writePermission",
+                      "uriPermission",
+                      "configChanges",
+                      "multiUserShared",
+                      "formsEnabled",
+                      "forms",
+                      "deviceCapability",
+                      "resizeable"
+                    ]
+                  },
+                  "required": [
+                    "name",
+                    "type",
+                    "uri"
+                  ],
+                  "properties": {
+                    "formsEnabled": {
+                      "const": false
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "service"
+                    }
+                  }
+                },
+                "then": {
+                  "propertyNames": {
+                    "enum": [
+                      "process",
+                      "mergeRule",
+                      "name",
+                      "description",
+                      "icon",
+                      "type",
+                      "label",
+                      "visible",
+                      "launchType",
+                      "metaData",
+                      "permissions",
+                      "skills",
+                      "backgroundModes",
+                      "configChanges",
+                      "formsEnabled",
+                      "forms",
+                      "deviceCapability",
+                      "resizeable"
+                    ]
+                  },
+                  "required": [
+                    "name",
+                    "type"
+                  ],
+                  "properties": {
+                    "formsEnabled": {
+                      "const": false
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "CA"
+                    }
+                  }
+                },
+                "then": {
+                  "propertyNames": {
+                    "enum": [
+                      "process",
+                      "mergeRule",
+                      "name",
+                      "description",
+                      "icon",
+                      "type",
+                      "label",
+                      "visible",
+                      "launchType",
+                      "metaData",
+                      "permissions",
+                      "skills",
+                      "configChanges",
+                      "formsEnabled",
+                      "forms",
+                      "deviceCapability",
+                      "resizeable"
+                    ]
+                  },
+                  "required": [
+                    "name",
+                    "type"
+                  ],
+                  "properties": {
+                    "formsEnabled": {
+                      "const": false
+                    }
+                  }
+                }
+              }
+            ],
+            "properties": {
+              "name": {
+                "description": "Indicates the name of the ability. The value is a reverse domain name, in the format of \"Complete bundle name.Class name\", for example, \"com.example.myapplication.MainAbility\", where com.example.myapplication indicates the bundle name and MainAbility indicates the class name. Alternatively, the value can start with a period (.) followed by the class name, for example, \".MainAbility\", which will be resolved into a complete name prefixed with the bundle name of the application.",
+                "type": "string",
+                "maxLength": 127
+              },
+              "description": {
+                "description": "Describes the ability. The value can be a string or a resource index to descriptions in multiple languages.This label can be left blank by default.",
+                "type": "string",
+                "maxLength": 255
+              },
+              "icon": {
+                "description": "Indicates the index to the ability icon file, in the format of \"$media:ability_icon\".This label can be left blank by default.",
+                "type": "string"
+              },
+              "type": {
+                "description": "Indicates the template used by the ability. The value can be page, service, or provider.The \"page\" indicates FA developed using the Page template to provide the capability of interacting with users.The \"service\" indicates AA developed using the Service template to provide the capability of running tasks in the background.The \"provider\" indicates AA developed using the Data template to provide unified data access for external systems.This label cannot be left blank.",
+                "type": "string",
+                "enum": [
+                  "page",
+                  "service",
+                  "data",
+                  "CA"
+                ]
+              },
+              "process": {
+                "description": "Indicates the name of the process running the application or ability.If a process is configured in the deviceConfig tag, all abilities of the application run in this process. You can also set the process attribute for a specific ability, so that the ability can run in this process. If this attribute is set to the same process name as other applications, all these applications can run in the same process on the premise that they have the same jointUserId and the same signature.This attribute is not supported by devices running the OHOS.",
+                "type": "string",
+                "maxLength": 31
+              },
+              "mergeRule": {
+                "description": "Tags identify the rule for merging configs.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "remove",
+                    "replace"
+                  ]
+                },
+                "properties": {
+                  "remove": {
+                    "description": "Attributes to Be Removed After Marking Merge",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "replace": {
+                    "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "formsEnabled": {
+                "description": "Indicates whether the capability of the page type provides the embedded card capability. The value is of the Boolean type. The value true indicates that the capability is provided, and the value false indicates that the capability is not provided.",
+                "type": "boolean"
+              },
+              "label": {
+                "description": "Indicates the ability name visible to users. The tag value is set to the resource index of this name to support multiple languages.",
+                "type": "string",
+                "pattern": "^[$]string:[0-9a-zA-Z_.]+$",
+                "maxLength": 255
+              },
+              "visible": {
+                "description": "Specifies whether the ability can be called by other applications.The \"true\" indicates the ability can be called by other applications.The \"false\" indicates the ability cannot be called by other applications.This tag is optional. The default value is false.",
+                "type": "boolean"
+              },
+              "uri": {
+                "description": "Indicates the Uniform Resource Identifier (URI) of the ability, in the format of \"[scheme:][//authority][path][?query][#fragment]\".",
+                "type": "string",
+                "maxLength": 255
+              },
+              "launchType": {
+                "description": "Indicates the startup type of the ability. The value can be singleton (only a single Ability instance can be created during startup) or standard (multiple Ability instances can be created during startup).This attribute is not supported by basic watches.",
+                "type": "string",
+                "enum": [
+                  "singleton",
+                  "standard",
+                  "singleMission"
+                ]
+              },
+              "metaData": {
+                "description": "Indicates the metadata of the ability.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "parameters",
+                    "results",
+                    "customizeData",
+                    "mergeRule"
+                  ]
+                },
+                "properties": {
+                  "mergeRule": {
+                    "description": "Tags identify the rule for merging configs.",
+                    "type": "object",
+                    "propertyNames": {
+                      "enum": [
+                        "remove",
+                        "replace"
+                      ]
+                    },
+                    "properties": {
+                      "remove": {
+                        "description": "Attributes to Be Removed After Marking Merge",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "replace": {
+                        "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "parameters": {
+                    "description": "Indicates the metadata of the parameters to be passed for calling the ability. The metadata of each parameter consists of the description, name, and type sub-attributes.",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "description",
+                          "name",
+                          "type"
+                        ]
+                      },
+                      "required": [
+                        "name",
+                        "type"
+                      ],
+                      "properties": {
+                        "name": {
+                          "description": "Indicates the name of the parameter.",
+                          "type": "string",
+                          "maxLength": 255
+                        },
+                        "type": {
+                          "description": "Indicates the type of the parameter, for example, Integer.",
+                          "type": "string"
+                        },
+                        "description": {
+                          "description": "Describes the parameter. The value can be a string or a resource index to descriptions in multiple languages.",
+                          "type": "string",
+                          "maxLength": 255
+                        }
+                      }
+                    }
+                  },
+                  "results": {
+                    "description": "Indicates the metadata of the ability return value. The metadata of each return value consists of the description, name, and type sub-attributes.",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "description",
+                          "name",
+                          "type"
+                        ]
+                      },
+                      "required": [
+                        "type"
+                      ],
+                      "properties": {
+                        "name": {
+                          "description": "Indicates the name of the return value.",
+                          "type": "string",
+                          "maxLength": 255
+                        },
+                        "type": {
+                          "description": "Indicates the type of the return value, for example, Integer.",
+                          "type": "string"
+                        },
+                        "description": {
+                          "description": "Describes the return value. The value can be a string or a resource index to descriptions in multiple languages.",
+                          "type": "string",
+                          "maxLength": 255
+                        }
+                      }
+                    }
+                  },
+                  "customizeData": {
+                    "description": "Indicates the custom metadata of the parent component. The parameters and results attributes are not configurable in the module tag.",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "name",
+                          "value",
+                          "extra"
+                        ]
+                      },
+                      "properties": {
+                        "name": {
+                          "description": "Indicates the key of a data element. The value is a string with a maximum of 255 bytes.",
+                          "type": "string",
+                          "maxLength": 255
+                        },
+                        "value": {
+                          "description": "Indicates the value of a data element. The value is a string with a maximum of 255 bytes.",
+                          "type": "string",
+                          "maxLength": 255
+                        },
+                        "extra": {
+                          "description": "Indicates the custom format of the data element. The value is an index to the resource that identifies the data.",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "orientation": {
+                "description": "Indicates the display orientation of the ability. This attribute is valid only for abilities using the Page template.",
+                "enum": [
+                  "unspecified",
+                  "landscape",
+                  "portrait",
+                  "followRecent"
+                ],
+                "type": "string"
+              },
+              "permissions": {
+                "description": "Indicates the permissions required for abilities of another application to call the current ability, generally in the format of a reverse domain name. The value can be either the permissions predefined in the OS or those customized by your application. If a custom permission is used, the value must be the same as the name value of a specific permission defined in the defPermissions attribute.",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 255
+                }
+              },
+              "skills": {
+                "description": "Indicates the types of the intent that can be accepted by the ability.",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "actions",
+                      "entities",
+                      "uris"
+                    ]
+                  },
+                  "properties": {
+                    "actions": {
+                      "description": "Indicates the actions of the intent that can be accepted by the ability. The value can have one or multiple actions predefined in the system.",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "entities": {
+                      "description": "Indicates the entities of the intent that can be accepted by the ability, such as video and Home application. The value can have one or multiple entities either predefined in the system or be customized.",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "uris": {
+                      "description": "This tag identifies the collection of data specifications to be added to the Intent filter.",
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "propertyNames": {
+                          "enum": [
+                            "scheme",
+                            "host",
+                            "port",
+                            "pathStartWith",
+                            "path",
+                            "pathRegx"
+                          ]
+                        },
+                        "required": [
+                          "scheme"
+                        ],
+                        "properties": {
+                          "scheme": {
+                            "description": "This label is a string type.",
+                            "type": "string"
+                          },
+                          "host": {
+                            "description": "This label is a string type.",
+                            "type": "string"
+                          },
+                          "port": {
+                            "description": "This label is a string type.",
+                            "type": "string"
+                          },
+                          "pathStartWith": {
+                            "description": "This label is a string type.",
+                            "type": "string"
+                          },
+                          "path": {
+                            "description": "This label is a string type.",
+                            "type": "string"
+                          },
+                          "pathRegx": {
+                            "description": "This label is a string type.",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "backgroundModes": {
+                "description": "Indicates the background service addressing a specific usage scenario. This attribute is dedicated to the abilities using the Service template. You can assign multiple background service types to a specific ability using the Service template.",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "dataTransfer",
+                    "audioPlayback",
+                    "audioRecording",
+                    "pictureInPicture",
+                    "voip",
+                    "location",
+                    "bluetoothInteraction",
+                    "wifiInteraction",
+                    "screenFetch",
+                    "multiDeviceConnection"
+                  ]
+                }
+              },
+              "grantPermission": {
+                "description": "Specifies whether a permission can be granted to any data within the ability.",
+                "type": "boolean"
+              },
+              "readPermission": {
+                "description": "Indicates the permission required for reading ability data. The value is a string with a maximum of 255 bytes. This attribute is valid only for the abilities whose type is provider.This attribute is not supported by devices running the OHOS.",
+                "type": "string",
+                "maxLength": 255
+              },
+              "writePermission": {
+                "description": "Indicates the permission required for writing data to the ability. The value is string of a maximum of 255 bytes. This attribute is valid only for the abilities whose type is provider.This attribute is not supported by devices running the OHOS.",
+                "type": "string",
+                "maxLength": 255
+              },
+              "uriPermission": {
+                "description": "Indicates the application data that the ability has the permission to access. This attribute consists of the mode and path sub-attributes. This attribute is valid only for the abilities whose type is provider.This attribute is not supported by devices running the OHOS.",
+                "type": "object",
+                "required": [
+                  "path"
+                ],
+                "propertyNames": {
+                  "enum": [
+                    "mode",
+                    "path"
+                  ]
+                },
+                "properties": {
+                  "mode": {
+                    "description": "This tag identifies the matching mode of uriPermission.",
+                    "type": "string",
+                    "enum": [
+                      "default",
+                      "prefix",
+                      "pattern"
+                    ]
+                  },
+                  "path": {
+                    "description": "Path of the tag uriPermission.",
+                    "type": "string",
+                    "maxLength": 255
+                  }
+                }
+              },
+              "configChanges": {
+                "description": "Indicates the system configurations that the ability concerns. Upon any changes on the configurations, the onConfigurationChanged callback will be invoked to notify the ability.",
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "density",
+                    "fontSize",
+                    "layout",
+                    "locale",
+                    "mcc",
+                    "mnc",
+                    "orientation",
+                    "size",
+                    "smallestSize"
+                  ]
+                }
+              },
+              "mission": {
+                "description": "Indicates the task stack of the ability. By default, all abilities in an application belong to the same task stack. This attribute is specific to the abilities using the Page template.This attribute is not supported by devices running the OHOS.",
+                "type": "string"
+              },
+              "targetAbility": {
+                "description": "Indicates the target ability that this ability alias points to. This attribute is specific to the abilities using the Page template. The target ability must belong to the same application as the alias and must be declared in config.json ahead of the alias.This attribute is not supported by devices running the OHOS.",
+                "type": "string"
+              },
+              "multiUserShared": {
+                "description": "Specifies whether the ability supports data sharing among multiple users. This attribute is specific to the abilities whose type is provider. Note that this attribute will invalidate the visible attribute. If this attribute is set to true, only one copy of data is stored for multiple users.This attribute is not supported by devices running the OHOS.",
+                "type": "boolean"
+              },
+              "supportPipMode": {
+                "description": "Specifies whether the ability allows the user to enter the Picture in Picture (PiP) mode. The PiP mode enables the user to watch a video in a small window that hovers on top of a full screen window (main window). This attribute is specific to the abilities using the Page template.This attribute is not supported by devices running the OHOS.",
+                "type": "boolean"
+              },
+              "deviceCapability": {
+                "description": "This label indicates the capability required by the device when the capability is running.",
+                "type": "array",
+                "maxItems": 512,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "maxLength": 64
+                }
+              },
+              "resizeable": {
+                "description": "Indicates whether the ability supports the multi-window feature.",
+                "type": "boolean"
+              },
+              "forms": {
+                "description": "This tag identifies the embedded card attribute of the capability. This tag is valid only when formsEnabled is set to true. This tag can be left blank by default.",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "name",
+                      "description",
+                      "isDefault",
+                      "type",
+                      "colorMode",
+                      "supportDimensions",
+                      "defaultDimension",
+                      "landscapeLayouts",
+                      "portraitLayouts",
+                      "updateEnabled",
+                      "scheduledUpdateTime",
+                      "updateDuration",
+                      "metaData",
+                      "jsComponentName",
+                      "formConfigAbility",
+                      "formVisibleNotify"
+                    ]
+                  },
+                  "properties": {
+                    "name": {
+                      "description": "Indicates the name of the form class. The tag value is a string of up to 127 bytes. The tag cannot be default.",
+                      "type": "string",
+                      "maxLength": 127
+                    },
+                    "description": {
+                      "description": "This tag identifies the description of the form. The tag value can be a string indicating the description content (a string of up to 255 bytes. If the length exceeds 255 bytes, use the resource index mode) or the resource index of the description content to support multiple languages. This tag can be left blank by default.",
+                      "type": "string",
+                      "maxLength": 255
+                    },
+                    "isDefault": {
+                      "description": "Indicates whether the card is the default icon. The value is of the Boolean type. The value true indicates that the card is the default card, and the value false indicates that the card is not the default card. Each capability can have only one default card.",
+                      "type": "boolean"
+                    },
+                    "type": {
+                      "description": "Indicates the card type. The value can be Java or JavaScript.",
+                      "type": "string",
+                      "enum": [
+                        "Java",
+                        "JS"
+                      ]
+                    },
+                    "colorMode": {
+                      "description": "This tag identifies the card hue. The value can be auto, dark, or light. dark indicates that the card supports the dark color mode, light indicates that the card does not support the dark color mode, and auto indicates that the card hue is the same as the system hue.",
+                      "type": "string",
+                      "enum": [
+                        "auto",
+                        "dark",
+                        "light"
+                      ]
+                    },
+                    "supportDimensions": {
+                      "description": "This label identifies the card appearance specification. The value is \"1*2\",\" 2*2\", \"2*4\",\"4*4\" and cannot be default. At least one card specification must be specified when defining a card.",
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "1*2",
+                          "2*2",
+                          "2*4",
+                          "4*4"
+                        ]
+                      }
+                    },
+                    "defaultDimension": {
+                      "description": "This label identifies the default appearance specifications of the card.",
+                      "type": "string",
+                      "enum": [
+                        "1*2",
+                        "2*2",
+                        "2*4",
+                        "4*4"
+                      ]
+                    },
+                    "landscapeLayouts": {
+                      "description": "This label identifies the horizontal layout file corresponding to the card appearance specifications. It corresponds to the specifications in supportDimensions. It cannot be defaulted. If the type is JS, this label does not need to be specified.",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "portraitLayouts": {
+                      "description": "This label identifies the vertical layout file corresponding to the card appearance specifications. It corresponds to the specifications in supportDimensions and cannot be defaulted. This label does not need to be specified when the type is JS.",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "updateEnabled": {
+                      "description": "Indicates whether the card supports scheduled refresh. The value is of the Boolean type. true indicates that the card supports scheduled vertical refresh, and false indicates that the card does not support scheduled vertical refresh.",
+                      "type": "boolean"
+                    },
+                    "scheduledUpdateTime": {
+                      "description": "Indicates the time when a card is refreshed at a fixed time. The value is counted in 24 hours, accurate to minute. This tag can be set to the default value.",
+                      "type": "string",
+                      "pattern": "^(([0-1][0-9])|([2][0-3]))[:]+([0-5][0-9])$"
+                    },
+                    "updateDuration": {
+                      "description": "This tag identifies the update frequency of the card. The unit is 30 minutes. The value is a multiple of 30. The maximum frequency of a card is refreshed every 30 minutes. You can select either refresh or refresh at a fixed point. If both are configured, the card is refreshed at a scheduled time. This label is an integer.",
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "metaData": {
+                      "description": "This tag indicates the customized information of a card, including the customizeData array tag. This tag can be left blank by default.",
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "mergeRule",
+                          "customizeData"
+                        ]
+                      },
+                      "properties": {
+                        "mergeRule": {
+                          "description": "Tags identify the rule for merging configs.",
+                          "type": "object",
+                          "propertyNames": {
+                            "enum": [
+                              "remove",
+                              "replace"
+                            ]
+                          },
+                          "properties": {
+                            "remove": {
+                              "description": "Attributes to Be Removed After Marking Merge",
+                              "type": "array",
+                              "uniqueItems": true,
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "replace": {
+                              "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                              "type": "array",
+                              "uniqueItems": true,
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "customizeData": {
+                          "description": "Indicates the custom metadata of the parent component. The parameters and results attributes are not configurable in the module tag.",
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "propertyNames": {
+                              "enum": [
+                                "name",
+                                "value",
+                                "extra"
+                              ]
+                            },
+                            "properties": {
+                              "name": {
+                                "description": "Indicates the key of a data element. The value is a string with a maximum of 255 bytes.",
+                                "type": "string",
+                                "maxLength": 255
+                              },
+                              "value": {
+                                "description": "Indicates the value of a data element. The value is a string with a maximum of 255 bytes.",
+                                "type": "string",
+                                "maxLength": 255
+                              },
+                              "extra": {
+                                "description": "Indicates the custom format of the data element. The value is an index to the resource that identifies the data.",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "jsComponentName": {
+                      "description": "Component name of a JS card. This tag is mandatory only for JS cards.",
+                      "type": "string",
+                      "maxLength": 127
+                    },
+                    "formConfigAbility": {
+                      "description": "Indicates the name of the facility or activity for card adjustment.",
+                      "type": "string",
+                      "maxLength": 127,
+                      "pattern": "^activity://(.*)|ability://(.*)$"
+                    },
+                    "formVisibleNotify": {
+                      "description": "This tag identifies whether the card is allowed to use card visibility notifications.",
+                      "type": "boolean"
+                    }
+                  },
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "JS"
+                      }
+                    }
+                  },
+                  "then": {
+                    "propertyNames": {
+                      "enum": [
+                        "name",
+                        "description",
+                        "isDefault",
+                        "type",
+                        "colorMode",
+                        "supportDimensions",
+                        "defaultDimension",
+                        "updateEnabled",
+                        "scheduledUpdateTime",
+                        "updateDuration",
+                        "metaData",
+                        "jsComponentName",
+                        "formConfigAbility",
+                        "formVisibleNotify"
+                      ]
+                    },
+                    "required": [
+                      "name",
+                      "isDefault",
+                      "type",
+                      "supportDimensions",
+                      "defaultDimension",
+                      "updateEnabled"
+                    ]
+                  },
+                  "else": {
+                    "propertyNames": {
+                      "enum": [
+                        "name",
+                        "description",
+                        "isDefault",
+                        "type",
+                        "colorMode",
+                        "supportDimensions",
+                        "defaultDimension",
+                        "landscapeLayouts",
+                        "portraitLayouts",
+                        "updateEnabled",
+                        "scheduledUpdateTime",
+                        "updateDuration",
+                        "metaData",
+                        "jsComponentName",
+                        "formConfigAbility",
+                        "formVisibleNotify"
+                      ]
+                    },
+                    "required": [
+                      "name",
+                      "isDefault",
+                      "type",
+                      "supportDimensions",
+                      "defaultDimension",
+                      "updateEnabled",
+                      "landscapeLayouts",
+                      "portraitLayouts"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "js": {
+          "description": "Indicates a set of all modules developed using the JavaScript UI framework. Each element in the set represents the information about a JavaScript module.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "pages"
+            ],
+            "propertyNames": {
+              "enum": [
+                "mergeRule",
+                "name",
+                "pages",
+                "window",
+                "type"
+              ]
+            },
+            "properties": {
+              "name": {
+                "description": "Indicates the name of the JavaScript module.This label can be left blank by default.",
+                "type": "string"
+              },
+              "pages": {
+                "description": "Describes the route information about all pages in the JavaScript module, including the page path and page name. The value is an array, in which each element represents a page. The first element in the array represents the home page of the JavaScript FA.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "window": {
+                "description": "Defines window-related configurations. This attribute is not supported by devices running the OHOS.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "designWidth",
+                    "autoDesignWidth"
+                  ]
+                },
+                "properties": {
+                  "designWidth": {
+                    "description": "Indicates the baseline width for page design, in pixels. The size of an element is scaled by the actual device width. This label is an integer.",
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "autoDesignWidth": {
+                    "description": "Specifies whether to automatically calculate the baseline width for page design. If it is set to true, the designWidth attribute becomes invalid. The baseline width is calculated based on the device width and screen density.",
+                    "type": "boolean"
+                  }
+                }
+              },
+              "type": {
+                "description": "Indicates whether a JS card or a JS application is used. The default value is normal.",
+                "type": "string",
+                "enum": [
+                  "normal",
+                  "form"
+                ]
+              },
+              "mergeRule": {
+                "description": "Tags identify the rule for merging configs.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "remove",
+                    "replace"
+                  ]
+                },
+                "properties": {
+                  "remove": {
+                    "description": "Attributes to Be Removed After Marking Merge",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "replace": {
+                    "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "defPermissions": {
+          "description": "Indicates the permissions required by the application. The callers must acquire these permissions before calling the application.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "mergeRule",
+                "name",
+                "grantMode",
+                "availableScope",
+                "label",
+                "description",
+                "group"
+              ]
+            },
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "description": "Specifies the permission name. The value is a character string.",
+                "type": "string"
+              },
+              "grantMode": {
+                "description": "This tag identifies the permission granting mode.",
+                "type": "string",
+                "enum": [
+                  "system_grant",
+                  "user_grant"
+                ]
+              },
+              "availableScope": {
+                "description": "This tag identifies the permission scope.",
+                "type": "string",
+                "enum": [
+                  "restricted",
+                  "signature",
+                  "privileged"
+                ]
+              },
+              "label": {
+                "description": "This tag identifies the short description of the permission.",
+                "type": "string"
+              },
+              "description": {
+                "description": "This tag indicates the detailed description of the permission.",
+                "type": "string"
+              },
+              "group": {
+                "description": "",
+                "type": "string"
+              },
+              "mergeRule": {
+                "description": "Tags identify the rule for merging configs.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "remove",
+                    "replace"
+                  ]
+                },
+                "properties": {
+                  "remove": {
+                    "description": "Attributes to Be Removed After Marking Merge",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "replace": {
+                    "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reqPermissions": {
+          "description": "Indicates the permissions that the application applies for from the system before its running.This label can be left blank by default.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "mergeRule",
+                "name",
+                "reason",
+                "usedScene"
+              ]
+            },
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "description": "Specifies the permission name to be used.",
+                "type": "string"
+              },
+              "reason": {
+                "description": "Describe the reason for applying for the permission.",
+                "type": "string"
+              },
+              "usedScene": {
+                "description": "This section describes the scenarios and timing of permission usage.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "ability",
+                    "when"
+                  ]
+                },
+                "properties": {
+                  "ability": {
+                    "description": "This tag identifies the abilities that need the permission.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "when": {
+                    "description": "This tag identifies the time when the permission is used.",
+                    "type": "string",
+                    "enum": [
+                      "inuse",
+                      "always"
+                    ]
+                  }
+                }
+              },
+              "mergeRule": {
+                "description": "Tags identify the rule for merging configs.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "remove",
+                    "replace"
+                  ]
+                },
+                "properties": {
+                  "remove": {
+                    "description": "Attributes to Be Removed After Marking Merge",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "replace": {
+                    "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reqCapabilities": {
+          "description": "indicates the device capabilities required to run the application. The value is an array of strings, each of which represents a device capability. Device capabilities are defined by the device OS.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commonEvents": {
+          "description": "This tag and subtag are not supported on lightweight devices.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "events"
+            ],
+            "propertyNames": {
+              "enum": [
+                "mergeRule",
+                "name",
+                "permission",
+                "data",
+                "type",
+                "events"
+              ]
+            },
+            "properties": {
+              "mergeRule": {
+                "description": "Tags identify the rule for merging configs.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "remove",
+                    "replace"
+                  ]
+                },
+                "properties": {
+                  "remove": {
+                    "description": "Attributes to Be Removed After Marking Merge",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "replace": {
+                    "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "name": {
+                "description": "This tag specifies the class name corresponding to the current static public event year. The class name must be specified in the capability field.",
+                "type": "string",
+                "maxLength": 127,
+                "pattern": "^[.].*"
+              },
+              "permission": {
+                "description": "This tag identifies the permission that needs to be applied for to implement the static public event. It is a character string indicating a permission name.",
+                "type": "string",
+                "maxLength": 255
+              },
+              "data": {
+                "description": "This tag configures the additional data array to be carried by the current static public event. The array type is string array. Each array element is an additional data to be carried.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "type": {
+                "description": "This tag is used to configure the category array of the current static public event. It is a string array. Each array element is a category name.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "events": {
+                "description": "This tag identifies a set of event values of intentions that can be received. The value is generally predefined by the system or can be customized.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "supportedModes": {
+          "description": "Indicates the running mode supported by the application. Currently, the drive mode is supported.This attribute is not supported by devices running the OHOS.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "drive"
+            ]
+          }
+        },
+        "shortcuts": {
+          "description": "Indicates the shortcut information of the application. The value is an array, in which each element represents a shortcut object.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "shortcutId",
+                "label",
+                "icon",
+                "intents"
+              ]
+            },
+            "required": [
+              "shortcutId"
+            ],
+            "properties": {
+              "shortcutId": {
+                "description": "Identifies a shortcut. The value is a string with a maximum of 63 bytes.",
+                "type": "string",
+                "maxLength": 63
+              },
+              "label": {
+                "description": "Indicates the label of the shortcut, that is, the text description displayed by the shortcut. The value can be a string or a resource index to description. A string can contain a maximum of 63 bytes. If the value exceeds 63 bytes, use the resource index.",
+                "type": "string",
+                "maxLength": 63
+              },
+              "icon": {
+                "description": "Indicates the icon of the shortcut. The value is the index to the resource file.",
+                "type": "string"
+              },
+              "intents": {
+                "description": "Indicates the intents to which the shortcut points. The attribute consists of the targetClass and targetBundle sub-attributes.",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "propertyNames": {
+                    "enum": [
+                      "targetClass",
+                      "targetBundle"
+                    ]
+                  },
+                  "properties": {
+                    "targetClass": {
+                      "description": "Indicates the class name for the target ability of the shortcut.",
+                      "type": "string"
+                    },
+                    "targetBundle": {
+                      "description": "Indicates the application bundle name for the target ability of the shortcut.",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "defPermissionGroups": {
+          "description": "Indicates the permission groups defined by the .hap file. The permission groups are used in setting the defPermissions attribute.This attribute is not supported by devices running the OHOS.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "mergeRule",
+                "name",
+                "order",
+                "icon",
+                "label",
+                "description",
+                "request"
+              ]
+            },
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "mergeRule": {
+                "description": "Tags identify the rule for merging configs.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "remove",
+                    "replace"
+                  ]
+                },
+                "properties": {
+                  "remove": {
+                    "description": "Attributes to Be Removed After Marking Merge",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "replace": {
+                    "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "name": {
+                "description": "This label indicates the name of the permission group.",
+                "type": "string"
+              },
+              "order": {
+                "description": "This tag indicates the group priority, which is used for sorting permission groups on the UI. This label is an integer.",
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 10000
+              },
+              "icon": {
+                "description": "Indicates the UI icon of the permission group. The value is the resource index of the icon.",
+                "type": "string"
+              },
+              "label": {
+                "description": "This label represents a short description of the permission group.",
+                "type": "string"
+              },
+              "description": {
+                "description": "Indicates the detailed description of the permission group.",
+                "type": "string"
+              },
+              "request": {
+                "description": "This tag indicates a question when an application dynamically applies for permissions from a user.",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "allowClassMap": {
+          "description": "Indicates the meta information about the HAP. The tag value is true or false. If the tag value is true, the hap uses the Java object proxy mechanism provided by the Harmony framework. The default value is false.",
+          "type": "boolean"
+        },
+        "colorMode": {
+          "description": "This tag identifies the card hue. The value can be auto, dark, or light. dark indicates that the card supports the dark color mode, light indicates that the card does not support the dark color mode, and auto indicates that the card hue is the same as the system hue.",
+          "type": "string",
+          "enum": [
+            "auto",
+            "dark",
+            "light"
+          ]
+        },
+        "theme": {
+          "description": "This tag identifies the hap topic. The tag value can be the index of a user-defined theme resource or the index of a system theme resource.",
+          "type": "string"
+        },
+        "mainAbility": {
+          "description": "This tag identifies the hap topic. The tag value can be the index of a user-defined theme resource or the index of a system theme resource.",
+          "type": "string"
+        },
+        "resizeable": {
+          "description": "Indicates whether the application supports the multi-window feature.",
+          "type": "boolean"
+        },
+        "entryTheme": {
+          "description": "This tag indicates the keyword of the Harmony internal topic. Set the tag value to the resource index of the name.",
+          "type": "string",
+          "pattern": "^[$](.*):(.*)+$"
+        },
+        "metaData": {
+          "description": "Indicates the metadata of the ability.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "parameters",
+              "results",
+              "customizeData"
+            ]
+          },
+          "properties": {
+            "parameters": {
+              "description": "Indicates the metadata of the parameters to be passed for calling the ability. The metadata of each parameter consists of the description, name, and type sub-attributes.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "description",
+                    "name",
+                    "type",
+                    "mergeRule"
+                  ]
+                },
+                "required": [
+                  "name",
+                  "type"
+                ],
+                "properties": {
+                  "name": {
+                    "description": "Indicates the name of the parameter.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "type": {
+                    "description": "Indicates the type of the parameter, for example, Integer.",
+                    "type": "string"
+                  },
+                  "description": {
+                    "description": "Describes the parameter. The value can be a string or a resource index to descriptions in multiple languages.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "mergeRule": {
+                    "description": "Tags identify the rule for merging configs.",
+                    "type": "object",
+                    "propertyNames": {
+                      "enum": [
+                        "remove",
+                        "replace"
+                      ]
+                    },
+                    "properties": {
+                      "remove": {
+                        "description": "Attributes to Be Removed After Marking Merge",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "replace": {
+                        "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "results": {
+              "description": "Indicates the metadata of the ability return value. The metadata of each return value consists of the description, name, and type sub-attributes.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "description",
+                    "name",
+                    "type",
+                    "mergeRule"
+                  ]
+                },
+                "required": [
+                  "type"
+                ],
+                "properties": {
+                  "name": {
+                    "description": "Indicates the name of the return value.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "type": {
+                    "description": "Indicates the type of the return value, for example, Integer.",
+                    "type": "string"
+                  },
+                  "description": {
+                    "description": "Describes the return value. The value can be a string or a resource index to descriptions in multiple languages.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "mergeRule": {
+                    "description": "Tags identify the rule for merging configs.",
+                    "type": "object",
+                    "propertyNames": {
+                      "enum": [
+                        "remove",
+                        "replace"
+                      ]
+                    },
+                    "properties": {
+                      "remove": {
+                        "description": "Attributes to Be Removed After Marking Merge",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "replace": {
+                        "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "customizeData": {
+              "description": "Indicates the custom metadata of the parent component. The parameters and results attributes are not configurable in the module tag.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "name",
+                    "value",
+                    "extra",
+                    "mergeRule"
+                  ]
+                },
+                "properties": {
+                  "name": {
+                    "description": "Indicates the key of a data element. The value is a string with a maximum of 255 bytes.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "value": {
+                    "description": "Indicates the value of a data element. The value is a string with a maximum of 255 bytes.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "extra": {
+                    "description": "Indicates the custom format of the data element. The value is an index to the resource that identifies the data.",
+                    "type": "string"
+                  },
+                  "mergeRule": {
+                    "description": "Tags identify the rule for merging configs.",
+                    "type": "object",
+                    "propertyNames": {
+                      "enum": [
+                        "remove",
+                        "replace"
+                      ]
+                    },
+                    "properties": {
+                      "remove": {
+                        "description": "Attributes to Be Removed After Marking Merge",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "replace": {
+                        "description": "Marks the label that needs to be replaced for merge conflicts, and always retains the value of the highest priority.",
+                        "type": "array",
+                        "uniqueItems": true,
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "app": {
+        "properties": {
+          "type": {
+            "const": "normal"
+          }
+        }
+      }
+    }
+  },
+  "then": {
+    "module": {
+      "properties": {
+        "abilities": {
+          "items": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "service",
+                  "data",
+                  "CA",
+                  "page"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "deviceConfig": {
+        "properties": {
+          "default": {
+            "properties": {
+              "keepAlive": {
+                "const": false
+              }
+            }
+          },
+          "tv": {
+            "properties": {
+              "keepAlive": {
+                "const": false
+              }
+            }
+          },
+          "wearable": {
+            "properties": {
+              "keepAlive": {
+                "const": false
+              }
+            }
+          },
+          "phone": {
+            "properties": {
+              "keepAlive": {
+                "const": false
+              }
+            }
+          },
+          "tablet": {
+            "properties": {
+              "keepAlive": {
+                "const": false
+              }
+            }
+          },
+          "car": {
+            "properties": {
+              "keepAlive": {
+                "const": false
+              }
+            }
+          }
+        }
+      },
+      "module": {
+        "properties": {
+          "abilities": {
+            "items": {
+              "properties": {
+                "type": {
+                  "enum": [
+                    "service",
+                    "data",
+                    "CA"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

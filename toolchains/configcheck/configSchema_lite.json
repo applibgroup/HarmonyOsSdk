@@ -1,0 +1,574 @@
+{
+  "title": "JSON schema for HarmonyProfile.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "app",
+    "deviceConfig",
+    "module"
+  ],
+  "propertyNames": {
+    "enum": [
+      "app",
+      "deviceConfig",
+      "module"
+    ]
+  },
+  "properties": {
+    "app": {
+      "description": "Indicates the global configuration of an application. Different .hap files of the same application must use the same app configuration.",
+      "type": "object",
+      "required": [
+        "bundleName",
+        "version"
+      ],
+      "propertyNames": {
+        "enum": [
+          "bundleName",
+          "vendor",
+          "version",
+          "apiVersion",
+          "smartWindowSize",
+          "smartWindowDeviceType"
+        ]
+      },
+      "properties": {
+        "bundleName": {
+          "description": "Indicates the bundle name of the application. This label is a string type and cannot be defaulted. It uniquely identifies the application. The value is a string with 7 to 127 bytes of a reverse domain name, for example, com.huawei.himusic. It is recommended that the first label of this attribute is the top-level domain com, the second label is the vendor or individual name, and the third label is the application name.This label cannot be left blank.",
+          "type": "string",
+          "maxLength": 127,
+          "minLength": 7,
+          "pattern": "^(([a-zA-Z]|[a-zA-Z][0-9a-zA-Z_]+)[.]([0-9a-zA-Z_.]+))|([{]([a-zA-Z]|[a-zA-Z][0-9a-zA-Z_]+)[}](.huawei.com))$"
+        },
+        "vendor": {
+          "description": "Describes the application vendor. The value is a string with a maximum of 255 bytes. This label can be left blank by default.",
+          "type": "string",
+          "maxLength": 255
+        },
+        "version": {
+          "description": "Indicates the version information of the application.Includes two sub-labels:”code” and ”name”.This label cannot be left blank.",
+          "type": "object",
+          "required": [
+            "code",
+            "name"
+          ],
+          "propertyNames": {
+            "enum": [
+              "code",
+              "name",
+              "minCompatibleVersionCode"
+            ]
+          },
+          "properties": {
+            "code": {
+              "description": "Indicates the version number of the application. The value is an integer greater than 0. A larger value generally represents a later version.The system determines the application version based on the tag value.This label cannot be left blank.",
+              "type": "integer",
+              "minimum": 0,
+              "maxLength": 32
+            },
+            "name": {
+              "description": "Indicates the text description of the application version.Used for displaying to users.A string can contain a maximum of 127 bytes.This label cannot be left blank.",
+              "type": "string",
+              "maxLength": 127,
+              "pattern": "^([1-9][0-9]{0,2})(.(0|[1-9][0-9]{0,2})){1,2}$"
+            },
+            "minCompatibleVersionCode": {
+              "description": "This label identifies the earliest historical version compatible with the app pack, which is used for cross-device compatibility determination.This label is an integer and can be defaulted.",
+              "type": "integer",
+              "minimum": 0,
+              "maxLength": 32
+            }
+          }
+        },
+        "apiVersion": {
+          "description": "This tag identifies the Harmony API version on which the application depends.",
+          "type": "object",
+          "required": [
+            "compatible"
+          ],
+          "propertyNames": {
+            "enum": [
+              "compatible",
+              "target",
+              "releaseType"
+            ]
+          },
+          "properties": {
+            "compatible": {
+              "description": "Indicates the minimum API version required for running an application. The value is an integer.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "target": {
+              "description": "This tag identifies the target API version required for application running. The value is an integer.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "releaseType": {
+              "description": "This tag identifies the type of the target API version required for application running. The tag is a string. The value can be CanaryN, BetaN, or Release, where N indicates an integer greater than 0.",
+              "type": "string",
+              "pattern": "^(Canary[1-9][0-9]+|Canary[1-9]|Beta[1-9][0-9]+|Beta[1-9]|Release)$"
+            }
+          }
+        },
+        "smartWindowSize": {
+          "description": "Indicates the size of the simulation window. The value is a character string.",
+          "type": "string",
+          "pattern": "^([2-9][0-9]{2}|[1][0-9]{3}|2000)\\*([2-9][0-9]{2}|[1][0-9]{3}|2000)$"
+        },
+        "smartWindowDeviceType": {
+          "description": "This label indicates the device on which the application is opened using the simulation window, a string array.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "phone",
+              "tablet",
+              "tv"
+            ]
+          }
+        }
+      }
+    },
+    "deviceConfig": {
+      "description": "Indicates the application configuration applied to a specific type of devices. When compiling and generating the HAP package, copy the device type configuration supported by the HAP package to the generated config file. The compilation is not required for the devices that are not supported by the HAP package.",
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "default",
+          "liteWearable",
+          "smartVision"
+        ]
+      },
+      "properties": {
+        "default": {
+          "description": "The configuration in the default tag is applicable to all devices. If the configuration is different for other device types, you need to configure the configuration under the configuration tag of the device type.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            }
+          }
+        },
+        "liteWearable": {
+          "description": "",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            }
+          }
+        },
+        "smartVision": {
+          "description": "",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "keepAlive"
+            ]
+          },
+          "properties": {
+            "keepAlive": {
+              "description": "Specifies whether the application will keep alive.If this attribute is set to true, the application will start during the OS startup. If the application process exits, the OS will restart it. This attribute applies only to system applications.This attribute is not supported by basic watches.This label can be left blank by default.",
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "module": {
+      "description": "Indicates the configuration of a .hap file. The module configuration is valid only for the current .hap file.",
+      "type": "object",
+      "required": [
+        "deviceType",
+        "distro"
+      ],
+      "propertyNames": {
+        "enum": [
+          "description",
+          "abilities",
+          "js",
+          "reqPermissions",
+          "deviceType",
+          "distro",
+          "reqCapabilities",
+          "metaData",
+          "resizeable"
+        ]
+      },
+      "properties": {
+        "description": {
+          "description": "Describes the .hap file. The value can be a string or a resource index to descriptions in multiple languages. A string can contain a maximum of 255 bytes. If the value exceeds 255 bytes, use the resource index.The tag can be left blank by default.",
+          "type": "string",
+          "maxLength": 255
+        },
+        "deviceType": {
+          "description": "Indicates the type of devices on which the abilities can run. The value can be default, tv (smart TVs), wearable (smart watches), liteWearable (basic watches), smartVision, phone, car, tablet or any combination of these values.This label cannot be left blank.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "car",
+              "liteWearable",
+              "phone",
+              "smartVision",
+              "tablet",
+              "tv",
+              "wearable",
+              "router"
+            ]
+          }
+        },
+        "distro": {
+          "description": "Indicates the description of the current .hap file.This label cannot be left blank.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "deliveryWithInstall",
+              "moduleName",
+              "moduleType"
+            ]
+          },
+          "required": [
+            "deliveryWithInstall",
+            "moduleName",
+            "moduleType"
+          ],
+          "properties": {
+            "deliveryWithInstall": {
+              "description": "Specifies whether the .hap file is installed when the user installs the application.true: The .hap file is installed during the application installation.false: The .hap file is not installed during the application installation.This label cannot be left blank.",
+              "type": "boolean"
+            },
+            "moduleName": {
+              "description": "Indicates the name of the current .hap file.This label cannot be left blank.",
+              "type": "string",
+              "maxLength": 31
+            },
+            "moduleType": {
+              "description": "Indicates the type of the current .hap file. The value can be entry or feature.This label cannot be left blank.",
+              "type": "string",
+              "enum": [
+                "entry",
+                "feature",
+                "har"
+              ]
+            }
+          }
+        },
+        "abilities": {
+          "description": "Indicates all abilities in the current module. The value is an array of objects, each of which represents an ability.This label can be left blank by default,and indicates no capability exists in the current module.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "type"
+            ],
+            "propertyNames": {
+              "enum": [
+                "name",
+                "description",
+                "icon",
+                "type",
+                "label",
+                "visible",
+                "deviceCapability",
+                "resizeable"
+              ]
+            },
+            "properties": {
+              "name": {
+                "description": "Indicates the name of the ability. The value is a reverse domain name, in the format of \"Complete bundle name.Class name\", for example, \"com.example.myapplication.MainAbility\", where com.example.myapplication indicates the bundle name and MainAbility indicates the class name. Alternatively, the value can start with a period (.) followed by the class name, for example, \".MainAbility\", which will be resolved into a complete name prefixed with the bundle name of the application.",
+                "type": "string",
+                "maxLength": 255
+              },
+              "description": {
+                "description": "Describes the ability. The value can be a string or a resource index to descriptions in multiple languages.This label can be left blank by default.",
+                "type": "string",
+                "maxLength": 255
+              },
+              "icon": {
+                "description": "Indicates the index to the ability icon file, in the format of \"$media:ability_icon\".This label can be left blank by default.",
+                "type": "string"
+              },
+              "type": {
+                "description": "Indicates the template used by the ability. The value can be page, service, or provider.The \"page\" indicates FA developed using the Page template to provide the capability of interacting with users.The \"service\" indicates AA developed using the Service template to provide the capability of running tasks in the background.The \"provider\" indicates AA developed using the Data template to provide unified data access for external systems.This label cannot be left blank.",
+                "type": "string",
+                "enum": [
+                  "page",
+                  "service",
+                  "data",
+                  "CA"
+                ]
+              },
+              "label": {
+                "description": "Indicates the ability name visible to users. The tag value is set to the resource index of this name to support multiple languages.",
+                "type": "string",
+                "pattern": "^[$]string:[0-9a-zA-Z_.]+$",
+                "maxLength": 255
+              },
+              "visible": {
+                "description": "Specifies whether the ability can be called by other applications.The \"true\" indicates the ability can be called by other applications.The \"false\" indicates the ability cannot be called by other applications.This tag is optional. The default value is false.",
+                "type": "boolean"
+              },
+              "deviceCapability": {
+                "description": "This label indicates the capability required by the device when the capability is running.",
+                "type": "array",
+                "maxItems": 512,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "maxLength": 64
+                }
+              },
+              "resizeable": {
+                "description": "Indicates whether the ability supports the multi-window feature.",
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "js": {
+          "description": "Indicates a set of all modules developed using the JavaScript UI framework. Each element in the set represents the information about a JavaScript module.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "pages"
+            ],
+            "propertyNames": {
+              "enum": [
+                "name",
+                "pages",
+                "window"
+              ]
+            },
+            "properties": {
+              "name": {
+                "description": "Indicates the name of the JavaScript module.This label can be left blank by default.",
+                "type": "string"
+              },
+              "pages": {
+                "description": "Describes the route information about all pages in the JavaScript module, including the page path and page name. The value is an array, in which each element represents a page. The first element in the array represents the home page of the JavaScript FA.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "window": {
+                "description": "Defines window-related configurations. This attribute is not supported by devices running the OHOS.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "designWidth",
+                    "autoDesignWidth"
+                  ]
+                },
+                "properties": {
+                  "designWidth": {
+                    "description": "Indicates the baseline width for page design, in pixels. The size of an element is scaled by the actual device width. This label is an integer.",
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "autoDesignWidth": {
+                    "description": "Specifies whether to automatically calculate the baseline width for page design. If it is set to true, the designWidth attribute becomes invalid. The baseline width is calculated based on the device width and screen density.",
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reqPermissions": {
+          "description": "Indicates the permissions that the application applies for from the system before its running.This label can be left blank by default.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "name",
+                "reason",
+                "usedScene"
+              ]
+            },
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "description": "Specifies the permission name to be used.",
+                "type": "string"
+              },
+              "reason": {
+                "description": "Describe the reason for applying for the permission.",
+                "type": "string"
+              },
+              "usedScene": {
+                "description": "This section describes the scenarios and timing of permission usage.",
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "ability",
+                    "when"
+                  ]
+                },
+                "properties": {
+                  "ability": {
+                    "description": "This tag identifies the meta-capabilities that need the permission.",
+                    "type": "array"
+                  },
+                  "when": {
+                    "description": "This tag identifies the time when the permission is used.",
+                    "type": "string",
+                    "enum": [
+                      "inuse",
+                      "always"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reqCapabilities": {
+          "description": "Indicates the device capabilities required to run the application. The value is an array of strings, each of which represents a device capability. Device capabilities are defined by the device OS.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "resizeable": {
+          "description": "Indicates whether the application supports the multi-window feature.",
+          "type": "boolean"
+        },
+        "metaData": {
+          "description": "Indicates the metadata of the ability.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "parameters",
+              "results",
+              "customizeData"
+            ]
+          },
+          "properties": {
+            "parameters": {
+              "description": "Indicates the metadata of the parameters to be passed for calling the ability. The metadata of each parameter consists of the description, name, and type sub-attributes.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "description",
+                    "name",
+                    "type"
+                  ]
+                },
+                "required": [
+                  "name",
+                  "type"
+                ],
+                "properties": {
+                  "name": {
+                    "description": "Indicates the name of the parameter.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "type": {
+                    "description": "Indicates the type of the parameter, for example, Integer.",
+                    "type": "string"
+                  },
+                  "description": {
+                    "description": "Describes the parameter. The value can be a string or a resource index to descriptions in multiple languages.",
+                    "type": "string",
+                    "maxLength": 255
+                  }
+                }
+              }
+            },
+            "results": {
+              "description": "Indicates the metadata of the ability return value. The metadata of each return value consists of the description, name, and type sub-attributes.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "description",
+                    "name",
+                    "type"
+                  ]
+                },
+                "required": [
+                  "type"
+                ],
+                "properties": {
+                  "name": {
+                    "description": "Indicates the name of the return value.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "type": {
+                    "description": "Indicates the type of the return value, for example, Integer.",
+                    "type": "string"
+                  },
+                  "description": {
+                    "description": "Describes the return value. The value can be a string or a resource index to descriptions in multiple languages.",
+                    "type": "string",
+                    "maxLength": 255
+                  }
+                }
+              }
+            },
+            "customizeData": {
+              "description": "Indicates the custom metadata of the parent component. The parameters and results attributes are not configurable in the module tag.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "name",
+                    "value",
+                    "extra"
+                  ]
+                },
+                "properties": {
+                  "name": {
+                    "description": "Indicates the key of a data element. The value is a string with a maximum of 255 bytes.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "value": {
+                    "description": "Indicates the value of a data element. The value is a string with a maximum of 255 bytes.",
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  "extra": {
+                    "description": "Indicates the custom format of the data element. The value is an index to the resource that identifies the data.",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

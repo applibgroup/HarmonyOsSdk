@@ -1,0 +1,25 @@
+# This is a configuration file for ProGuard.
+# https://www.guardsquare.com/en/products/proguard/manual/usage
+#
+
+#ace ability
+-keep class *.ace.ability.* {
+    *;
+}
+-keep class * extends *.ace.ability.* {
+    public <methods>;
+}
+
+# ace plugin
+-keep class com.huawei.ace.plugin.* {
+    *;
+}
+-keep class * extends com.huawei.ace.plugin.* {
+    public <methods>;
+}
+
+# rpc
+-keep class * extends *.utils.Sequenceable {
+    public <methods>;
+}
+

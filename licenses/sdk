@@ -1,0 +1,174 @@
+HarmonyOS SDK License Agreement
+
+1. Definition
+
+1.1 Huawei refers to the signing entity, in accordance with Clause 11 herein, which provides you with the HarmonyOS SDKs.
+
+1.2 HarmonyOS SDKs refers to the software development kits provided by Huawei that contains system files, integrated APIs, toolchains, previewer, technical documents, and subsequent updates.
+
+1.3 HarmonyOS refers to a brand-new distributed operating system that is oriented to a wide range of scenarios.
+
+1.4 Compatible device refers to a device that complies with the Product Compatibility Specifications, which can be obtained by going to Design  Compatibility on httpsdevice.harmonyos.com and may be updated in the future.
+
+2. About This Agreement
+
+2.1 The HarmonyOS SDK License Agreement (hereinafter referred to as this Agreement) is a legally binding agreement made and entered into between you and Huawei. Huawei will license you to use the HarmonyOS SDKs in accordance with this Agreement. By reading this Agreement, you will understand the rules for using the HarmonyOS SDKs and other important information. Please read this Agreement carefully. By clicking the Accept button below this Agreement or by using the HarmonyOS SDKs, you shall be deemed as having fully understood and accepted the terms contained herein. If you do not agree to the terms of this Agreement, you shall not use the HarmonyOS SDKs.
+
+2.2 You must meet the following criteria You have reached the legal age of majority so that you are competent to enter into a legally binding agreement with Huawei; you possess full legal capacity to conclude, understand, and perform this Agreement with Huawei and are able to assume the legal liability for any and all breaches thereof; you are not otherwise forbidden to use HarmonyOS SDKs in accordance with applicable laws. If you enter into this Agreement on behalf of an entity, you undertake that you have the qualification and ability to enter into this Agreement on behalf of the entity and that the entity possesses the qualification, authorization, or license(s) required to enter into this Agreement with Huawei.
+
+3. License
+
+3.1 Huawei grants you a limited, non-exclusive, free, non-transferable, non-sublicensable, and revocable license worldwide for you to download, install, copy, integrate, and run the HarmonyOS SDKs to develop applications that run on compatible devices.
+
+3.2 You shall not use HarmonyOS SDKs to develop applications or other SDKs for incompatible devices. If you do not use HarmonyOS SDKs, you can develop applications for other platforms, including incompatible devices.
+
+3.3 All rights and interests related to HarmonyOS SDKs are owned by Huawei, including any intellectual property rights. Huawei reserves all rights that are not explicitly granted to you.
+
+3.4 This Agreement does not contain any terms that grant you the right to use any of Huawei's trademarks, logos, domain names, company names, product names, or other brands.
+
+3.5 Huawei agrees not to obtain any rights or interests, including any intellectual property rights, of the applications that you have developed using HarmonyOS SDKs from you (or your licensor) in accordance with this Agreement.
+
+4. Usage Rules
+
+You agree that you will not perform the following activities, or allow or encourage any third party to perform the following activities
+
+(a) Use HarmonyOS SDKs for any purposes that are not explicitly allowed by this Agreement or that are not allowed by applicable laws and regulations;
+
+(b) Use HarmonyOS SDKs to implement functions that are prohibited by applicable laws and regulations during application development;
+
+(c) Use HarmonyOS SDKs to interfere with, damage, disrupt, or access without authorization the server, network, or other services of any subject;
+
+(d) Modify, adapt, redistribute, decompile, reverse-engineer, or disassemble HarmonyOS SDKs or any part of HarmonyOS SDKs, or create derivatives of HarmonyOS SDKs or any part of HarmonyOS SDKs;
+
+(e) Delete, cover, or modify any proprietary right statements (including copyright statements and trademark statements) that may be attached to or contained in HarmonyOS SDKs.
+
+5. Privacy and Data
+
+5.1 HarmonyOS SDKs will not collect any personal information from you or end users of your applications.
+
+5.2 To understand developers' requirements and improve the quality and experience of HarmonyOS SDKs, Huawei will collect information about your usage of HarmonyOS SDKs, such as the usage frequency of each function and operation logs.
+
+6. Cyber Security and Personal Information Protection
+
+6.1 During application development, you shall comply with the following network security requirements
+
+(a) Comply with local laws and regulations and ensure that there are no securitysafety risks or issues;
+
+(b) Do not attack or damage Huawei networks. Do not steal any data or information from Huawei or user devices. Do not crack accounts or passwords of Huawei users;
+
+(c) Do not implant unwanted code, malware, or backdoors in Huawei networks or user devices. Do not reserve any undisclosed interfaces or accounts;
+
+(d) Do not introduce any form of Trojan horse, backdoor, worm, virus, malicious code, unknown function, or unknown permission into your applications.
+
+6.2 If the applications you develop using HarmonyOS SDKs will collect and process user data, you shall inform users of the type of data that will be collected, the purpose of the collection, and the data processing methods, and you shall also obtain users' consent and provide users with privacy statements and protection measures that comply with applicable laws. You shall be responsible for resolving any privacy and security issues arising between you and your users related to your applications, and Huawei shall not be responsible for such issues.
+
+7. Disclaimer
+
+7.1 Huawei, its affiliates, principals, directors, employees, contractors, agents, third-party payment service providers, partners, licensors, and resellers (hereinafter collectively referred to as the Huawei Parties) do not take any responsibility, under any responsibility theory, for any direct, indirect, incidental, special, secondary, or punitive damage (including any loss of data, reputation, or profit) that you may suffer, irrespective of whether the Huawei Parties or their representatives have been informed, or whether the Huawei Parties or their representatives are aware of the possibility of any of the above-mentioned losses.
+
+7.2 HarmonyOS SDKs are provided on an as-is and as available basis without any representation or endorsement of any kind. To the maximum extent permitted by applicable laws, the Huawei Parties do not make any explicit or implicit guarantee, undertaking, representation, or warranty for the following
+
+(a) HarmonyOS SDK marketability, applicability for specific purposes, and non-infringement of any other's rights;
+
+(b) Integrity, accuracy, reliability, and timeliness of any content obtained through HarmonyOS SDKs;
+
+(c) HarmonyOS SDKs or the servers that accommodate HarmonyOS SDKs are free from defects, errors, viruses, bugs, or other harmful elements;
+
+(d) HarmonyOS SDK function defects will be fixed;
+
+(e) Future HarmonyOS SDK versions are fully compatible with applications developed based on previous HarmonyOS SDK versions.
+
+The Huawei Parties are not liable for any loss or damage caused by your full or partial reliance on HarmonyOS SDKs, your use of HarmonyOS SDKs, or any information obtained by your (or anyone else's) use of HarmonyOS SDKs.
+
+7.3 You shall bear full responsibility for any failure to fulfill obligations under this Agreement or any applicable third-party agreements, laws, and regulations, and for any consequences arising thereof, and Huawei does not assume any responsibility for you or any third party.
+
+7.4 The laws of some countries do not allow certain warranties, guarantees, or liabilities to be excluded or limited by a contract. If these laws apply to you, all or part of the above-mentioned exclusions or restrictions may not apply to you, but other content in this Agreement is not affected.
+
+7.5 You agree to select your country or region in the operating system where you use HarmonyOS SDKs according to the actual situation. You shall be solely responsible for the failure to select the factual country/region, and for any consequence arising thereof, such as data leakage. Huawei shall bear no liability.
+
+8. Indemnity
+
+8.1 To the maximum extent permitted by applicable laws, you shall defend, hold harmless, and indemnify the Huawei Parties against and from any and all claims, suits, and actions arising out of or in relation to any of the following events
+
+(a) Your use of HarmonyOS SDKs;
+
+(b) Your breach of any provision of this Agreement;
+
+(c) Your breach of any applicable laws and regulations;
+
+(d) Disputes between you and end users;
+
+(e) Your commitments and warranties to any third party regarding HarmonyOS SDKs under this Agreement;
+
+(f) Any claim that your application infringes upon or embezzles any third party's intellectual property rights or other rights.
+
+8.2 You acknowledge and agree to provide full assistance and cooperation in defending against the aforesaid claims, suits, and actions immediately upon reasonable request of the Huawei Parties.
+
+9. Termination
+
+9.1 This Agreement shall remain in effect unless you or Huawei terminates this Agreement in accordance with the provisions of this Agreement.
+
+9.2 You can terminate this Agreement by stopping using HarmonyOS SDKs.
+
+9.3 Huawei reserves the right to temporarily or permanently suspend, cancel, or restrict your use of part or all HarmonyOS SDKs, and suspend or terminate this Agreement without assuming any responsibility for you or any third party in any of the following circumstances
+
+(a) You violate, or Huawei believes you are about to violate this Agreement, including any agreements, policies, or guidelines incorporated herein;
+
+(b) You, or anyone acting on your behalf, acts illegally, or provides Huawei with any false or misleading information;
+
+(c) In response to requests by law enforcement or other government agencies under a valid legal process;
+
+(d) Unexpected technical, security, or business reasons.
+
+The expiry or termination of this Agreement does not affect the provisions of this Agreement that are expressed or by their nature to operate or have effect after deactivation or termination and is without prejudice to any accrued rights or obligations or any rights or obligations which are intended to survive such deactivation or termination.
+
+10. Amendments
+
+10.1 Huawei has been and will be updating and optimizing HarmonyOS SDKs. Huawei may add or delete functions, set new restrictions, or temporarily or permanently suspend or stop certain functions of HarmonyOS SDKs without any prior notice to you. Huawei may also amend this Agreement at any time based on the changes to the HarmonyOS SDKs.
+
+10.2 If changes to HarmonyOS SDKs or this Agreement severely affect users or restrict the use of HarmonyOS SDKs, Huawei will release a new version notice within a reasonable period after the changes. For the changes to HarmonyOS SDKs that Huawei needs to make to meet security, legal, or regulatory requirements, Huawei may not be able to meet the aforementioned timescales and Huawei will notify you of these changes as soon as possible.
+
+11. Signing Huawei Entities
+11.1. Your signing entity will be determined by the country or region ("Use Area") set in the operating system where you use HarmonyOS SDKs.
+
+11.2 If your Use Area is the Chinese mainland specified in Part I of Exhibit A hereto, you are entering into and concluding this Agreement with Huawei Software Technologies Co., Ltd. which is legally established and incorporated in the People's Republic of China, and you designate Huawei Software Technologies Co., Ltd. as your agent in the Chinese mainland.
+
+11.3 If your Use Area is the country(ies) and/or region(s) listed in Part II of Exhibit A hereto, you are entering into and concluding this Agreement with Aspiegel SE (formerly known as Aspiegel Limited) which is legally established and incorporated in Ireland, and you designate Aspiegel SE as your agent in such countries and regions.
+
+11.4 If your Use Area is the country((ies) and/or region(s) listed in Part III of Exhibit A hereto, you are entering into and concluding this Agreement with Huawei Services (Hong Kong) Co., Limited which is legally established and incorporated in Hong Kong (China), and you designate Huawei Services (Hong Kong) Co., Limited as your agent in such countries and regions.
+
+12. Governing Laws and Dispute Resolution
+
+12.1 If you are concluding this Agreement with Huawei Software Technologies Co., Ltd., you agree that the establishment, jurisdiction, and interpretation of this Agreement shall be governed by the laws of the People's Republic of China. You agree that this Agreement is signed in Longgang District, Shenzhen, P.R. China. Any and all disputes, compensation claims, and causes of action arising out of or in relation to performing this Agreement or receiving HarmonyOS SDKs under this Agreement shall be resolved in the court with jurisdiction over the place where this Agreement is signed.
+
+12.2 If you are concluding this Agreement with Aspiegel SE, you agree that the establishment, jurisdiction, and interpretation of this Agreement shall be governed by the laws of Ireland. You agree that any and all disputes, compensation claims, and causes of action arising out of or in relation to performing this Agreement or receiving HarmonyOS SDKs under this Agreement shall be submitted to the Irish Courts with jurisdiction in Dublin, Ireland, for litigation in the English language, without applying the United Nations Convention on Contracts for the International Sale of Goods.
+
+12.3 If you are concluding this Agreement with Huawei Services (Hong Kong) Co., Limited, you agree that the establishment, jurisdiction, and interpretation of this Agreement shall be governed by the laws of Hong Kong (China), you agree that any and all disputes, compensation claims, and causes of action arising out of or in relation to performing of this Agreement or receiving HarmonyOS SDKs under this Agreement shall be submitted to the courts in Hong Kong (China) for litigation in the English language, without applying the United Nations Convention on contracts for the International Sale of Goods.
+
+13. Miscellaneous
+
+13.1 This Agreement constitutes the entire legal agreement between you and Huawei and governs your use of HarmonyOS SDKs. This Agreement completely replaces any prior agreements between you and Huawei in relation to HarmonyOS SDKs.
+
+13.2 HarmonyOS SDKs may provide links to other websites or resources. You acknowledge and agree that Huawei is not responsible for the availability of such websites or resources, and does not endorse or take responsibility for any content, advertisements, products, or other information on or available from such websites or resources. Huawei is not responsible for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or resources.
+
+13.3 Nothing in this Agreement shall be construed to create a partnership or agency relationship between you and Huawei, and neither party shall have the right or authority to incur any liability debt or cost or enter into any contracts or other arrangements in the name of or on behalf of the other party.
+
+13.4 Huawei is not liable for any failure or delay in performance of its obligations under this Agreement that is caused or contributed to by matters beyond Huawei's reasonable control.
+
+13.5 If any provision of this Agreement is found by a court of competent jurisdiction or any other competent authority to be void, invalid, or unenforceable, it shall be deemed to be deleted from this Agreement, and all other provisions of this Agreement shall remain in full force and effect.
+
+13.6 Even if Huawei does not exercise any of the rights or remedies mentioned in this Agreement, it shall not be deemed that Huawei waives these rights or remedies. Huawei can still exercise these rights or take these remedies.
+
+13.7 The headings in this Agreement are for reading convenience only and have no legal effect.
+
+13.8 Huawei may assign or sub-contract any of Huawei's rights and obligations under this Agreement.
+
+13.9 You shall not distribute obligations under this Agreement or transfer or sublicense rights under this Agreement.
+
+Exhibit A – List of Countries/Regions
+
+Part I: Chinese mainland.
+
+Part II: Aland Islands, Albania, Andorra, Australia, Austria, Belgium, Bonaire, Bosnia and Herzegovina, Bulgaria, Canada, Croatia, Curacao, Cyprus, Czech Republic, Denmark, Dutch Caribbean, Estonia, Faroe Islands, Finland, France, Germany, Gibraltar, Greece, Greenland, Guernsey, Hungary, Iceland, Israel, Italy, Jersey, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Moldova, Monaco, Montenegro, Netherlands, New Zealand, North Macedonia, Norway, Poland, Portugal, Ireland, Romania, Saba, Saint Vincent and the Grenadines, San Marino, Serbia, Sint Eustatius, Sint Maarten, Slovakia, Slovenia, Spain, St. Martin, St. Pierre and Miquelon (France), Sweden, Switzerland, Turkey, Ukraine, United Kingdom, United States, Vatican City.
+
+Part III: Other countries and regions.

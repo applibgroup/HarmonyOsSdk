@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions>
+    <constants namespace="ohos" name="width">
+        <constant name="match_parent" value="-1" />
+        <constant name="match_content" value="-2" />
+    </constants>
+
+    <constants namespace="ohos" name="height">
+        <constant name="match_parent" value="-1" />
+        <constant name="match_content" value="-2" />
+    </constants>
+
+    <constants namespace="ohos" name="orientation">
+        <constant name="horizontal" value="0" />
+        <constant name="vertical" value="1" />
+    </constants>
+
+    <constants namespace="ohos" name="text_alignment">
+        <constant name="left" value="4" />
+        <constant name="top" value="32" />
+        <constant name="right" value="16" />
+        <constant name="bottom" value="128" />
+        <constant name="horizontal_center" value="8" />
+        <constant name="vertical_center" value="64" />
+        <constant name="center" value="72" />
+        <constant name="start" value="260" />
+        <constant name="end" value="272" />
+    </constants>
+
+    <constants namespace="ohos" name="progress_hint_text_alignment">
+        <constant name="left" value="4" />
+        <constant name="top" value="32" />
+        <constant name="right" value="16" />
+        <constant name="bottom" value="128" />
+        <constant name="horizontal_center" value="8" />
+        <constant name="vertical_center" value="64" />
+        <constant name="center" value="72" />
+        <constant name="start" value="260" />
+        <constant name="end" value="272" />
+    </constants>
+
+    <constants namespace="ohos" name="layout_alignment">
+        <constant name="left" value="3" />
+        <constant name="top" value="48" />
+        <constant name="right" value="5" />
+        <constant name="bottom" value="80" />
+        <constant name="horizontal_center" value="1" />
+        <constant name="vertical_center" value="16" />
+        <constant name="center" value="17" />
+        <constant name="start" value="8388611" />
+        <constant name="end" value="8388613" />
+    </constants>
+
+    <constants namespace="ohos" name="alignment">
+        <constant name="left" value="3" />
+        <constant name="top" value="48" />
+        <constant name="right" value="5" />
+        <constant name="bottom" value="80" />
+        <constant name="horizontal_center" value="1" />
+        <constant name="vertical_center" value="16" />
+        <constant name="center" value="17" />
+        <constant name="start" value="8388611" />
+        <constant name="end" value="8388613" />
+    </constants>
+
+    <constants namespace="ohos" name="alignment_type">
+        <constant name="align_edges" value="0" />
+        <constant name="align_contents" value="1" />
+    </constants>
+
+    <constants namespace="ohos" name="visibility">
+        <constant name="visible" value="0" />
+        <constant name="invisible" value="1" />
+        <constant name="hide" value="2" />
+    </constants>
+
+    <constants namespace="ohos" name="scale_mode">
+        <constant name="zoom_center" value="0" />
+        <constant name="zoom_start" value="1" />
+        <constant name="zoom_end" value="2" />
+        <constant name="stretch" value="3" />
+        <constant name="center" value="4" />
+        <constant name="inside" value="5" />
+        <constant name="clip_center" value="6" />
+    </constants>
+
+    <constants namespace="ohos" name="clip_direction">
+        <constant name="horizontal" value="1" />
+        <constant name="vertical" value="2" />
+    </constants>
+
+    <constants namespace="ohos" name="clip_alignment">
+        <constant name="left" value="256" />
+        <constant name="right" value="512" />
+        <constant name="top" value="1024" />
+        <constant name="bottom" value="2048" />
+        <constant name="center" value="4096" />
+    </constants>
+
+    <constants namespace="ohos" name="text_style">
+        <constant name="normal" value="0" />
+        <constant name="bold" value="1" />
+        <constant name="italic" value="2" />
+    </constants>
+
+    <constants namespace="ohos" name="auto_scrolling_count">
+        <constant name="unlimited" value="-1" />
+    </constants>
+
+    <constants namespace="ohos" name="focusable">
+        <constant name="focus_disable" value="0" />
+        <constant name="focus_adaptable" value="4" />
+        <constant name="focus_enable" value="8" />
+    </constants>
+
+    <constants namespace="ohos" name="text_input_type">
+        <constant name="pattern_null" value="1" />
+        <constant name="pattern_text" value="2" />
+        <constant name="pattern_number" value="3" />
+        <constant name="pattern_password" value="7" />
+    </constants>
+
+    <constants namespace="ohos" name="input_enter_key_type">
+        <constant name="enter_key_type_unspecified" value="0" />
+        <constant name="enter_key_type_search" value="1" />
+        <constant name="enter_key_type_go" value="2" />
+        <constant name="enter_key_type_send" value="3" />
+    </constants>
+
+    <constants namespace="ohos" name="layout_direction">
+        <constant name="ltr" value="0" />
+        <constant name="rtl" value="1" />
+        <constant name="inherit" value="2" />
+        <constant name="locale" value="3" />
+    </constants>
+
+    <constants namespace="ohos" name="fold_direction">
+        <constant name="fold_obverse" value="0" />
+        <constant name="fold_reverse" value="1" />
+    </constants>
+
+    <constants namespace="ohos" name="fold_alignment">
+        <constant name="left" value="3" />
+        <constant name="top" value="48" />
+        <constant name="right" value="5" />
+        <constant name="bottom" value="80" />
+        <constant name="horizontal_center" value="1" />
+        <constant name="vertical_center" value="16" />
+        <constant name="center" value="17" />
+        <constant name="start" value="8388611" />
+        <constant name="end" value="8388613" />
+    </constants>
+
+    <constants namespace="ohos" name="tab_indicator_type">
+        <constant name="invisible" value="0" />
+        <constant name="bottom_line" value="1" />
+        <constant name="left_line" value="2" />
+        <constant name="oval" value="3" />
+    </constants>
+
+    <constants namespace="ohos" name="date_order">
+        <constant name="day-month-year" value="0" />
+        <constant name="month-day-year" value="1" />
+        <constant name="year-month-day" value="2" />
+        <constant name="year-day-month" value="3" />
+        <constant name="day-month" value="4" />
+        <constant name="month-day" value="5" />
+        <constant name="year-month" value="6" />
+        <constant name="month-year" value="7" />
+        <constant name="only_year" value="8" />
+        <constant name="only_month" value="9" />
+        <constant name="only_day" value="10" />
+    </constants>
+
+    <constants namespace="ohos" name="am_pm_order">
+        <constant name="start" value="0" />
+        <constant name="end" value="1" />
+        <constant name="left" value="2" />
+        <constant name="right" value="3" />
+    </constants>
+
+    <!-- Element configuration -->
+    <!-- StateElement -->
+    <constants namespace="ohos" name="state">
+        <constant name="component_state_empty" value="0" />
+        <constant name="component_state_hovered" value="268435456" />
+        <constant name="component_state_focused" value="2" />
+        <constant name="component_state_selected" value="4" />
+        <constant name="component_state_pressed" value="16384" />
+        <constant name="component_state_disabled" value="32" />
+        <constant name="component_state_checked" value="64" />
+    </constants>
+
+    <!-- Interpolator configuration -->
+    <constants namespace="ohos" name="interpolator">
+        <constant name="accelerate" value="0" />
+        <constant name="accelerate_decelerate" value="1" />
+        <constant name="anticipate" value="2" />
+        <constant name="anticipate_overshoot" value="3" />
+        <constant name="bounce" value="4" />
+        <constant name="cubic_hermite" value="5" />
+        <constant name="cycle" value="6" />
+        <constant name="decelerate" value="7" />
+        <constant name="linear" value="8" />
+        <constant name="overshoot" value="9" />
+        <constant name="smooth_step" value="10" />
+        <constant name="spring" value="11" />
+        <constant name="physical_spring" value="12" />
+        <constant name="physical_fling" value="13" />
+        <constant name="cubic_bezier_standard" value="14" />
+        <constant name="cubic_bezier_deceleration" value="15" />
+        <constant name="cubic_bezier_acceleration" value="16" />
+        <constant name="cubic_bezier_friction" value="17" />
+        <constant name="cubic_bezier_extreme_deceleration" value="18" />
+        <constant name="cubic_bezier_sharp" value="19" />
+        <constant name="cubic_bezier_rhythm" value="20" />
+        <constant name="cubic_bezier_smooth" value="21" />
+    </constants>
+</definitions>
