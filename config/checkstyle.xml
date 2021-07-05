@@ -180,8 +180,8 @@
       <message key="name.invalidPattern"
              value="Type name ''{0}'' must match pattern ''{1}''."/>
     </module>
-    <module name="MemberName"> <!-- Dont Modify -->
-      <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+    <module name="MemberName"> <!-- Modified to fix the member variable name issue -->
+      <property name="format" value="(^m[a-zA-Z0-9]+$)|(^s[a-zA-Z0-9]+$)|(^[a-z][a-z0-9][a-zA-Z0-9]*$)"/>
       <message key="name.invalidPattern"
              value="Member name ''{0}'' must match pattern ''{1}''."/>
     </module>
@@ -264,11 +264,14 @@
     </module>
     <module name="OverloadMethodsDeclarationOrder"/>
     <module name="VariableDeclarationUsageDistance"/> <!-- Dont Modify -->
-    <module name="CustomImportOrder">
-      <property name="sortImportsInGroupAlphabetically" value="true"/>
-      <property name="separateLineBetweenGroups" value="true"/>
-      <property name="customImportOrderRules" value="STATIC###THIRD_PARTY_PACKAGE"/>
-      <property name="tokens" value="IMPORT, STATIC_IMPORT, PACKAGE_DEF"/>
+    <module name="RedundantImport"/> <!-- Modified to add RedundantImport -->
+    <module name="UnusedImports"/> <!-- Modified to add UnusedImports -->
+    <module name="ImportOrder"> <!-- Modified to fix import order issue within a group-->
+      <property name="groups" value="ohos,com,*,net,org,javacard,/^java\./,javax"/>
+      <property name="ordered" value="true"/>
+      <property name="option" value="top"/>
+      <property name="useContainerOrderingForStatic" value="true"/>
+      <property name="sortStaticImportsAlphabetically" value = "true"/>
     </module>
     <module name="MethodParamPad"> <!-- Dont Modify -->
       <property name="tokens"
