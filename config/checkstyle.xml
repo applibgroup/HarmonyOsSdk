@@ -18,9 +18,7 @@
 
 <module name = "Checker">
   <property name="charset" value="UTF-8"/>
-
   <property name="severity" value="info"/>
-
   <property name="fileExtensions" value="java, properties, xml"/>
   <!-- Excludes all 'module-info.java' files              -->
   <!-- See https://checkstyle.org/config_filefilters.html -->
@@ -28,8 +26,10 @@
     <property name="fileNamePattern" value="module\-info\.java$"/>
   </module>
   <!-- https://checkstyle.org/config_filters.html#SuppressionFilter -->
+  
   <module name="SuppressionFilter">
-    <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
+    <property name="severity" value="info"/>
+	<property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
            default="checkstyle-suppressions.xml" />
     <property name="optional" value="true"/>
   </module>
@@ -41,12 +41,14 @@
   </module>
 
   <module name="LineLength">
+	<property name="severity" value="info"/>
     <property name="fileExtensions" value="java"/>
     <property name="max" value="120"/> <!-- modified -->
     <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
   </module>
 
   <module name="TreeWalker">
+	<property name="severity" value="info"/>
     <module name="OuterTypeFilename"/>
     <module name="IllegalTokenText">
       <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
