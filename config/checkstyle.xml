@@ -6,19 +6,18 @@
 <!--
     Checkstyle configuration that checks the Google coding conventions from Google Java Style
     that can be found at https://google.github.io/styleguide/javaguide.html
-
     Checkstyle is very configurable. Be sure to read the documentation at
     http://checkstyle.org (or in your downloaded distribution).
-
     To completely disable a check, just comment it out or delete it from the file.
     To suppress certain violations please review suppression filters.
-
     Authors: Max Vetrenko, Ruslan Diachenko, Roman Ivanov.
  -->
 
 <module name = "Checker">
   <property name="charset" value="UTF-8"/>
+
   <property name="severity" value="info"/>
+
   <property name="fileExtensions" value="java, properties, xml"/>
   <!-- Excludes all 'module-info.java' files              -->
   <!-- See https://checkstyle.org/config_filefilters.html -->
@@ -26,10 +25,8 @@
     <property name="fileNamePattern" value="module\-info\.java$"/>
   </module>
   <!-- https://checkstyle.org/config_filters.html#SuppressionFilter -->
-  
   <module name="SuppressionFilter">
-    <property name="severity" value="info"/>
-	<property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
+    <property name="file" value="${org.checkstyle.google.suppressionfilter.config}"
            default="checkstyle-suppressions.xml" />
     <property name="optional" value="true"/>
   </module>
@@ -41,14 +38,12 @@
   </module>
 
   <module name="LineLength">
-	<property name="severity" value="info"/>
     <property name="fileExtensions" value="java"/>
     <property name="max" value="120"/> <!-- modified -->
     <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
   </module>
 
   <module name="TreeWalker">
-	<property name="severity" value="info"/>
     <module name="OuterTypeFilename"/>
     <module name="IllegalTokenText">
       <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
