@@ -1,0 +1,54 @@
+name: 'HMOS'
+description: 'build HMOS libraries'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: false
+    default: 'World'
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
+runs:
+  using: "composite"
+  steps:
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: set environment variables
+      uses: allenevans/set-env@v2.0.0
+      with:
+          OHOS_SDK_HOME: '${{ github.workspace }}\huawei'
+           
+    - name: Download HMOS SDK
+      uses: actions/checkout@main
+      with:
+        repository: applibgroup/HarmonyOsSdk
+        path: huawei
+    - name: Cache SonarCloud packages
+      uses: actions/cache@v1
+      with:
+        path: ~/.sonar/cache
+        key: ${{ runner.os }}-sonar
+        restore-keys: ${{ runner.os }}-sonar
+    - name: Cache Gradle packages
+      uses: actions/cache@v1
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+        restore-keys: ${{ runner.os }}-gradle
+    - name: Hmos Build and analyze code
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: ./gradlew assembleDebug checkstyle sonarqube --info
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assets-for-download
+        path: build\reports\checkstyle
