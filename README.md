@@ -2,7 +2,7 @@
 The HMOS SDK required for the app compilation
 
 
-on: [push]
+`on: [push]
 
 jobs:
   Build and Analyse:
@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
           name: assets-for-download
-          path: build\outputs\hap\debug\phone
+          path: build\outputs\hap\debug\phone`
