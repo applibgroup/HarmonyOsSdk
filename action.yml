@@ -2,9 +2,8 @@ name: 'HMOS'
 description: 'build HMOS libraries'
 inputs:
   who-to-greet:  # id of input
-    description: 'Who to greet'
+    description: 'Build HMOS libraries'
     required: false
-    default: 'World'
 outputs:
   random-number:
     description: "Random number"
