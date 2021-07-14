@@ -1,5 +1,4 @@
-# HarmonyOsSdk
-The HMOS SDK required for the app compilation
+# Github action for building HarmonyOs Library 
 
 
 ```xml   
