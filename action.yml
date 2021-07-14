@@ -19,4 +19,6 @@ runs:
       working-directory: ${{ github.workspace }}
       run: |
         xcopy ${{ github.action_path }}\config ${{ github.workspace }}\huawei\
+        dir
+        cd huawei | dir
         ${{ github.action_path }}/run.bat
