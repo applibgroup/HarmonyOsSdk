@@ -2,7 +2,7 @@
 The HMOS SDK required for the app compilation
 
 
-`nano`
+```xml   
 on: [push]
 
 jobs:
@@ -26,4 +26,4 @@ jobs:
         with: 
           name: assets-for-download
           path: build\outputs\hap\debug\phone
-`nano`
+```xml     
