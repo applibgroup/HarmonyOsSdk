@@ -18,5 +18,5 @@ runs:
       id: main
       working-directory: ${{ github.workspace }}
       run: |
-        xcopy ${{ github.action_path }}\config ${{ github.workspace }}\huawei\con
+        xcopy ${{ github.action_path }}\config ${{ github.workspace }}\huawei\config
         ${{ github.action_path }}/run.bat
