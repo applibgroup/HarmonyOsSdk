@@ -14,8 +14,7 @@ runs:
   steps:
     - name: Build
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        OHOS_SDK_HOME: ${{ github.workspace }}\huawei
       shell: cmd
       id: main
       working-directory: ${{ github.workspace }}
