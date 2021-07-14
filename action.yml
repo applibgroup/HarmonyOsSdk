@@ -1,4 +1,4 @@
-name: 'HMOS'
+name: 'HarmonyOS-build'
 description: 'build HMOS libraries'
 inputs:
   who-to-greet:  # id of input
