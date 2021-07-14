@@ -1,13 +1,8 @@
 name: 'HarmonyOS-build'
 description: 'This Github action helps build and analyse HMOS libraries'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Build HMOS libraries'
-    required: false
-outputs:
-  random-number:
-    description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-id }}
+branding:
+  icon: award
+  color: red
 runs:
   using: "composite"
   steps:
