@@ -2,7 +2,8 @@
 The HMOS SDK required for the app compilation
 
 
-`on: [push]
+`nano`
+on: [push]
 
 jobs:
   Build and Analyse:
@@ -15,7 +16,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - id: main
+      - d: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -24,4 +25,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
           name: assets-for-download
-          path: build\outputs\hap\debug\phone`
+          path: build\outputs\hap\debug\phone
+`nano`
