@@ -14,7 +14,7 @@ runs:
   steps:
     - name: Build
       env:
-        OHOS_SDK_HOME: ${{ github.workspace }}\huawei
+        OHOS_SDK_HOME: ${{ github.action_path }}
       shell: cmd
       id: main
       working-directory: ${{ github.workspace }}
