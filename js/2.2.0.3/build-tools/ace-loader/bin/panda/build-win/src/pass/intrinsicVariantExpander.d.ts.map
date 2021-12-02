@@ -1,0 +1,1 @@
+{"version":3,"file":"intrinsicVariantExpander.d.ts","sourceRoot":"","sources":["../../../src/pass/intrinsicVariantExpander.ts"],"names":[],"mappings":"AAmBA,OAAO,EAAE,QAAQ,EAAE,MAAM,aAAa,CAAC;AACvC,OAAO,EAAE,IAAI,EAAE,MAAM,SAAS,CAAC;AAuI/B,qBAAa,wBAAyB,YAAW,IAAI;IACjD,GAAG,CAAC,EAAE,EAAE,QAAQ,GAAG,IAAI;CAI1B"}

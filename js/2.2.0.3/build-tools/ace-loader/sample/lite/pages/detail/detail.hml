@@ -1,0 +1,11 @@
+<stack
+    style="width: 444px;height: 444px;margin: 20px;border-width: 5px;border-color: #00ff00;border-radius: 10px;opacity: 0.5"
+>
+    <text style="left:140px;top:50px;width:300px;height:40px">common style</text>
+    <div class="commonStyle"></div>
+    <image
+        src="common/nextRow.bin"
+        style="left:390px;top:227px;width:30px;height:42px"
+        onclick="nextPage"
+    />
+</stack>

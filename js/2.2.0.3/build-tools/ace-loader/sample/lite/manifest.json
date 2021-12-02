@@ -1,0 +1,11 @@
+{
+  "appID": "com.example.ace.helloworld",
+  "appName": "HelloAce",
+  "versionName": "1.0.0",
+  "versionCode": 1,
+  "minPlatformVersion": "zsdk 1.0.0",
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail"
+  ]
+}

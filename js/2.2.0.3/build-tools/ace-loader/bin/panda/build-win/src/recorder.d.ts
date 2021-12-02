@@ -1,0 +1,45 @@
+import ts from "typescript";
+import { CompilerDriver } from "./compilerDriver";
+import { ModuleStmt } from "./modules";
+import { Decl, FunctionParameter, FunctionScope, Scope, VariableScope } from "./scope";
+export declare class Recorder {
+    node: ts.Node;
+    scope: Scope;
+    compilerDriver: CompilerDriver;
+    private scopeMap;
+    private hoistMap;
+    private parametersMap;
+    private ClassGroupOfNoCtor;
+    private importStmts;
+    private exportStmts;
+    private defaultUsed;
+    constructor(node: ts.Node, scope: Scope, compilerDriver: CompilerDriver);
+    record(): ts.Node;
+    getClassGroupOfNoCtor(): ts.ClassLikeDeclaration[];
+    private recordInfo;
+    private recordClassInfo;
+    buildVariableScope(curScope: Scope, node: ts.FunctionLikeDeclaration): FunctionScope;
+    private recordVariableDecl;
+    private addVariableDeclToScope;
+    private getDeclarationNodeOfId;
+    private recordImportInfo;
+    private recordExportInfo;
+    private recordFuncDecl;
+    private recordFuncInfo;
+    recordFuncName(node: ts.FunctionLikeDeclaration): void;
+    recordFunctionParameters(node: ts.FunctionLikeDeclaration): void;
+    recordPatternParameter(pattern: ts.BindingPattern, funcParams: Array<FunctionParameter>): void;
+    isRestParameter(parameter: ts.ParameterDeclaration): boolean;
+    private collectHoistDecls;
+    setScopeMap(node: ts.Node, scope: Scope): void;
+    getScopeMap(): Map<ts.Node, Scope>;
+    getScopeOfNode(node: ts.Node): Scope | undefined;
+    getImportStmts(): ModuleStmt[];
+    getExportStmts(): ModuleStmt[];
+    setHoistMap(scope: VariableScope, decl: Decl): void;
+    getHoistMap(): Map<Scope, Decl[]>;
+    getHoistDeclsOfScope(scope: VariableScope): Decl[] | undefined;
+    setParametersMap(node: ts.FunctionLikeDeclaration, parameters: FunctionParameter[]): void;
+    getParametersOfFunction(node: ts.FunctionLikeDeclaration): FunctionParameter[] | undefined;
+}
+//# sourceMappingURL=recorder.d.ts.map

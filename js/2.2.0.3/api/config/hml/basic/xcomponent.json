@@ -1,0 +1,58 @@
+{
+  "name": "xcomponent",
+  "version": [
+    {
+      "name": "v6.0"
+    }
+  ],
+  "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+  "description": [
+    {
+      "name": "The <xcomponent> component provides plugin components for third-party vendors to develop components.",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "name",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": true,
+      "description": [
+        {
+          "name": "Name of the xcomponent component.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "id",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Unique ID of a component.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "ref",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Used to register reference information for elements or child components. The reference information is registered with the parent component on $refs.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    }
+  ],
+  "events": [],
+  "supportedSubComponents": false,
+  "supportedSubComponentsRestriction": [],
+  "unSupportSubComponentsRestriction": [],
+  "parentComponentsRestriction": []
+}

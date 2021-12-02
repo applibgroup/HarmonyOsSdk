@@ -1,0 +1,1 @@
+{"version":3,"file":"cacheExpander.d.ts","sourceRoot":"","sources":["../../../src/pass/cacheExpander.ts"],"names":[],"mappings":"AAMA,OAAO,EAAE,QAAQ,EAAE,MAAM,aAAa,CAAC;AACvC,OAAO,EAAE,IAAI,EAAE,MAAM,SAAS,CAAC;AAG/B,qBAAa,aAAc,YAAW,IAAI;IACtC,GAAG,CAAC,QAAQ,EAAE,QAAQ,GAAG,IAAI;CAYhC"}

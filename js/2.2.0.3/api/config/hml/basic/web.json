@@ -1,0 +1,65 @@
+{
+  "name": "web",
+  "version": [
+    {
+      "name": "v6.0"
+    }
+  ],
+  "supportedDevices": ["phone", "tablet", "tv"],
+  "description": [
+    {
+      "name": "Component that displays web page content.",
+      "supportedDevices": ["phone", "tablet", "tv"]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "src",
+      "supportedDevices": ["phone", "tablet", "tv"],
+      "required": false,
+      "description": [
+        {
+          "name": "Set the URL of the web page to be displayed. The domain name of the web page must be HTTPS and archived by the ICP.",
+          "supportedDevices": ["phone", "tablet", "tv"]
+        }
+      ],
+      "type": "string"
+    }
+  ],
+  "events": [
+    {
+      "name": "pagestart",
+      "supportedDevices": ["phone", "tablet", "tv"],
+      "description": [
+        {
+          "name": "Triggered when a web page is loaded",
+          "supportedDevices": ["phone", "tablet", "tv"]
+        }
+      ]
+    },
+    {
+      "name": "pagefinish",
+      "supportedDevices": ["phone", "tablet", "tv"],
+      "description": [
+        {
+          "name": "Triggered when web page loading ends",
+          "supportedDevices": ["phone", "tablet", "tv"]
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "supportedDevices": ["phone", "tablet", "tv"],
+      "description": [
+        {
+          "name": "Triggered when an error occurs in loading a web page or when an error occurs in opening a web page",
+          "supportedDevices": ["phone", "tablet", "tv"]
+        }
+      ]
+    }
+  ],
+  "supportedSubComponents": false,
+  "supportedSubComponentsRestriction": [],
+  "unSupportSubComponentsRestriction": [],
+  "parentComponentsRestriction": []
+}

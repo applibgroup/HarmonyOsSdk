@@ -1,0 +1,10 @@
+{
+  "apiVersion": "6",
+  "displayName": "Java",
+  "meta": {
+    "metaVersion": "3.0.0"
+  },
+  "path": "java",
+  "releaseType": "Release",
+  "version": "2.2.0.3"
+}

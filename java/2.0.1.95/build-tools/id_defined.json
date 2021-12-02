@@ -1,0 +1,19 @@
+{
+    "record":[
+        {
+            "type":"media",
+            "name":"ic_app",
+            "order":0
+        },
+        {
+            "type":"string",
+            "name":"request_location_reminder_title",
+            "order":1
+        },
+        {
+            "type":"string",
+            "name":"request_location_reminder_content",
+            "order":2
+        }
+    ]
+}

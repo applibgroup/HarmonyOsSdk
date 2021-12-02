@@ -1,0 +1,84 @@
+OPENHARMONY SOFTWARE DEVELOPER KITS LICENSE AGREEMENT
+
+
+This OpenHarmony Software Developer Kits License Agreement (this "Agreement") is entered into effect by and between You and OpenAtom Foundation (the "OpenAtom"), whose registered office is situated at Room 2018, Block A, No.66 of 4th Ring West Road, Beijing, the People's Republic of China, in relation to your use of the OpenHarmony SDKs. Please read this Agreement carefully. By CLICKING the Accept button below this Agreement or by using the OpenHarmony SDKs, you shall be deemed as having fully understood and accepted the terms contained herein. If you do not agree to the terms of this Agreement, you shall not use the OpenHarmony SDKs.
+
+1. DEFINITIONS
+For purposes of this Agreement, the following terms shall have the following meanings:
+   1.1 "OpenHarmony" refers to an operating system project of OpenAtom Foundation for open source operation, which comprised of dozens of affiliated projects, which is located at:  https://gitee.com/openharmony , as updated from time to time.
+   1.2 "OpenHarmony SDKs" refers to a collection of OpenHarmony-based APIs, toolchains, previewer, technical documents and subsequent updates provided by OpenAtom. It helps you debug, profile and build applications that run on Compatible Device of OpenHarmony.
+   1.3 "Compatible Device" refers to any device that (i) complies with the OpenHarmony Product Compatibility Specifications (PCS); and (ii) successfully passes the OpenHarmony X Test Suite (XTS).
+   1.4 "Documentation" refers to the manuals, installation guides and other technical documentation related to the OpenHarmony SDKs that OpenAtom may provide to you. 
+
+2. LICENSE
+   2.1 Grant of Rights.  Subject to the terms and conditions of this Agreement, OpenAtom grants you a limited, worldwide, royalty-free, non-exclusive, non-transferable, non-sublicensable and revocable license for you to download, install, copy, integrate and run the OpenHarmony SDKs solely to develop applications that run on Compatible Device of OpenHarmony.  
+   2.2 Limitations on Rights. 
+     a) You shall not use the OpenHarmony SDKs for any purpose not expressly permitted by this Agreement. 
+     b) You shall not use the OpenHarmony SDKs to develop applications for other platform (including non-compatible device of OpenHarmony) or to develop other SDKs. If you do not use OpenHarmony SDKs, you can develop applications for other platforms, including incompatible devices.
+     c) This Agreement does not contain any terms that grant you the right to use any of OpenAtom's trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.
+     d) OpenAtom agrees not to obtain any rights or interests, including any intellectual property rights, of the applications that you have developed using OpenHarmony SDKs from you (or your licensor) in accordance with this Agreement.
+
+3. USAGE RULES
+   3.1 You agree to use the OpenHarmony SDKs and write applications only for purposes that are permitted by (a) this Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions. 
+   3.2 You agree that you will not engage in any activity with the SDKs, including the development or distribution of an application, that interferes with, disrupts, damages, or accesses without authorization the servers, networks, or other properties or services of any third party including, but not limited to, OpenAtom or any mobile communications carrier. 
+   3.3 Except to the extent required by applicable third party licenses, you may not modify, adapt, redistribute, decompile, reverse-engineer, disassemble, or create derivative works of the OpenHarmony SDKs or any part of the OpenHarmony SDKs.  
+   3.4 You agree that you will not remove, obscure, or alter any rights notices (including copyright and trademark notices) that may be affixed to or contained within the OpenHarmony SDKs.
+    
+4. PRIVACY AND DATA
+   4.1 The OpenHarmony SDKs will not collect any personal information form you or end users of your applications.
+   4.2 To understand developers' requirement and continually improve the quality and experience of OpenHarmony SDKs, OpenAtom may collect certain statistics from your usage of OpenHarmony SDKs, such as the usage frequency of each function and operation logs. Before any of this information is collected, the OpenHarmony SDKs will notify you and seek your consent. If you withhold consent, the information will not be collected.
+   4.3 The data collected by OpenAtom is maintained in accordance with OpenHarmony's Privacy Policy. 
+    
+5. CYBER SECURITY AND PERSONAL INFORMATION PROTECTION
+   5.1 During application development, you shall comply with the following network security requirements: 
+     a) Comply with local laws and regulations and ensure that there are no security safety risks or issues;
+     b) Do not attack or damage OpenAtom networks. Do not steal any data or information from OpenAtom or user devices. Do not crack accounts or passwords of OpenAtom users;
+     c) Do not implant unwanted code, malware, or backdoors in OpenAtom networks or user devices. Do not reserve any undisclosed interfaces or accounts;
+     d) Do not introduce any form of Trojan horse, backdoor, worm, virus, malicious code, unknown function, or unknown permission into your applications.
+   5.2 If the applications you develop using OpenHarmony SDKs will collect and process user data, you shall inform users of the type of data that will be collected, the purpose of the collection, and the data processing methods, and you shall also obtain users' consent and provide users with privacy statements and protection measures that comply with applicable laws. You shall be responsible for resolving any privacy and security issues arising between you and your users related to your applications, and OpenAtom shall not be responsible for such issues.
+
+6. UPDATES AND SUPPORT
+   6.1 Updates.  OpenAtom may extend, enhance, or otherwise modify the OpenHarmony SDKs and services at any time. Should an Update be made available, it may have APIs, features, services, or functionality that are different from those found in the OpenHarmony SDKs licensed hereunder. When OpenAtom makes Updates available, the terms of this Agreement will govern such Updates, unless the Update is accompanied by a separate license in which case the terms of that license will govern. 
+   6.2 No support or Maintenance.  OpenAtom is not obligated to provide any maintenance, technical or other support, including on-site support, for the OpenHarmony SDKs. 
+    
+7. DISCLAIMERS OF WARRANTIES
+   7.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF THE SDK IS AT YOUR SOLE RISK AND THAT THE SDK IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM OPENATOM. 
+   7.2 YOUR USE OF THE SDK AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SDK IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE. 
+   7.3 OPENATOM FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.
+
+8. INDEMNIFICATION
+   To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless OpenAtom, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys fees) arising out of or accruing from (a) your use of the OpenHarmony SDKs, (b) any application you develop on the SDKs that infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non-compliance by you with the Agreement.
+
+9. LIMITATION OF LIABILITY
+   OTHER THAN THE INTENTIONAL INFRINGEMENT OF THE INTELLECTUAL PROPERTY RIGHTS OF THE OTHER PARTY, TO THE EXTENT ALLOWED BY APPLICABLE LAW AND NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY OR LIMITATION OF LIABILITY: (A) IN NO EVENT SHALL OPENATOM OR YOU BE LIABLE FOR ANY DAMAGES FOR LOSS OF PROFITS, LOSS OF BUSINESS, LOSS OF USE OR DATA, OR INTERRUPTION OF BUSINESS AND OTHER INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, STATUTORY OR PUNITIVE DAMAGES.
+
+10. TERM AND TERMINATION
+   10.1 Term.  This Agreement shall commence on the Effective Date and continues effect until it is terminated by either you or OpenAtom as set out below. 
+   10.2 Termination.  If you want to terminate the Agreement, you may do so by ceasing your use of the OpenHarmony SDKs and any relevant developer credentials. OpenAtom may at any time, terminate the Agreement with you if: (A) you have breached any provision of the Agreement; or (B) OpenAtom is required to do so by law; or (C) the partner with whom OpenAtom offered certain parts of OpenHarmony SDKs (such as APIs) to you has terminated its relationship with OpenAtom or ceased to offer certain parts of the OpenHarmony SDKs to you; or (D) OpenAtom decides to no longer provide the OpenHarmony SDKs or certain parts of the OpenHarmony SDKs to users in the country in which you are resident or from which you use the service, or the provision of the OpenHarmony SDKs or certain OpenHarmony SDKs services to you by OpenAtom is, in OpenAtom's sole discretion, no longer commercially viable. 
+   10.3 Effect of Termination.  
+     a) When the Agreement comes to an end, the rights subject to the Agreement shall terminate immediately. You shall cease all use of and return to OpenAtom, or destroy pursuant to OpenAtom's instructions, the OpenHarmony SDKs, Documentation, and all other Confidential Information, including, without limitation, all copies and extracts thereof. You and OpenAtom shall return to the other Party, or destroy pursuant to the other Party's instructions, the other Party's Confidential Information, and all other information, including, without limitation, all copies and extracts thereof.
+     b) However, all of the legal rights, obligations and liabilities that you and OpenAtom have benefited from, been subject to (or which have accrued over time whilst the Agreement has been in force) or which are expressed to continue indefinitely, shall be unaffected by this cessation, and the provisions of paragraph 13.7 shall continue to apply to such rights, obligations and liabilities indefinitely.
+
+11. MISCELLANEOUS
+   11.1 Notices.  Any notice, request, demand or other communication required or permitted hereunder shall be in writing, shall reference this Agreement and shall be sent to the address set forth below:
+       OpenAtom Foundation
+       Room 2018, Block A, No.66 of 4th Ring West Road, 
+       100000, Beijing, the People's Republic of China	
+       Attn: Legal Team		
+       eMail: legal@openatom.org      
+       
+   11.2 Assignment.  The rights granted in the Agreement may not be assigned or transferred, in whole or part, whether voluntarily, by operation of law or otherwise, by either you or OpenAtom without the prior written approval of the other party. Neither you nor OpenAtom shall be permitted to delegate their responsibilities or obligations under the Agreement without the prior written approval of the other party. Subject to the preceding sentence, the rights and liabilities of you and OpenAtom hereto shall bind, and inure to the benefit of, their respective assignees and successors and is binding on you and OpenAtom and their successors and assigns. 
+   11.3 Relationship of the Parties.  Nothing contained in this Agreement shall be deemed or construed as creating a joint venture, partnership, agency, employment or fiduciary relationship between you and OpenAtom. The relationship of you and OpenAtom is, and at all times shall continue to be, that of independent contractors.  
+   11.4 No Third Party Beneficiaries.  Nothing in this Agreement, express or implied, is intended to confer, nor shall anything herein confer on, any person other than you and OpenAtom and their respective successors or permitted assigns, any rights, remedies, obligations or liabilities.
+   11.5 Waiver.  If OpenAtom does not exercise or enforce any legal right or remedy under any provision of this Agreement, this shall not be construed as a formal waiver of OpenAtom's rights. Those rights and remedies shall still be available to OpenAtom.
+   11.6 Severability.  If the application of any provision of this Agreement to any particular facts or circumstances shall be held to be invalid or unenforceable by a court of competent jurisdiction, then (a) the validity and enforceability of such provision as applied to any other particular facts or circumstances and the validity of other provisions of this Agreement shall not in any way be affected or impaired thereby and (b) such provision shall be enforced to the maximum extent possible so as to effect the intent of the you and OpenAtom and reformed without further action by you and OpenAtom to the extent necessary to make such provision valid and enforceable.
+   11.7 Governing Law.  This Agreement shall be governed by and construed in accordance with the laws of the People's Republic of China, without reference to its conflicts of law provisions.  
+   11.8 Dispute Resolution.  You and OpenAtom agree that any and all disputes, controversies or differences arising between you and OpenAtom from this Agreement, shall be solely and finally settled by the courts in Haidian District in Beijing. The languages to be used in the proceedings shall be Chinese.
+   11.9 Export Compliance.  You acknowledges and agrees that the OpenHarmony SDKs are subject to the export control laws and regulations, of the various countries of the world, including but not limited to the Chinese export rules of Ministry of Commerce ("Export Control Laws"). These laws include restrictions on destinations, end users and end use. You will comply with all Export Control Laws.  
+   11.10 Entire Agreement.  This Agreement constitutes the entire agreement between you and OpenAtom and governs your use of the OpenHarmony SDKs (excluding any services which OpenAtom may provide to you under a separate written agreement), and completely supersedes and replaces all prior or contemporaneous representations, discussions, proposals, negotiations, conditions, agreements and communications, whether oral or written, between you and OpenAtom relating to the use of OpenHarmony SDKs.
+
+
+
+IN WITNESS WHEREOF, by CLICKING the Accept button and/or by using the OpenHarmony SDKs, you hereby AGREE to the terms of this Agreement.
+
+

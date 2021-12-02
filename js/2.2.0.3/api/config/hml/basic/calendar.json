@@ -1,0 +1,250 @@
+{
+  "name": "calendar",
+  "version": [
+    {
+      "name": "v3.0"
+    }
+  ],
+  "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+  "description": [
+    {
+      "name": "The <calendar> component is used to create a calendar component. ",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "calendardata",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar data.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "cardcalendar",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar card type.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    },
+    {
+      "name": "date",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar date.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "object"
+    },
+    {
+      "name": "dateadapter",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar date.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "direction",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar swipe direction.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "vertical"
+        },
+        {
+          "name": "horizontal"
+        }
+      ]
+    },
+    {
+      "name": "showholiday",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar to show holiday.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    },
+    {
+      "name": "showlunar",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar to show lunar.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    },
+    {
+      "name": "startdayofweek",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar start day of week.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "0"
+        },
+        {
+          "name": "1"
+        },
+        {
+          "name": "2"
+        },
+        {
+          "name": "3"
+        },
+        {
+          "name": "4"
+        },
+        {
+          "name": "5"
+        },
+        {
+          "name": "6"
+        }
+      ]
+    },
+    {
+      "name": "type",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar type.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "simple"
+        },
+        {
+          "name": "normal"
+        }
+      ]
+    },
+    {
+      "name": "offdays",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar offdays.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "workdays",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar workdays.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "holidays",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "setting calendar holidays.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    }
+  ],
+  "events": [
+    {
+      "name": "selectedchange",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "description": [
+        {
+          "name": "Triggered when the select date.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ]
+    },
+    {
+      "name": "goto",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "description": [
+        {
+          "name": "Triggered when the jump to a certain month.",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ]
+    }
+  ],
+  "supportedSubComponents": false,
+  "supportedSubComponentsRestriction": [],
+  "unSupportSubComponentsRestriction": [],
+  "parentComponentsRestriction": []
+}

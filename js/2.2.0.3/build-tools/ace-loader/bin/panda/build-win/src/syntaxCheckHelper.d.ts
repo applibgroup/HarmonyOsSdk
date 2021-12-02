@@ -1,0 +1,21 @@
+import * as ts from "typescript";
+export declare function isOctalNumber(num: string): boolean;
+export declare function isNewOrCallExpression(node: ts.Node): boolean;
+export declare function stringLiteralIsInRegExp(node: ts.Node): boolean;
+export declare function isIncludeOctalEscapeSequence(text: string): boolean;
+export declare function isEvalOrArgumentsIdentifier(node: ts.Node): boolean;
+export declare function isLeftHandSideExpressionKind(kind: ts.SyntaxKind): boolean;
+export declare function isLeftHandSideExpression(node: ts.Node): boolean;
+export declare function isAssignmentOperator(token: ts.SyntaxKind): boolean;
+export declare function isOriginalKeyword(node: ts.Identifier): boolean;
+export declare function isFunctionLikeDeclaration(node: ts.Node): node is ts.FunctionLikeDeclaration;
+export declare function allowLetAndConstDeclarations(node: ts.Node): boolean;
+export declare function isGlobalIdentifier(name: string): boolean;
+export declare function isBindingPattern(node: ts.Node | undefined): boolean;
+export declare function visibilityToString(flag: ts.ModifierFlags): string | undefined;
+export declare function isDeclInGlobal(id: ts.Identifier): boolean;
+export declare function isInBlockScope(node: ts.Node): boolean;
+export declare function isIncludeBackslash8Or9InString(text: string): boolean;
+export declare function isOptionalParameter(node: ts.ParameterDeclaration): boolean;
+export declare function isStatement(kind: ts.SyntaxKind): boolean;
+//# sourceMappingURL=syntaxCheckHelper.d.ts.map
