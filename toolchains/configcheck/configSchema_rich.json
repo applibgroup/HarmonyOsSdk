@@ -1281,7 +1281,11 @@
                       "formsEnabled",
                       "forms",
                       "deviceCapability",
-                      "resizeable"
+                      "resizeable",
+                      "availableSubjects",
+                      "availableSubjectDeviceSecurityLevel",
+                      "srcLanguage",
+                      "srcPath"
                     ]
                   },
                   "required": [
@@ -1323,7 +1327,11 @@
                       "formsEnabled",
                       "forms",
                       "deviceCapability",
-                      "resizeable"
+                      "resizeable",
+                      "availableSubjects",
+                      "availableSubjectDeviceSecurityLevel",
+                      "srcLanguage",
+                      "srcPath"
                     ]
                   },
                   "required": [
@@ -1366,7 +1374,11 @@
                       "formsEnabled",
                       "forms",
                       "deviceCapability",
-                      "resizeable"
+                      "resizeable",
+                      "availableSubjects",
+                      "availableSubjectDeviceSecurityLevel",
+                      "srcLanguage",
+                      "srcPath"
                     ]
                   },
                   "required": [
@@ -1407,7 +1419,11 @@
                       "formsEnabled",
                       "forms",
                       "deviceCapability",
-                      "resizeable"
+                      "resizeable",
+                      "availableSubjects",
+                      "availableSubjectDeviceSecurityLevel",
+                      "srcLanguage",
+                      "srcPath"
                     ]
                   },
                   "required": [
@@ -1779,9 +1795,7 @@
                     "bluetoothInteraction",
                     "wifiInteraction",
                     "screenFetch",
-                    "multiDeviceConnection",
-                    "camera",
-                    "microphone"
+                    "multiDeviceConnection"
                   ]
                 }
               },
@@ -1877,6 +1891,41 @@
               "resizeable": {
                 "description": "Indicates whether the ability supports the multi-window feature.",
                 "type": "boolean"
+              },
+              "availableSubjects": {
+                "description": "The tag is a string array. It can be defaulted and is left empty by default, indicating the list of package names of other applications that can access the secondary Ability.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "maxItems": 10
+              },
+              "availableSubjectDeviceSecurityLevel": {
+                "description": "The label is a string and can be defaulted. The default value is greaterOrEqual SL3. This label indicates that cross-device query and startup are allowed only when the security level of the device where the application is located meets this condition.",
+                "type": "string",
+                "enum": [
+                  "greaterThanMe",
+                  "greaterOrEqualMe",
+                  "greaterOrEqual SL1",
+                  "greaterOrEqual SL2",
+                  "greaterOrEqual SL3",
+                  "greaterOrEqual SL4",
+                  "greaterOrEqual SL5"
+                ]
+              },
+              "srcLanguage": {
+                "description": "Type of the capability development language. The value can be java, js, or ets. The label cannot be defaulted.",
+                "type": "string",
+                "enum": [
+                  "java",
+                  "js",
+                  "ets"
+                ]
+              },
+              "srcPath": {
+                "description": "This tag indicates the JS component code path corresponding to the ability. The tag value is a character string (a maximum of 127 bytes). When srcLanguage is set to js or ets, this tag cannot be defaulted.",
+                "type": "string",
+                "maxLength": 127
               },
               "forms": {
                 "description": "This tag identifies the embedded card attribute of the capability. This tag is valid only when formsEnabled is set to true. This tag can be left blank by default.",

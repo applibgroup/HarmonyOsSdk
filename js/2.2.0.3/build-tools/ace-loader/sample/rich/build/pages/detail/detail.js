@@ -87,9 +87,9 @@
 /******/ ({
 
 /***/ "../../lib/json.js!../../lib/style.js!./pages/detail/detail.css":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/json.js!D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/style.js!./pages/detail/detail.css ***!
-  \****************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/json.js!D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/style.js!./pages/detail/detail.css ***!
+  \********************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -118,9 +118,9 @@ module.exports = {
 /***/ }),
 
 /***/ "../../lib/json.js!../../lib/template.js!./pages/detail/detail.hml":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/json.js!D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/template.js!./pages/detail/detail.hml ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/json.js!D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/template.js!./pages/detail/detail.hml ***!
+  \***********************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -176,10 +176,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "../../lib/script.js!../../node_modules/babel-loader/lib/index.js?presets[]=D:\\2.2.0.341\\0901\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\preset-env&plugins[]=D:\\2.2.0.341\\0901\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\plugin-transform-modules-commonjs&comments=false!../../lib/resource-reference-script.js!./pages/detail/detail.js":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/script.js!D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/babel-loader/lib?presets[]=D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/preset-env&plugins[]=D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/plugin-transform-modules-commonjs&comments=false!D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/resource-reference-script.js!./pages/detail/detail.js ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "../../lib/script.js!../../node_modules/babel-loader/lib/index.js?presets[]=D:\\project\\ohos\\sdk\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\preset-env&plugins[]=D:\\project\\ohos\\sdk\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\plugin-transform-modules-commonjs&comments=false!../../lib/resource-reference-script.js!./pages/detail/detail.js":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/script.js!D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/babel-loader/lib?presets[]=D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/preset-env&plugins[]=D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/plugin-transform-modules-commonjs&comments=false!D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/lib/resource-reference-script.js!./pages/detail/detail.js ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -276,7 +276,7 @@ if (moduleOwn.data && accessors.some(function (acc) {
 
 var $app_template$ = __webpack_require__(/*! !../../../../lib/json.js!../../../../lib/template.js!./detail.hml */ "../../lib/json.js!../../lib/template.js!./pages/detail/detail.hml")
 var $app_style$ = __webpack_require__(/*! !../../../../lib/json.js!../../../../lib/style.js!./detail.css */ "../../lib/json.js!../../lib/style.js!./pages/detail/detail.css")
-var $app_script$ = __webpack_require__(/*! !../../../../lib/script.js!../../../../node_modules/babel-loader?presets[]=D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/preset-env&plugins[]=D:/2.2.0.341/0901/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/plugin-transform-modules-commonjs&comments=false!../../../../lib/resource-reference-script.js!./detail.js */ "../../lib/script.js!../../node_modules/babel-loader/lib/index.js?presets[]=D:\\2.2.0.341\\0901\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\preset-env&plugins[]=D:\\2.2.0.341\\0901\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\plugin-transform-modules-commonjs&comments=false!../../lib/resource-reference-script.js!./pages/detail/detail.js")
+var $app_script$ = __webpack_require__(/*! !../../../../lib/script.js!../../../../node_modules/babel-loader?presets[]=D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/preset-env&plugins[]=D:/project/ohos/sdk/.temp/js/2.2.0.3/install/unzip/js/build-tools/ace-loader/node_modules/@babel/plugin-transform-modules-commonjs&comments=false!../../../../lib/resource-reference-script.js!./detail.js */ "../../lib/script.js!../../node_modules/babel-loader/lib/index.js?presets[]=D:\\project\\ohos\\sdk\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\preset-env&plugins[]=D:\\project\\ohos\\sdk\\.temp\\js\\2.2.0.3\\install\\unzip\\js\\build-tools\\ace-loader\\node_modules\\@babel\\plugin-transform-modules-commonjs&comments=false!../../lib/resource-reference-script.js!./pages/detail/detail.js")
 
 $app_define$('@app-component/detail', [], function($app_require$, $app_exports$, $app_module$) {
 

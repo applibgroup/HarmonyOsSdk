@@ -1,0 +1,428 @@
+{
+    "float": [
+        {
+            "name": "id_alpha_content_primary",
+            "value": "0.9"
+        },
+        {
+            "name": "id_alpha_content_primary_dark",
+            "value": "0.86"
+        },
+        {
+            "name": "id_alpha_content_primary_transparent",
+            "value": "1.0"
+        },
+        {
+            "name": "id_alpha_content_secondary",
+            "value": "0.6"
+        },
+        {
+            "name": "id_alpha_content_secondary_dark",
+            "value": "0.6"
+        },
+        {
+            "name": "id_alpha_content_secondary_transparent",
+            "value": "0.6"
+        },
+        {
+            "name": "id_alpha_content_tertiary",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_content_tertiary_dark",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_content_tertiary_transparent",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_content_fourth",
+            "value": "0.2"
+        },
+        {
+            "name": "id_alpha_content_fourth_dark",
+            "value": "0.2"
+        },
+        {
+            "name": "id_alpha_content_fourth_transparent",
+            "value": "0.2"
+        },
+        {
+            "name": "id_alpha_disabled",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_disabled_dark",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_disabled_transparent",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_highlight_bg",
+            "value": "0.2"
+        },
+        {
+            "name": "id_alpha_highlight_bg_dark",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_highlight_bg_transparent",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_normal_bg",
+            "value": "0.1"
+        },
+        {
+            "name": "id_alpha_normal_bg_dark",
+            "value": "0.1"
+        },
+        {
+            "name": "id_alpha_normal_bg_transparent",
+            "value": "0.2"
+        },
+        {
+            "name": "id_alpha_inapptip_bg",
+            "value": "0.05"
+        },
+        {
+            "name": "id_alpha_inapptip_bg_dark",
+            "value": "0.1"
+        },
+        {
+            "name": "id_alpha_inapptip_bg_transparent",
+            "value": "0.2"
+        },
+        {
+            "name": "id_alpha_separator_line",
+            "value": "0.0"
+        },
+        {
+            "name": "id_alpha_separator_line_dark",
+            "value": "0.1"
+        },
+        {
+            "name": "id_alpha_separator_line_transparent",
+            "value": "0.0"
+        },
+        {
+            "name": "id_text_size_headline1",
+            "value": "96.0vp"
+        },
+        {
+            "name": "id_text_size_headline2",
+            "value": "72.0vp"
+        },
+        {
+            "name": "id_text_size_headline3",
+            "value": "60.0vp"
+        },
+        {
+            "name": "id_text_size_headline4",
+            "value": "48.0vp"
+        },
+        {
+            "name": "id_text_size_headline5",
+            "value": "38.0vp"
+        },
+        {
+            "name": "id_text_size_headline6",
+            "value": "30.0vp"
+        },
+        {
+            "name": "id_text_size_headline7",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_text_size_headline8",
+            "value": "20.0vp"
+        },
+        {
+            "name": "id_text_size_headline9",
+            "value": "18.0vp"
+        },
+        {
+            "name": "id_text_size_sub_title1",
+            "value": "18.0fp"
+        },
+        {
+            "name": "id_text_size_sub_title2",
+            "value": "16.0fp"
+        },
+        {
+            "name": "id_text_size_sub_title3",
+            "value": "14.0fp"
+        },
+        {
+            "name": "id_text_size_button1",
+            "value": "16.0fp"
+        },
+        {
+            "name": "id_text_size_button2",
+            "value": "14.0fp"
+        },
+        {
+            "name": "id_text_size_button3",
+            "value": "12.0fp"
+        },
+        {
+            "name": "id_text_size_body1",
+            "value": "16.0fp"
+        },
+        {
+            "name": "id_text_size_body2",
+            "value": "14.0fp"
+        },
+        {
+            "name": "id_text_size_body3",
+            "value": "12.0fp"
+        },
+        {
+            "name": "id_text_size_caption",
+            "value": "10.0vp"
+        },
+        {
+            "name": "id_text_size_caption1",
+            "value": "10.0fp"
+        },
+        {
+            "name": "id_text_size_chart1",
+            "value": "10.0fp"
+        },
+        {
+            "name": "id_text_size_chart2",
+            "value": "0.0vp"
+        },
+        {
+            "name": "id_text_size_over_line",
+            "value": "14.0vp"
+        },
+        {
+            "name": "id_corner_radius_tips_toast",
+            "value": "18.0vp"
+        },
+        {
+            "name": "id_corner_radius_tips_badge",
+            "value": "14.0vp"
+        },
+        {
+            "name": "id_corner_radius_tips_tips",
+            "value": "18.0vp"
+        },
+        {
+            "name": "id_corner_radius_toggle_button",
+            "value": "14.0vp"
+        },
+        {
+            "name": "id_corner_radius_switch",
+            "value": "10.0vp"
+        },
+        {
+            "name": "id_corner_radius_piece",
+            "value": "14.0vp"
+        },
+        {
+            "name": "id_corner_radius_button",
+            "value": "20.0vp"
+        },
+        {
+            "name": "id_corner_radius_small_button",
+            "value": "14.0vp"
+        },
+        {
+            "name": "id_corner_radius_mark",
+            "value": "4.0vp"
+        },
+        {
+            "name": "id_corner_radius_subtab",
+            "value": "4.0vp"
+        },
+        {
+            "name": "id_corner_radius_clicked",
+            "value": "8.0vp"
+        },
+        {
+            "name": "id_corner_radius_panel",
+            "value": "32.0vp"
+        },
+        {
+            "name": "id_corner_radius_notification",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_corner_radius_card",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_corner_radius_progress_bar",
+            "value": "2.0vp"
+        },
+        {
+            "name": "id_corner_radius_dialog",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_corner_radius_grid",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_corner_radius_check_box",
+            "value": "4.0vp"
+        },
+        {
+            "name": "id_corner_radius_menu",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_corner_radius_banner",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_corner_radius_icon",
+            "value": "8.0vp"
+        },
+        {
+            "name": "id_corner_radius_text_field",
+            "value": "20.0vp"
+        },
+        {
+            "name": "id_corner_radius_default_xl",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_corner_radius_default_l",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_corner_radius_default_m",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_corner_radius_default_s",
+            "value": "8.0vp"
+        },
+        {
+            "name": "id_corner_radius_default_xs",
+            "value": "4.0vp"
+        },
+        {
+            "name": "id_default_padding_start",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_max_padding_start ",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_default_padding_end",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_max_padding_end",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_default_padding_top",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_default_padding_bottom_flexible",
+            "value": "0.0vp"
+        },
+        {
+            "name": "id_default_padding_bottom_fixed",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_dialog_margin_start",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_dialog_margin_end",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_dialog_margin_bottom",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_notification_margin_start",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_notification_margin_end",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_card_margin_start",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_card_margin_end",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_card_margin_middle",
+            "value": "12.0vp"
+        },
+        {
+            "name": "id_text_margin_vertical",
+            "value": "2.0vp"
+        },
+        {
+            "name": "id_text_margin_horizontal",
+            "value": "8.0vp"
+        },
+        {
+            "name": "id_text_paragraph_margin_xl",
+            "value": "48.0vp"
+        },
+        {
+            "name": "id_text_paragraph_margin_l",
+            "value": "24.0vp"
+        },
+        {
+            "name": "id_text_paragraph_margin_m",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_text_paragraph_margin_s",
+            "value": "8.0vp"
+        },
+        {
+            "name": "id_text_paragraph_margin_xs",
+            "value": "4.0vp"
+        },
+        {
+            "name": "id_elements_margin_vertical_l",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_elements_margin_vertical_m",
+            "value": "8.0vp"
+        },
+        {
+            "name": "id_elements_margin_horizontal_l",
+            "value": "16.0vp"
+        },
+        {
+            "name": "id_elements_margin_horizontal_m",
+            "value": "8.0vp"
+        },
+        {
+            "name": "id_text_line_space_s",
+            "value": "1.1"
+        },
+        {
+            "name": "id_text_line_space_l",
+            "value": "1.4"
+        },
+        {
+            "name": "button_radius",
+            "value": "10vp"
+        }
+    ]
+}

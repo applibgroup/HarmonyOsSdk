@@ -1,0 +1,217 @@
+{
+  "name": "animate",
+  "version": [
+    {
+      "name": "v7.0"
+    }
+  ],
+  "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+  "description": [
+    {
+      "name": "",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "attributeName",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "begin",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "dur",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "end",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "repeatCount",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "number",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        },
+        {
+          "name": "indefinite",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ]
+    },
+    {
+      "name": "fill",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "freeze",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        },
+        {
+          "name": "remove",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ]
+    },
+    {
+      "name": "calcMode",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "discrete",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        },
+        {
+          "name": "linear",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        },
+        {
+          "name": "paced",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        },
+        {
+          "name": "spline",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ]
+    },
+    {
+      "name": "keyTimes",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "keySplines",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "by",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "from",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "to",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "values",
+      "supportedDevices": ["phone", "tablet", "tv", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "",
+          "supportedDevices": ["phone", "tablet", "tv", "wearable"]
+        }
+      ],
+      "type": "string"
+    }
+  ],
+  "events": [],
+  "supportedSubComponents": false,
+  "supportedSubComponentsRestriction": [],
+  "unSupportSubComponentsRestriction": [],
+  "parentComponentsRestriction": []
+}
+

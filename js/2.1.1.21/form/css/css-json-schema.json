@@ -1,0 +1,283 @@
+{
+  "type": "object",
+  "properties": {
+    "properties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "supportedDevices": {
+            "type": "array",
+            "description": "本字段非必填,如果为空，表示该属性支持所有的设备类型",
+            "items": {
+              "type": "string",
+              "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+            }
+          },
+          "syntax": {
+            "type": "array",
+            "description": "语法",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "支持<length>、<color>、<percentage> 、<line-width>、<line-style>、<repeat-style>、<time>、<transform-list>等内置类型单个或多个(||分割)"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该属性继承属性支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          },
+          "version": {
+            "type": "array",
+            "description": "该属性的当前的版本",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "版本号例如:v3.0"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该属性继承属性支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          },
+          "description": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "属性的描述文档"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该属性继承属性支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          },
+          "restrictions": {
+            "type": "array",
+            "description": "语法限制",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "array",
+                  "description": "语法限制,单个或多个组合",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "enum",
+                      "length",
+                      "line-style",
+                      "color",
+                      "percentage",
+                      "image",
+                      "string",
+                      "repeat",
+                      "position",
+                      "identifier",
+                      "number",
+                      "time"
+                    ]
+                  }
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该属性继承属性支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          },
+          "values": {
+            "type": "array",
+            "description": "当restrictions字段存在enum时存在该字段,表示该属性对应的值的可选值",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "可选值"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该属性继承属性支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": ["name"]
+            }
+          }
+        },
+        "required": ["name", "version", "description"]
+      }
+    },
+    "atDirectives": {
+      "type": "array",
+      "description": "指令列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "指令名称"
+          },
+          "supportedDevices": {
+            "type": "array",
+            "description": "本字段非必填,如果为空，表示该属性支持所有的设备类型",
+            "items": {
+              "type": "string",
+              "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+            }
+          },
+          "version": {
+            "type": "array",
+            "description": "版本",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "版本号eg: v3.0"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该属性继承指令支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          },
+          "description": {
+            "type": "array",
+            "description": "指令的描述",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该属性继承指令支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          }
+        }
+      }
+    },
+    "pseudoClasses": {
+      "type": "array",
+      "description": "伪类列表",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "伪类名称"
+          },
+          "supportedDevices": {
+            "type": "array",
+            "description": "本字段非必填,如果为空，表示该伪类支持所有的设备类型",
+            "items": {
+              "type": "string",
+              "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+            }
+          },
+          "version": {
+            "type": "array",
+            "description": "版本",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "版本号eg: v3.0"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该伪类继承指令支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          },
+          "description": {
+            "type": "array",
+            "description": "伪类的描述",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "supportedDevices": {
+                  "type": "array",
+                  "description": "本字段非必填,如果为空，表示该伪类继承指令支持的设备类型",
+                  "items": {
+                    "type": "string",
+                    "enum": ["tv", "phone", "tablet", "wearable", "liteWearable", "smartVision"]
+                  }
+                }
+              },
+              "required": ["name"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["properties", "atDirectives", "pseudoClasses"]
+}

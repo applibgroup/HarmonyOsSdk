@@ -1,0 +1,64 @@
+/*
+ * This header was generated from the Linux kernel headers by update_headers.py,
+ * to provide necessary information from kernel to userspace, such as constants,
+ * structures, and macros, and thus, contains no copyrightable information.
+ */
+#ifndef _UAPI_LINUX_SEG6_LOCAL_H
+#define _UAPI_LINUX_SEG6_LOCAL_H
+#include <linux/seg6.h>
+enum {
+	SEG6_LOCAL_UNSPEC,
+	SEG6_LOCAL_ACTION,
+	SEG6_LOCAL_SRH,
+	SEG6_LOCAL_TABLE,
+	SEG6_LOCAL_NH4,
+	SEG6_LOCAL_NH6,
+	SEG6_LOCAL_IIF,
+	SEG6_LOCAL_OIF,
+	SEG6_LOCAL_BPF,
+	__SEG6_LOCAL_MAX,
+};
+#define SEG6_LOCAL_MAX (__SEG6_LOCAL_MAX - 1)
+enum {
+	SEG6_LOCAL_ACTION_UNSPEC	= 0,
+
+	SEG6_LOCAL_ACTION_END		= 1,
+
+	SEG6_LOCAL_ACTION_END_X		= 2,
+
+	SEG6_LOCAL_ACTION_END_T		= 3,
+
+	SEG6_LOCAL_ACTION_END_DX2	= 4,
+
+	SEG6_LOCAL_ACTION_END_DX6	= 5,
+
+	SEG6_LOCAL_ACTION_END_DX4	= 6,
+
+	SEG6_LOCAL_ACTION_END_DT6	= 7,
+
+	SEG6_LOCAL_ACTION_END_DT4	= 8,
+
+	SEG6_LOCAL_ACTION_END_B6	= 9,
+
+	SEG6_LOCAL_ACTION_END_B6_ENCAP	= 10,
+
+	SEG6_LOCAL_ACTION_END_BM	= 11,
+
+	SEG6_LOCAL_ACTION_END_S		= 12,
+
+	SEG6_LOCAL_ACTION_END_AS	= 13,
+
+	SEG6_LOCAL_ACTION_END_AM	= 14,
+
+	SEG6_LOCAL_ACTION_END_BPF	= 15,
+	__SEG6_LOCAL_ACTION_MAX,
+};
+#define SEG6_LOCAL_ACTION_MAX (__SEG6_LOCAL_ACTION_MAX - 1)
+enum {
+	SEG6_LOCAL_BPF_PROG_UNSPEC,
+	SEG6_LOCAL_BPF_PROG,
+	SEG6_LOCAL_BPF_PROG_NAME,
+	__SEG6_LOCAL_BPF_PROG_MAX,
+};
+#define SEG6_LOCAL_BPF_PROG_MAX (__SEG6_LOCAL_BPF_PROG_MAX - 1)
+#endif

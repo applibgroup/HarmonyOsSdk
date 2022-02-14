@@ -1,0 +1,724 @@
+{
+    "color": [
+        {
+            "name": "id_color_foreground_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "id_color_foreground_contrary_dark",
+            "value": "#ffe5e5e5"
+        },
+        {
+            "name": "id_color_foreground_contrary_disable_dark",
+            "value": "#ff666666"
+        },
+        {
+            "name": "id_color_background_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_sub_background_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_emphasize_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "id_color_emphasize_contrary_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "id_color_alert_dark",
+            "value": "#ffd94838"
+        },
+        {
+            "name": "id_color_warning_dark",
+            "value": "#ffdb6b42"
+        },
+        {
+            "name": "id_color_handup_dark",
+            "value": "#ffd94838"
+        },
+        {
+            "name": "id_color_connected_dark",
+            "value": "#ff5ba854"
+        },
+        {
+            "name": "id_color_component_activated_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_component_normal_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "id_color_list_separator_dark",
+            "value": "#33ffffff"
+        },
+        {
+            "name": "id_color_subheading_separator_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "id_color_click_effect_dark",
+            "value": "#26ffffff"
+        },
+        {
+            "name": "id_color_hover_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "id_color_focused_content_primary_dark",
+            "value": "#e5ffffff"
+        },
+        {
+            "name": "id_color_focused_content_second_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_focused_content_tertiary_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "id_color_focused_outline_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_focused_bg_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_primary_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_primary_contrary_dark",
+            "value": "#ffe5e5e5"
+        },
+        {
+            "name": "id_color_secondary_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_tertiary_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "id_color_fourth_dark",
+            "value": "#33ffffff"
+        },
+        {
+            "name": "id_color_activated_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_activated_start_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_activated_end_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_text_primary_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_text_primary_contrary_dark",
+            "value": "#ffe5e5e5"
+        },
+        {
+            "name": "id_color_text_secondary_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_text_secondary_contrary_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_text_tertiary_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "id_color_text_tertiary_contrary_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "id_color_text_primary_activated_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_text_secondary_activated_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_text_search_url_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_text_hint_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_text_hint_contrary_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_text_hyperlink_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_text_hyperlink_contrary_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_text_highlight_bg_dark",
+            "value": "#66317af7"
+        },
+        {
+            "name": "id_color_text_highlight_bg_contrary_dark",
+            "value": "#66317af7"
+        },
+        {
+            "name": "id_color_palette1_dark",
+            "value": "#ff5f58c7"
+        },
+        {
+            "name": "id_color_palette2_dark",
+            "value": "#ff4796c4"
+        },
+        {
+            "name": "id_color_palette3_dark",
+            "value": "#ff5aada0"
+        },
+        {
+            "name": "id_color_palette4_dark",
+            "value": "#ff5ba854"
+        },
+        {
+            "name": "id_color_palette5_dark",
+            "value": "#ff86ad53"
+        },
+        {
+            "name": "id_color_palette6_dark",
+            "value": "#ff8c55c2"
+        },
+        {
+            "name": "id_color_palette7_dark",
+            "value": "#ffd64966"
+        },
+        {
+            "name": "id_color_palette8_dark",
+            "value": "#ffd94838"
+        },
+        {
+            "name": "id_color_palette9_dark",
+            "value": "#ffdb6b42"
+        },
+        {
+            "name": "id_color_palette10_dark",
+            "value": "#ffe08c3a"
+        },
+        {
+            "name": "id_color_palette11_dark",
+            "value": "#ffd1a738"
+        },
+        {
+            "name": "id_color_palette_aux1_dark",
+            "value": "#ff5550a6"
+        },
+        {
+            "name": "id_color_palette_aux2_dark",
+            "value": "#ff467794"
+        },
+        {
+            "name": "id_color_palette_aux3_dark",
+            "value": "#ff4c7a73"
+        },
+        {
+            "name": "id_color_palette_aux4_dark",
+            "value": "#ff5c8059"
+        },
+        {
+            "name": "id_color_palette_aux5_dark",
+            "value": "#ff6b8052"
+        },
+        {
+            "name": "id_color_palette_aux6_dark",
+            "value": "#ff634794"
+        },
+        {
+            "name": "id_color_palette_aux7_dark",
+            "value": "#ffa14a5c"
+        },
+        {
+            "name": "id_color_palette_aux8_dark",
+            "value": "#ff9c554b"
+        },
+        {
+            "name": "id_color_palette_aux9_dark",
+            "value": "#ff9e644f"
+        },
+        {
+            "name": "id_color_palette_aux10_dark",
+            "value": "#ff9e7349"
+        },
+        {
+            "name": "id_color_palette_aux11_dark",
+            "value": "#ff997e39"
+        },
+        {
+            "name": "id_color_special1_dark",
+            "value": "#ff392f49"
+        },
+        {
+            "name": "id_color_special2_dark",
+            "value": "#ff343e4a"
+        },
+        {
+            "name": "id_color_special3_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_special4_dark",
+            "value": "#ff3c4b34"
+        },
+        {
+            "name": "id_color_special5_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_special6_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_special7_dark",
+            "value": "#ff443038"
+        },
+        {
+            "name": "id_color_special8_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_special9_dark",
+            "value": "#ff463630"
+        },
+        {
+            "name": "id_color_special10_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_special11_dark",
+            "value": "#ff4a4333"
+        },
+        {
+            "name": "id_color_mask_thin_dark",
+            "value": "#66000000"
+        },
+        {
+            "name": "id_color_mask_light_dark",
+            "value": "#99000000"
+        },
+        {
+            "name": "id_color_mask_regular_dark",
+            "value": "#b2000000"
+        },
+        {
+            "name": "id_color_mask_thick_dark",
+            "value": "#e5000000"
+        },
+        {
+            "name": "id_color_statusbar_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_navigationbar_bg_dark",
+            "value": "#e5000000"
+        },
+        {
+            "name": "id_color_titlebar_icon_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_titlebar_icon_pressed_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_titlebar_text_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_titlebar_text_off_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_titlebar_subtitle_text_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_titlebar_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_titlebar_sub_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_bottom_tab_icon_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_bottom_tab_icon_off_dark",
+            "value": "#33ffffff"
+        },
+        {
+            "name": "id_color_bottom_tab_icon_auxcolor01_dark",
+            "value": "#ccffffff"
+        },
+        {
+            "name": "id_color_bottom_tab_icon_auxcolor_off01_dark",
+            "value": "#3fffffff"
+        },
+        {
+            "name": "id_color_bottom_tab_icon_auxcolor02_dark",
+            "value": "#995291ff"
+        },
+        {
+            "name": "id_color_bottom_tab_icon_auxcolor_off02_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "id_color_bottom_tab_text_on_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_bottom_tab_text_off_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_bottom_tab_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_bottom_tab_bg_blur_dark",
+            "value": "#f2000000"
+        },
+        {
+            "name": "id_color_bottom_tab_sub_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_bottom_tab_sub_bg_blur_dark",
+            "value": "#f2000000"
+        },
+        {
+            "name": "id_color_subtab_text_on_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_subtab_text_off_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_subtab_line_on_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_subtab_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_toolbar_icon_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_toolbar_icon_actived_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_toolbar_text_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_toolbar_text_actived_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "id_color_toolbar_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_toolbar_sub_bg_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_text_field_bg_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "id_color_text_field_sub_bg_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "id_color_progress_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "id_color_spinner_icon_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "id_color_badge_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "id_color_badge_red_dark",
+            "value": "#ffd94838"
+        },
+        {
+            "name": "id_color_dialog_bg_dark",
+            "value": "#ff202224"
+        },
+        {
+            "name": "id_color_button_normal_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "id_color_switch_outline_off_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "id_color_switch_bg_off_dark",
+            "value": "#66000000"
+        },
+        {
+            "name": "id_color_floating_button_icon_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "id_color_floating_button_icon_start_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "id_color_floating_button_icon_end_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "id_color_floating_button_bg_normal_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "id_color_floating_button_start_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "id_color_floating_button_center_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "id_color_floating_button_end_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "id_color_floating_button_shadow_start_dark",
+            "value": "#4d317af7"
+        },
+        {
+            "name": "id_color_floating_button_shadow_end_dark",
+            "value": "#4d317af7"
+        },
+        {
+            "name": "id_color_floating_button_bg_pressed_dark",
+            "value": "#ff4587f7"
+        },
+        {
+            "name": "id_color_instant_tip_bg_dark",
+            "value": "#ff4d4d4d"
+        },
+        {
+            "name": "id_color_panel_bg_dark",
+            "value": "#ff202224"
+        },
+        {
+            "name": "id_color_card_bg_dark",
+            "value": "#ff2e3033"
+        },
+        {
+            "name": "id_color_list_card_bg_dark",
+            "value": "#ff202224"
+        },
+        {
+            "name": "id_color_tooltip_foreground_dark",
+            "value": "#ff000000"
+        },
+        {
+            "name": "id_color_tooltip_background_dark",
+            "value": "#ff404040"
+        },
+        {
+            "name": "id_color_help_tip_bg_dark",
+            "value": "#ff404040"
+        },
+        {
+            "name": "fa_foreground_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "fa_foreground_contrary_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "fa_emphasize_dark",
+            "value": "#ff317af7"
+        },
+        {
+            "name": "fa_emphasize_outline_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "fa_alert_dark",
+            "value": "#ffd94838"
+        },
+        {
+            "name": "fa_warning_dark",
+            "value": "#ffdb6b42"
+        },
+        {
+            "name": "fa_handup_dark",
+            "value": "#ffd94838"
+        },
+        {
+            "name": "fa_connected_dark",
+            "value": "#ff5ba854"
+        },
+        {
+            "name": "fa_component_normal_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "fa_click_effect_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "fa_list_separator_dark",
+            "value": "#33ffffff"
+        },
+        {
+            "name": "fa_list_card_bg_blur_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "fa_list_card_bg_dark",
+            "value": "#19ffffff"
+        },
+        {
+            "name": "fa_background_blur_dark",
+            "value": "#cc202224"
+        },
+        {
+            "name": "fa_background_dark",
+            "value": "#ff2e3033"
+        },
+        {
+            "name": "fa_sub_background_dark",
+            "value": "#ff2e3033"
+        },
+        {
+            "name": "fa_text_primary_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "fa_text_secondary_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "fa_text_tertiary_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "fa_text_fourth_dark",
+            "value": "#33ffffff"
+        },
+        {
+            "name": "fa_text_contrary_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "fa_text_activated_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "fa_icon_primary_dark",
+            "value": "#dbffffff"
+        },
+        {
+            "name": "fa_icon_secondary_dark",
+            "value": "#99ffffff"
+        },
+        {
+            "name": "fa_icon_tertiary_dark",
+            "value": "#66ffffff"
+        },
+        {
+            "name": "fa_icon_fourth_dark",
+            "value": "#33ffffff"
+        },
+        {
+            "name": "fa_icon_contrary_dark",
+            "value": "#ffffffff"
+        },
+        {
+            "name": "fa_activated_dark",
+            "value": "#ff5291ff"
+        },
+        {
+            "name": "fa_palette1_dark",
+            "value": "#ff5f58c7"
+        },
+        {
+            "name": "fa_palette2_dark",
+            "value": "#ff4796c4"
+        },
+        {
+            "name": "fa_palette3_dark",
+            "value": "#ff5aada0"
+        },
+        {
+            "name": "fa_palette4_dark",
+            "value": "#ff5ba854"
+        },
+        {
+            "name": "fa_palette5_dark",
+            "value": "#ff86ad53"
+        },
+        {
+            "name": "fa_palette6_dark",
+            "value": "#ff8c55c2"
+        },
+        {
+            "name": "fa_palette7_dark",
+            "value": "#ffd64966"
+        },
+        {
+            "name": "fa_palette8_dark",
+            "value": "#ffd94838"
+        },
+        {
+            "name": "fa_palette9_dark",
+            "value": "#ffdb6b42"
+        },
+        {
+            "name": "fa_palette10_dark",
+            "value": "#ffe08c3a"
+        },
+        {
+            "name": "fa_palette11_dark",
+            "value": "#ffd1a738"
+        },
+        {
+            "name": "fa_palette12_dark",
+            "value": "#ff838388"
+        }
+    ]
+}

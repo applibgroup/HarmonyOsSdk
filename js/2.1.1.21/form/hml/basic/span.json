@@ -1,0 +1,281 @@
+{
+  "name": "span",
+  "version": [
+    {
+      "name": "v3.0"
+    }
+  ],
+  "supportedDevices": ["phone", "tablet", "wearable"],
+  "description": [
+    {
+      "name": "The <span> child component of <text> is used as a text modifier.",
+      "supportedDevices": ["phone", "tablet", "wearable"]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "id",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Unique ID of a component.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "style",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Style declaration of a component.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "class",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Style class of a component, which is used to refer to a style table.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "voicelabel",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Voice label. When a voice label is triggered, the click event of the component is triggered. NOTE: The voice label takes effect only when the click event is set.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "subscriptflag",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Voice subscript switch. Available values are as follows: auto: For the <image> and <list-item> components, if subscriptflag is set to auto, the voice subscript is turned on. For other components, if subscriptflag is set to auto, the voice subscript is turned off. on: Turn on the voice subscript. off: Turn off the voice subscript. If no customized subscript is set, the subscript is automatically accumulated from 1. NOTE The voice subscript takes effect only when the click event is set.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "auto"
+        },
+        {
+          "name": "on"
+        },
+        {
+          "name": "off"
+        }
+      ]
+    },
+    {
+      "name": "subscriptlabel",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Custom subscript. After it is set, the subscript is displayed in the way you specified. To make this attribute take effect, you need to turn on the voice subscript.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "scenelabel",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Available values are as follows: video: Video scenario. For example, to watch a video, a user can say the voiceLabel (usually the video name), play voiceLabel, see voiceLabel, or watch voiceLabel, etc. audio: Music scenario. For example, to listen to a song, a user can say the voiceLabel (usually the song name), play voiceLabel, or listen voiceLabel, etc. page: Page scenario. For example, to go to a page, a user can say the voiceLabel (usually the page name), switch to voiceLabel, go to voiceLabel, or jump to voiceLabel, etc. switch: Switch scenario. For example, to turn on or turn off a switch, a user can say the voiceLabel (usually the switch name), turn on voiceLabel, open voiceLabel, turn off voiceLabel, close voiceLabel, etc. common: Common scenario, which is triggered by the voiceLabel.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "video"
+        },
+        {
+          "name": "audio"
+        },
+        {
+          "name": "page"
+        },
+        {
+          "name": "switch"
+        },
+        {
+          "name": "common"
+        }
+      ]
+    },
+    {
+      "name": "accessibilitygroup",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Accessibility group. If this attribute is set to true, the component and all its child components form an entire selectable component, and the accessibility service will no longer available for the content of its child components.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    },
+    {
+      "name": "accessibilitytext",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Accessibility text. If a component does not contain text information, it will not be read when the component is selected by the screen reader. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set this attribute for components without text information. When the component is selected by the screen reader, the specified accessibility text will be read, informing the user which component is selected. If a component with this attribute set contains text information, only the accessibility text will be read.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "accessibilitydescription",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Accessibility description. You can specify further explanation of the current component, for example, possible operation consequences, especially those cannot be learned from component attributes and accessibility text. You can set a detailed description text for the attribute of the component to help users understand the operation to be performed. If a component contains both text information and the accessibility description, the text is read first and then the accessibility description, when the component is selected.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "accessibilityimportance",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Accessibility importance, which is used to decide whether a component can be identified by the accessibility service. The value can be auto, yes, no, or no-hide-descendants. The last value forces the screen reader to ignore the current component and all its subcomponents. yes: The current component is selectable for the accessibility service. no: The current component is not selectable for the accessibility service.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "for",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Expands the current element based on the configured data list.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "tid",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "The tid attribute is used to accelerate the for loop. It is used to improve the re-rendering efficiency when data in a loop changes. The tid attribute specifies the unique ID of each element in the array. If it is not specified, the index of each element in the array is used as the ID. For example, tid='id' indicates that the id attribute of each element is its unique identifier.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "if",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Whether the element is added or removed.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    },
+    {
+      "name": "elif",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    },
+    {
+      "name": "else",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [],
+      "type": "string"
+    },
+    {
+      "name": "show",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "Whether the element is displayed or hidden.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    }
+  ],
+  "events": [],
+  "supportedSubComponents": true,
+  "supportedSubComponentsRestriction": [
+    {
+      "name": "span",
+      "supportedDevices": ["phone", "tablet", "wearable"]
+    }
+  ],
+  "unSupportSubComponentsRestriction": [],
+  "parentComponentsRestriction": []
+}

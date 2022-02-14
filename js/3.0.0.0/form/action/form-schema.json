@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties":{
+    "data": {
+      "type": "object",
+      "description": "Defines variables."
+    },
+    "actions": {
+      "type": "object",
+      "description": "Defines events."
+    },
+    "apiVersion": {
+      "type": "object",
+      "description": "Defines api version compatibility information."
+    }
+  }
+}

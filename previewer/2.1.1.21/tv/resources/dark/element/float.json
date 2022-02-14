@@ -1,0 +1,20 @@
+{
+    "float": [
+        {
+            "name": "id_alpha_content_primary",
+            "value": "0.86"
+        },
+        {
+            "name": "id_alpha_highlight_bg",
+            "value": "0.4"
+        },
+        {
+            "name": "id_alpha_inapptip_bg",
+            "value": "0.1"
+        },
+        {
+            "name": "id_alpha_separator_line",
+            "value": "0.1"
+        }
+    ]
+}

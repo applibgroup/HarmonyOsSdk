@@ -286,7 +286,9 @@
                 "label",
                 "visible",
                 "deviceCapability",
-                "resizeable"
+                "resizeable",
+                "srcLanguage",
+                "srcPath"
               ]
             },
             "properties": {
@@ -337,6 +339,20 @@
               "resizeable": {
                 "description": "Indicates whether the ability supports the multi-window feature.",
                 "type": "boolean"
+              },
+              "srcLanguage": {
+                "description": "Type of the capability development language. The value can be java, js, or ets. The label cannot be defaulted.",
+                "type": "string",
+                "enum": [
+                  "java",
+                  "js",
+                  "ets"
+                ]
+              },
+              "srcPath": {
+                "description": "This tag indicates the JS component code path corresponding to the ability. The tag value is a character string (a maximum of 127 bytes). When srcLanguage is set to js or ets, this tag cannot be defaulted.",
+                "type": "string",
+                "maxLength": 127
               }
             }
           }

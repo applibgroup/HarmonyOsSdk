@@ -1,0 +1,638 @@
+{
+    "theme": [
+        {
+            "name": "theme_dark",
+            "parent": "theme_light",
+            "value": [
+                {
+                    "name": "attribute_color_foreground",
+                    "value": "$color:id_color_foreground_dark"
+                },
+                {
+                    "name": "attribute_color_foreground_contrary",
+                    "value": "$color:id_color_foreground_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_foreground_contrary_disable",
+                    "value": "$color:id_color_foreground_contrary_disable_dark"
+                },
+                {
+                    "name": "attribute_color_background",
+                    "value": "$color:id_color_background_dark"
+                },
+                {
+                    "name": "attribute_color_sub_background",
+                    "value": "$color:id_color_sub_background_dark"
+                },
+                {
+                    "name": "attribute_color_emphasize",
+                    "value": "$color:id_color_emphasize_dark"
+                },
+                {
+                    "name": "attribute_color_emphasize_contrary",
+                    "value": "$color:id_color_emphasize_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_alert",
+                    "value": "$color:id_color_alert_dark"
+                },
+                {
+                    "name": "attribute_color_warning",
+                    "value": "$color:id_color_warning_dark"
+                },
+                {
+                    "name": "attribute_color_handup",
+                    "value": "$color:id_color_handup_dark"
+                },
+                {
+                    "name": "attribute_color_connected",
+                    "value": "$color:id_color_connected_dark"
+                },
+                {
+                    "name": "attribute_color_component_activated",
+                    "value": "$color:id_color_component_activated_dark"
+                },
+                {
+                    "name": "attribute_color_component_normal",
+                    "value": "$color:id_color_component_normal_dark"
+                },
+                {
+                    "name": "attribute_color_list_separator",
+                    "value": "$color:id_color_list_separator_dark"
+                },
+                {
+                    "name": "attribute_color_subheading_separator",
+                    "value": "$color:id_color_subheading_separator_dark"
+                },
+                {
+                    "name": "attribute_color_click_effect",
+                    "value": "$color:id_color_click_effect_dark"
+                },
+                {
+                    "name": "attribute_color_hover",
+                    "value": "$color:id_color_hover_dark"
+                },
+                {
+                    "name": "attribute_color_focused_content_primary",
+                    "value": "$color:id_color_focused_content_primary_dark"
+                },
+                {
+                    "name": "attribute_color_focused_content_second",
+                    "value": "$color:id_color_focused_content_second_dark"
+                },
+                {
+                    "name": "attribute_color_focused_content_tertiary",
+                    "value": "$color:id_color_focused_content_tertiary_dark"
+                },
+                {
+                    "name": "attribute_color_focused_outline",
+                    "value": "$color:id_color_focused_outline_dark"
+                },
+                {
+                    "name": "attribute_color_focused_bg",
+                    "value": "$color:id_color_focused_bg_dark"
+                },
+                {
+                    "name": "attribute_color_primary",
+                    "value": "$color:id_color_primary_dark"
+                },
+                {
+                    "name": "attribute_color_primary_contrary",
+                    "value": "$color:id_color_primary_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_secondary",
+                    "value": "$color:id_color_secondary_dark"
+                },
+                {
+                    "name": "attribute_color_tertiary",
+                    "value": "$color:id_color_tertiary_dark"
+                },
+                {
+                    "name": "attribute_color_fourth",
+                    "value": "$color:id_color_fourth_dark"
+                },
+                {
+                    "name": "attribute_color_activated",
+                    "value": "$color:id_color_activated_dark"
+                },
+                {
+                    "name": "attribute_color_activated_start",
+                    "value": "$color:id_color_activated_start_dark"
+                },
+                {
+                    "name": "attribute_color_activated_end",
+                    "value": "$color:id_color_activated_end_dark"
+                },
+                {
+                    "name": "attribute_color_text_primary",
+                    "value": "$color:id_color_text_primary_dark"
+                },
+                {
+                    "name": "attribute_color_text_primary_contrary",
+                    "value": "$color:id_color_text_primary_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_text_secondary",
+                    "value": "$color:id_color_text_secondary_dark"
+                },
+                {
+                    "name": "attribute_color_text_secondary_contrary",
+                    "value": "$color:id_color_text_secondary_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_text_tertiary",
+                    "value": "$color:id_color_text_tertiary_dark"
+                },
+                {
+                    "name": "attribute_color_text_tertiary_contrary",
+                    "value": "$color:id_color_text_tertiary_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_text_primary_activated",
+                    "value": "$color:id_color_text_primary_activated_dark"
+                },
+                {
+                    "name": "attribute_color_text_secondary_activated",
+                    "value": "$color:id_color_text_secondary_activated_dark"
+                },
+                {
+                    "name": "attribute_color_text_search_url",
+                    "value": "$color:id_color_text_search_url_dark"
+                },
+                {
+                    "name": "attribute_color_text_hint",
+                    "value": "$color:id_color_text_hint_dark"
+                },
+                {
+                    "name": "attribute_color_text_hint_contrary",
+                    "value": "$color:id_color_text_hint_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_text_hyperlink",
+                    "value": "$color:id_color_text_hyperlink_dark"
+                },
+                {
+                    "name": "attribute_color_text_hyperlink_contrary",
+                    "value": "$color:id_color_text_hyperlink_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_text_highlight_bg",
+                    "value": "$color:id_color_text_highlight_bg_dark"
+                },
+                {
+                    "name": "attribute_color_text_highlight_bg_contrary",
+                    "value": "$color:id_color_text_highlight_bg_contrary_dark"
+                },
+                {
+                    "name": "attribute_color_palette1",
+                    "value": "$color:id_color_palette1_dark"
+                },
+                {
+                    "name": "attribute_color_palette2",
+                    "value": "$color:id_color_palette2_dark"
+                },
+                {
+                    "name": "attribute_color_palette3",
+                    "value": "$color:id_color_palette3_dark"
+                },
+                {
+                    "name": "attribute_color_palette4",
+                    "value": "$color:id_color_palette4_dark"
+                },
+                {
+                    "name": "attribute_color_palette5",
+                    "value": "$color:id_color_palette5_dark"
+                },
+                {
+                    "name": "attribute_color_palette6",
+                    "value": "$color:id_color_palette6_dark"
+                },
+                {
+                    "name": "attribute_color_palette7",
+                    "value": "$color:id_color_palette7_dark"
+                },
+                {
+                    "name": "attribute_color_palette8",
+                    "value": "$color:id_color_palette8_dark"
+                },
+                {
+                    "name": "attribute_color_palette9",
+                    "value": "$color:id_color_palette9_dark"
+                },
+                {
+                    "name": "attribute_color_palette10",
+                    "value": "$color:id_color_palette10_dark"
+                },
+                {
+                    "name": "attribute_color_palette11",
+                    "value": "$color:id_color_palette11_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux1",
+                    "value": "$color:id_color_palette_aux1_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux2",
+                    "value": "$color:id_color_palette_aux2_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux3",
+                    "value": "$color:id_color_palette_aux3_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux4",
+                    "value": "$color:id_color_palette_aux4_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux5",
+                    "value": "$color:id_color_palette_aux5_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux6",
+                    "value": "$color:id_color_palette_aux6_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux7",
+                    "value": "$color:id_color_palette_aux7_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux8",
+                    "value": "$color:id_color_palette_aux8_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux9",
+                    "value": "$color:id_color_palette_aux9_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux10",
+                    "value": "$color:id_color_palette_aux10_dark"
+                },
+                {
+                    "name": "attribute_color_palette_aux11",
+                    "value": "$color:id_color_palette_aux11_dark"
+                },
+                {
+                    "name": "attribute_color_special1",
+                    "value": "$color:id_color_special1_dark"
+                },
+                {
+                    "name": "attribute_color_special2",
+                    "value": "$color:id_color_special2_dark"
+                },
+                {
+                    "name": "attribute_color_special3",
+                    "value": "$color:id_color_special3_dark"
+                },
+                {
+                    "name": "attribute_color_special4",
+                    "value": "$color:id_color_special4_dark"
+                },
+                {
+                    "name": "attribute_color_special5",
+                    "value": "$color:id_color_special5_dark"
+                },
+                {
+                    "name": "attribute_color_special6",
+                    "value": "$color:id_color_special6_dark"
+                },
+                {
+                    "name": "attribute_color_special7",
+                    "value": "$color:id_color_special7_dark"
+                },
+                {
+                    "name": "attribute_color_special8",
+                    "value": "$color:id_color_special8_dark"
+                },
+                {
+                    "name": "attribute_color_special9",
+                    "value": "$color:id_color_special9_dark"
+                },
+                {
+                    "name": "attribute_color_special10",
+                    "value": "$color:id_color_special10_dark"
+                },
+                {
+                    "name": "attribute_color_special11",
+                    "value": "$color:id_color_special11_dark"
+                },
+                {
+                    "name": "attribute_color_mask_thin",
+                    "value": "$color:id_color_mask_thin_dark"
+                },
+                {
+                    "name": "attribute_color_mask_light",
+                    "value": "$color:id_color_mask_light_dark"
+                },
+                {
+                    "name": "attribute_color_mask_regular",
+                    "value": "$color:id_color_mask_regular_dark"
+                },
+                {
+                    "name": "attribute_color_mask_thick",
+                    "value": "$color:id_color_mask_thick_dark"
+                },
+                {
+                    "name": "attribute_alpha_content_primary",
+                    "value": "$float:id_alpha_content_primary_dark"
+                },
+                {
+                    "name": "attribute_alpha_content_secondary",
+                    "value": "$float:id_alpha_content_secondary_dark"
+                },
+                {
+                    "name": "attribute_alpha_content_tertiary",
+                    "value": "$float:id_alpha_content_tertiary_dark"
+                },
+                {
+                    "name": "attribute_alpha_content_fourth",
+                    "value": "$float:id_alpha_content_fourth_dark"
+                },
+                {
+                    "name": "attribute_alpha_disabled",
+                    "value": "$float:id_alpha_disabled_dark"
+                },
+                {
+                    "name": "attribute_alpha_highlight_bg",
+                    "value": "$float:id_alpha_highlight_bg_dark"
+                },
+                {
+                    "name": "attribute_alpha_normal_bg",
+                    "value": "$float:id_alpha_normal_bg_dark"
+                },
+                {
+                    "name": "attribute_alpha_inapptip_bg",
+                    "value": "$float:id_alpha_inapptip_bg_dark"
+                },
+                {
+                    "name": "attribute_alpha_list_separator",
+                    "value": "$float:id_alpha_separator_line_dark"
+                },
+                {
+                    "name": "attribute_color_statusbar_bg",
+                    "value": "$color:id_color_statusbar_bg_dark"
+                },
+                {
+                    "name": "attribute_color_navigationbar_bg",
+                    "value": "$color:id_color_navigationbar_bg_dark"
+                },
+                {
+                    "name": "attribute_color_titlebar_icon",
+                    "value": "$color:id_color_titlebar_icon_dark"
+                },
+                {
+                    "name": "attribute_color_titlebar_icon_pressed",
+                    "value": "$color:id_color_titlebar_icon_pressed_dark"
+                },
+                {
+                    "name": "attribute_color_titlebar_text",
+                    "value": "$color:id_color_titlebar_text_dark"
+                },
+                {
+                    "name": "attribute_color_titlebar_text_off",
+                    "value": "$color:id_color_titlebar_text_off_dark"
+                },
+                {
+                    "name": "attribute_color_titlebar_subtitle_text",
+                    "value": "$color:id_color_titlebar_subtitle_text_dark"
+                },
+                {
+                    "name": "attribute_color_titlebar_bg",
+                    "value": "$color:id_color_titlebar_bg_dark"
+                },
+                {
+                    "name": "attribute_color_titlebar_sub_bg",
+                    "value": "$color:id_color_titlebar_sub_bg_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_icon",
+                    "value": "$color:id_color_bottom_tab_icon_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_icon_off",
+                    "value": "$color:id_color_bottom_tab_icon_off_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_icon_auxcolor01",
+                    "value": "$color:id_color_bottom_tab_icon_auxcolor01_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_icon_auxcolor_off01",
+                    "value": "$color:id_color_bottom_tab_icon_auxcolor_off01_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_icon_auxcolor02",
+                    "value": "$color:id_color_bottom_tab_icon_auxcolor02_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_icon_auxcolor_off02",
+                    "value": "$color:id_color_bottom_tab_icon_auxcolor_off02_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_text_on",
+                    "value": "$color:id_color_bottom_tab_text_on_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_text_off",
+                    "value": "$color:id_color_bottom_tab_text_off_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_bg",
+                    "value": "$color:id_color_bottom_tab_bg_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_bg_blur",
+                    "value": "$color:id_color_bottom_tab_bg_blur_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_sub_bg",
+                    "value": "$color:id_color_bottom_tab_sub_bg_dark"
+                },
+                {
+                    "name": "attribute_color_bottom_tab_sub_bg_blur",
+                    "value": "$color:id_color_bottom_tab_sub_bg_blur_dark"
+                },
+                {
+                    "name": "attribute_color_subtab_text_on",
+                    "value": "$color:id_color_subtab_text_on_dark"
+                },
+                {
+                    "name": "attribute_color_subtab_text_off",
+                    "value": "$color:id_color_subtab_text_off_dark"
+                },
+                {
+                    "name": "attribute_color_subtab_line_on",
+                    "value": "$color:id_color_subtab_line_on_dark"
+                },
+                {
+                    "name": "attribute_color_subtab_bg",
+                    "value": "$color:id_color_subtab_bg_dark"
+                },
+                {
+                    "name": "attribute_color_toolbar_icon",
+                    "value": "$color:id_color_toolbar_icon_dark"
+                },
+                {
+                    "name": "attribute_color_toolbar_icon_actived",
+                    "value": "$color:id_color_toolbar_icon_actived_dark"
+                },
+                {
+                    "name": "attribute_color_toolbar_text",
+                    "value": "$color:id_color_toolbar_text_dark"
+                },
+                {
+                    "name": "attribute_color_toolbar_text_actived",
+                    "value": "$color:id_color_toolbar_text_actived_dark"
+                },
+                {
+                    "name": "attribute_color_toolbar_bg",
+                    "value": "$color:id_color_toolbar_bg_dark"
+                },
+                {
+                    "name": "attribute_color_toolbar_sub_bg",
+                    "value": "$color:id_color_toolbar_sub_bg_dark"
+                },
+                {
+                    "name": "attribute_color_text_field_bg",
+                    "value": "$color:id_color_text_field_bg_dark"
+                },
+                {
+                    "name": "attribute_color_text_field_sub_bg",
+                    "value": "$color:id_color_text_field_sub_bg_dark"
+                },
+                {
+                    "name": "attribute_color_progress",
+                    "value": "$color:id_color_progress_dark"
+                },
+                {
+                    "name": "attribute_color_spinner_icon",
+                    "value": "$color:id_color_spinner_icon_dark"
+                },
+                {
+                    "name": "attribute_color_badge",
+                    "value": "$color:id_color_badge_dark"
+                },
+                {
+                    "name": "attribute_color_badge_red",
+                    "value": "$color:id_color_badge_red_dark"
+                },
+                {
+                    "name": "attribute_color_dialog_bg",
+                    "value": "$color:id_color_dialog_bg_dark"
+                },
+                {
+                    "name": "attribute_color_button_normal",
+                    "value": "$color:id_color_button_normal_dark"
+                },
+                {
+                    "name": "attribute_color_switch_outline_off",
+                    "value": "$color:id_color_switch_outline_off_dark"
+                },
+                {
+                    "name": "attribute_color_switch_bg_off",
+                    "value": "$color:id_color_switch_bg_off_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_icon",
+                    "value": "$color:id_color_floating_button_icon_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_icon_start",
+                    "value": "$color:id_color_floating_button_icon_start_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_icon_end",
+                    "value": "$color:id_color_floating_button_icon_end_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_bg_normal",
+                    "value": "$color:id_color_floating_button_bg_normal_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_start",
+                    "value": "$color:id_color_floating_button_start_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_center",
+                    "value": "$color:id_color_floating_button_center_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_end",
+                    "value": "$color:id_color_floating_button_end_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_shadow_start",
+                    "value": "$color:id_color_floating_button_shadow_start_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_shadow_end",
+                    "value": "$color:id_color_floating_button_shadow_end_dark"
+                },
+                {
+                    "name": "attribute_color_floating_button_bg_pressed",
+                    "value": "$color:id_color_floating_button_bg_pressed_dark"
+                },
+                {
+                    "name": "attribute_color_instant_tip_bg",
+                    "value": "$color:id_color_instant_tip_bg_dark"
+                },
+                {
+                    "name": "attribute_color_panel_bg",
+                    "value": "$color:id_color_panel_bg_dark"
+                },
+                {
+                    "name": "attribute_color_card_bg",
+                    "value": "$color:id_color_card_bg_dark"
+                },
+                {
+                    "name": "attribute_color_list_card_bg",
+                    "value": "$color:id_color_list_card_bg_dark"
+                },
+                {
+                    "name": "attribute_color_tooltip_foreground",
+                    "value": "$color:id_color_tooltip_foreground_dark"
+                },
+                {
+                    "name": "attribute_color_tooltip_background",
+                    "value": "$color:id_color_tooltip_background_dark"
+                },
+                {
+                    "name": "attribute_color_help_tip_bg",
+                    "value": "$color:id_color_help_tip_bg_dark"
+                },
+                {
+                    "name": "button_pattern",
+                    "value": "$pattern:button_pattern_dark"
+                },
+                {
+                    "name": "checkbox_pattern",
+                    "value": "$pattern:checkbox_pattern_dark"
+                },
+                {
+                    "name": "radio_pattern",
+                    "value": "$pattern:radio_pattern_dark"
+                },
+                {
+                    "name": "switch_pattern",
+                    "value": "$pattern:switch_pattern_dark"
+                },
+                {
+                    "name": "swiper_pattern",
+                    "value": "$pattern:swiper_pattern_dark"
+                },
+                {
+                    "name": "toolbar_pattern",
+                    "value": "$pattern:toolbar_pattern_dark"
+                },
+                {
+                    "name": "data_panel_pattern",
+                    "value": "$pattern:data_panel_pattern_dark"
+                },
+                {
+                    "name": "toggle_pattern",
+                    "value": "$pattern:toggle_pattern_dark"
+                }
+            ]
+        }
+    ]
+}

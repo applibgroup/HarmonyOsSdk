@@ -1,0 +1,46 @@
+{
+  "name": "element",
+  "version": [
+    {
+      "name": "v3.0"
+    }
+  ],
+  "supportedDevices": ["phone", "tablet", "wearable"],
+  "description": [
+    {
+      "name": "custom component.",
+      "supportedDevices": ["phone", "tablet", "wearable"]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "name",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": false,
+      "description": [
+        {
+          "name": "custom component name.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "src",
+      "supportedDevices": ["phone", "tablet", "wearable"],
+      "required": true,
+      "description": [
+        {
+          "name": "custom component path.",
+          "supportedDevices": ["phone", "tablet", "wearable"]
+        }
+      ],
+      "type": "url"
+    }
+  ],
+  "events": [],
+  "supportedSubComponents": false,
+  "supportedSubComponentsRestriction": [],
+  "unSupportSubComponentsRestriction": [],
+  "parentComponentsRestriction": []
+}

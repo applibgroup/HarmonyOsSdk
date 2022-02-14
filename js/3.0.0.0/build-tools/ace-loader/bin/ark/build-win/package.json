@@ -1,0 +1,53 @@
+{
+  "name": "ts2panda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:ts2abc-linux": "mkdir -p build && cd build && cmake -DCMAKE_TOOLCHAIN_FILE=../../submodules/panda/cmake/toolchain/host_clang_8.cmake ../ts2abc && make ts2abc -j4",
+    "build:ts2abc-win": "mkdir -p build-win && cd build-win && cmake -DCMAKE_TOOLCHAIN_FILE=../../submodules/panda/cmake/toolchain/cross-clang-8-x86_64-w64-mingw32-static.cmake ../ts2abc && make ts2abc -j4",
+    "build:ts2abc-mac": "mkdir -p build-mac && cd build-mac && cmake -DPANDA_ENABLE_CLANG_TIDY=false ../ts2abc && make ts2abc -j4",
+    "build": "npm run build:irnodes && npm run build:diagnostic && npm run build:ts2abc-linux && npm run build:sources-linux",
+    "build-win": "npm run build:irnodes && npm run build:diagnostic && npm run build:ts2abc-win && npm run build:sources-win",
+    "build-mac": "npm run build:irnodes && npm run build:diagnostic && npm run build:ts2abc-mac && npm run build:sources-mac",
+    "build-full": "npm run build && npm run build-win && npm run build-mac",
+    "build:irnodes": "scripts/gen_irnodes.sh",
+    "build:diagnostic": "scripts/gen_diagnostic.sh",
+    "build:sources-linux": "tsc -b src",
+    "build:sources-win": "tsc -b src/tsconfig.win.json",
+    "build:sources-mac": "node_modules/typescript/bin/tsc -b src/tsconfig.mac.json",
+    "build:tests": "tsc -b src tests",
+    "run:tests": "mocha \"build/tests/**/*.test.js\"",
+    "test": "npm run build:tests && npm run run:tests",
+    "ast": "tsc -b tools && node build/tools/astPrinter.js",
+    "dev": "node --expose-gc build/src/index.js",
+    "clean": "rm -rf build && rm -fr build-win && rm -fr build-mac && rm -f src/irnodes.ts && rm -rf src/diagnostic.ts && rm -rf src/builtinsMap.ts"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.2",
+    "@types/node": "^14.0.27",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.3",
+    "ts-sinon": "^1.2.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@types/command-line-args": "^5.0.0",
+    "@types/command-line-usage": "^5.0.1",
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.1.1",
+    "minimatch": "^3.0.4",
+    "recast": "^0.20.4",
+    "regexpp": "^3.1.0",
+    "rxjs": "^6.6.3",
+    "test262-stream": "^1.3.0",
+    "unique-temp-dir": "^1.0.0",
+    "yargs": "^16.2.0"
+  }
+}

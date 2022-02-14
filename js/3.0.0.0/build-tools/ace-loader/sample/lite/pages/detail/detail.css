@@ -1,0 +1,11 @@
+.commonStyle {
+    left: 95px;
+    top: 95px;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    padding: 30px;
+    border-width: 1px;
+    border-radius: 10px;
+    background-color: #ff0000;
+}

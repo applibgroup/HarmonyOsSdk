@@ -1,0 +1,54 @@
+{
+  "name": "block",
+  "version": [
+    {
+      "name": "v3.0"
+    }
+  ],
+  "supportedDevices": ["phone", "tablet", "wearable", "tv", "car"],
+  "description": [
+    {
+      "name": "'Logic control block.",
+      "supportedDevices": ["phone", "tablet", "wearable", "tv", "car"]
+    }
+  ],
+  "attributes": [
+    {
+      "name": "for",
+      "supportedDevices": ["phone", "tablet", "wearable", "tv", "car"],
+      "required": false,
+      "description": [
+        {
+          "name": "Expands the current element based on the configured data list.",
+          "supportedDevices": ["phone", "tablet", "wearable", "tv", "car"]
+        }
+      ],
+      "type": "string"
+    },
+    {
+      "name": "if",
+      "supportedDevices": ["phone", "tablet", "wearable", "tv", "car"],
+      "required": false,
+      "description": [
+        {
+          "name": "Whether the element is added or removed.",
+          "supportedDevices": ["phone", "tablet", "wearable", "tv", "car"]
+        }
+      ],
+      "type": "enum",
+      "options": [
+        {
+          "name": "true"
+        },
+        {
+          "name": "false"
+        }
+      ]
+    }
+  ],
+  "events": [],
+  "supportedSubComponents": true,
+  "supportedSubComponentsRestriction": [],
+  "unSupportSubComponentsRestriction": [],
+  "parentComponentsRestriction": []
+}

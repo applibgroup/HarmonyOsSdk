@@ -1,0 +1,19 @@
+{
+  "data": {
+    "show": true,
+    "display": false,
+    "card_name": "weather",
+    "temperature": "35°",
+    "city": "SH",
+    "date": "2020.09.04",
+    "weather_info": "cloud",
+    "image_src":"../../common/clouds.png"
+  },
+  "actions": {
+    "router": {
+      "action": "router",
+      "bundleName": "com.example.helloworld",
+      "bundleAbility": "com.example.helloworld.MainAbility"
+    }
+  }
+}

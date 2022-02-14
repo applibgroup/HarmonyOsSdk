@@ -1,0 +1,1 @@
+"use strict";var _require=require("./lite/lite-enum"),DEVICE_LEVEL=_require.DEVICE_LEVEL;module.exports=function(e){return process.env.DEVICE_LEVEL===DEVICE_LEVEL.LITE?JSON.stringify({"manifest.json":"content"}):e};

@@ -1,0 +1,1 @@
+"use strict";var _validate_ui_syntax=require("./validate_ui_syntax");module.exports=function(t){return(0,_validate_ui_syntax.processSystemApi)(t)};
