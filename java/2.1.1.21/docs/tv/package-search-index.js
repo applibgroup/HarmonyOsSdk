@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"ohos.media.audio"}]

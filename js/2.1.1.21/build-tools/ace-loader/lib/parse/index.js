@@ -1,1 +1,0 @@
-"use strict";const Parser=require("./parser"),Serializer=require("./serializer");exports.parse=function(r,e){return new Parser(e).parse(r)},exports.parseFragment=function(r,e,s){return"string"==typeof r&&(s=e,e=r,r=null),new Parser(s).parseFragment(e,r)},exports.serialize=function(r,e){return new Serializer(r,e).serialize()};

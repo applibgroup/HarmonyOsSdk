@@ -1,1 +1,0 @@
-{"app" :{"apiVersion" :{"compatible" : 3,"target" : 3},"bundleName" : "ohos.global.systemres","vendor" : "ohos","version" :{"code" : 1,"name" : "1.0.0.1"}},"deviceConfig" :{"default" : {}},"module" :{"deviceType" :["default","tv","car","wearable"],"distro" :{"deliveryWithInstall" : true,"moduleName" : "entry","moduleType" : "entry"},"package" : "ohos.global.systemres"}}

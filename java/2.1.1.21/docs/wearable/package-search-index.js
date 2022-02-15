@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"ohos.wearable.complication"},{"l":"ohos.wearable.tile"}]

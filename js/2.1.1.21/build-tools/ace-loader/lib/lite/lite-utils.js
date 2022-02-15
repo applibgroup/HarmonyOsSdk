@@ -1,1 +1,0 @@
-"use strict";var is=function(t){return function(i){return Object.prototype.toString.call(i)==="[object ".concat(t,"]")}};exports.isFunction=is("Function"),exports.isUndefined=is("Undefined"),exports.isObject=is("Object"),exports.isArray=is("Array"),exports.isNull=is("Null");
