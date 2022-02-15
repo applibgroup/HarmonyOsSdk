@@ -1,1 +1,1 @@
-gradlew assembleDebug --info
+gradlew assembleDebug sonarqube --info
