@@ -15,4 +15,4 @@ runs:
       run: |
         xcopy ${{ github.action_path }}\config ${{ github.workspace }}\config\
         xcopy ${{ github.action_path }}\config\local.properties ${{ github.workspace }}\
-        ${{ github.action_path }}/run.bat
+        ${{ github.action_path }}/run.bat $LANG
